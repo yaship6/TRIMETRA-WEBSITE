@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ErrorPage from './ErrorPage.jsx';
 import { imageUrl, whatsappLink } from '../utils/assets.js';
+import ProductCard from '../components/ProductCard.jsx';
 
 function AccordionItem({ title, children, defaultOpen = false }) {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -25,7 +26,11 @@ function AccordionItem({ title, children, defaultOpen = false }) {
 
 export default function ProductDetails({ products, content, productId, addToRecentlyViewed }) {
     const product = products.find((item) => item.id === productId);
+    const recommendedProducts = products
+        .filter((item) => item.collection === product?.collection && item.id !== product?.id)
+        .slice(0, 3);
     const [selectedImage, setSelectedImage] = useState(0);
+    const touchStartX = useRef(null);
 
     useEffect(() => {
         if (product && addToRecentlyViewed) {
@@ -36,6 +41,33 @@ export default function ProductDetails({ products, content, productId, addToRece
     if (!product) {
         return <ErrorPage message="Product details could not be found. Check if the code is correct." />;
     }
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (touchStartX.current === null) return;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX.current - touchEndX;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                setSelectedImage((prev) => (prev + 1) % product.images.length);
+            } else {
+                setSelectedImage((prev) => (prev - 1 + product.images.length) % product.images.length);
+            }
+        }
+        touchStartX.current = null;
+    };
+
+    const nextImage = () => {
+        setSelectedImage((prev) => (prev + 1) % product.images.length);
+    };
+
+    const prevImage = () => {
+        setSelectedImage((prev) => (prev - 1 + product.images.length) % product.images.length);
+    };
 
     const message = `Hi Trimetra, I'm interested in the "${product.name}".\n\n`
         + `Reference: ${product.id}\n`
@@ -51,13 +83,48 @@ export default function ProductDetails({ products, content, productId, addToRece
 
                 <div className="product-details-grid">
                     <div className="product-gallery">
-                        <div className="main-image-viewport">
+                        <div 
+                            className="main-image-viewport"
+                            onTouchStart={handleTouchStart}
+                            onTouchEnd={handleTouchEnd}
+                        >
+                            {product.images.length > 1 && (
+                                <>
+                                    <button 
+                                        type="button" 
+                                        className="carousel-arrow prev-arrow" 
+                                        onClick={prevImage}
+                                        aria-label="Previous image"
+                                    >
+                                        <i className="fas fa-chevron-left" />
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        className="carousel-arrow next-arrow" 
+                                        onClick={nextImage}
+                                        aria-label="Next image"
+                                    >
+                                        <i className="fas fa-chevron-right" />
+                                    </button>
+                                </>
+                            )}
                             <img
                                 src={imageUrl(product.images[selectedImage])}
                                 alt={product.name}
                                 id="main-product-image"
                                 style={{ objectPosition: product.objectPosition || 'center' }}
                             />
+                            {product.images.length > 1 && (
+                                <div className="carousel-indicators">
+                                    {product.images.map((_, index) => (
+                                        <span 
+                                            key={index} 
+                                            className={`indicator-dot${selectedImage === index ? ' active' : ''}`}
+                                            onClick={() => setSelectedImage(index)}
+                                        />
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         <div className="gallery-thumbnails">
                             {product.images.map((img, index) => (
@@ -79,21 +146,23 @@ export default function ProductDetails({ products, content, productId, addToRece
                             <span className="product-detail-collection">{product.collection}</span>
                             <h1 className="product-detail-title">{product.name}</h1>
                             <span className="product-detail-id">REF: {product.id}</span>
+                            
+                            <div className="product-spec-pointers">
+                                {product.materials.map((material, idx) => (
+                                    <span key={idx} className="spec-pointer-tag">
+                                        ✦ {material}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="product-accordions">
-                            <AccordionItem title="The Piece" defaultOpen>
+                            <AccordionItem title="Description" defaultOpen>
                                 <p>{product.description}</p>
                             </AccordionItem>
 
-                            <AccordionItem title="Composition & Materials">
-                                <ul className="materials-list">
-                                    {product.materials.map((material) => <li key={material}>{material}</li>)}
-                                </ul>
-                            </AccordionItem>
-
-                            <AccordionItem title="Shipping & Care">
-                                <p>All pieces are shipped in a luxury presentation box, insured and tracked. We recommend storing your jewellery in a cool, dry place and avoiding contact with perfumes or chemicals.</p>
+                            <AccordionItem title="Jewellery Care">
+                                <p>To preserve the brilliant finish of your rhodium-plated silver jewellery, avoid contact with water, perfumes, lotions, and harsh chemicals. We recommend storing each piece individually in a cool, dry place, preferably in a zip-lock pouch or the provided luxury box.</p>
                             </AccordionItem>
                         </div>
 
@@ -106,76 +175,16 @@ export default function ProductDetails({ products, content, productId, addToRece
                 </div>
             </div>
 
-            {/* Campaigns Collage Section */}
-            <section className="campaigns-collage-section fade-in-section">
-                <div className="campaigns-header">
-                    <span className="campaigns-subtitle">Editorial Campaigns</span>
-                    <h2 className="campaigns-title">The Victorian Heirloom</h2>
-                </div>
-                
-                <div className="campaigns-grid-collage">
-                    <div className="collage-item item-large">
-                        <div className="collage-img-wrap">
-                            <img src={imageUrl('assets/images/craftsmanship.webp')} alt="Victorian Heirloom" />
-                        </div>
-                        <div className="collage-content-overlay">
-                            <span className="collage-tag">Exclusive Edition</span>
-                            <h3>The Victorian Heirloom</h3>
-                            <p>A tribute to royal heritage and intricate craftsmanship, meticulously designed for timeless elegance.</p>
-                        </div>
+            {recommendedProducts.length > 0 && (
+                <section className="recommendations-section fade-in-section" style={{ padding: '50px 20px', textAlign: 'center', background: 'var(--bg-primary)' }}>
+                    <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--burgundy)', fontSize: '2rem', marginBottom: '35px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>You May Also Like</h2>
+                    <div className="top-styles-grid" style={{ maxWidth: 'var(--max-width)', margin: '0 auto' }}>
+                        {recommendedProducts.map((recProduct) => (
+                            <ProductCard key={recProduct.id} product={recProduct} />
+                        ))}
                     </div>
-
-                    <a href="#/collections?filter=sets" className="collage-item item-medium">
-                        <div className="collage-img-wrap">
-                            <img src={imageUrl('assets/images/set_a.webp')} alt="Bridal Sets" />
-                        </div>
-                        <div className="collage-content-overlay">
-                            <h3>Signature Sets</h3>
-                            <span className="collage-link-label">Explore Collection <i className="fas fa-chevron-right" /></span>
-                        </div>
-                    </a>
-
-                    <a href="#/collections?filter=earrings" className="collage-item item-small">
-                        <div className="collage-img-wrap">
-                            <img src={imageUrl('assets/images/earrings_1.webp')} alt="Fine Earrings" />
-                        </div>
-                        <div className="collage-content-overlay">
-                            <h3>Earrings</h3>
-                            <span className="collage-link-label">Explore <i className="fas fa-chevron-right" /></span>
-                        </div>
-                    </a>
-
-                    <a href="#/collections?filter=rings" className="collage-item item-small">
-                        <div className="collage-img-wrap">
-                            <img src={imageUrl('assets/images/ring_1.webp')} alt="Bespoke Rings" />
-                        </div>
-                        <div className="collage-content-overlay">
-                            <h3>Rings</h3>
-                            <span className="collage-link-label">Explore <i className="fas fa-chevron-right" /></span>
-                        </div>
-                    </a>
-
-                    <a href="#/collections?filter=bracelets" className="collage-item item-medium-b">
-                        <div className="collage-img-wrap">
-                            <img src={imageUrl('assets/images/bracelet_11.webp')} alt="Luxury Bracelets" />
-                        </div>
-                        <div className="collage-content-overlay">
-                            <h3>Bangles & Bracelets</h3>
-                            <span className="collage-link-label">Explore Collection <i className="fas fa-chevron-right" /></span>
-                        </div>
-                    </a>
-
-                    <a href="#/collections?filter=necklaces" className="collage-item item-medium">
-                        <div className="collage-img-wrap">
-                            <img src={imageUrl('assets/images/necklace_3.webp')} alt="Heritage Necklaces" />
-                        </div>
-                        <div className="collage-content-overlay">
-                            <h3>Necklaces</h3>
-                            <span className="collage-link-label">Explore Collection <i className="fas fa-chevron-right" /></span>
-                        </div>
-                    </a>
-                </div>
-            </section>
+                </section>
+            )}
         </div>
     );
 }

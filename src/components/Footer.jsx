@@ -8,9 +8,9 @@ export default function Footer({ content }) {
             <div className="footer-container">
                 <div className="footer-brand">
                     <div className="footer-logo-group" style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                        <a href="#/home" className="footer-logo" style={{ display: 'inline-block' }}>
+                        <div className="footer-logo" style={{ display: 'inline-block' }}>
                             <img src={imageUrl('assets/images/Logo1.png')} alt="TRIMETRA logo" className="site-logo footer-site-logo" />
-                        </a>
+                        </div>
                         <p className="footer-subunit" style={{
                             fontFamily: 'var(--font-heading)',
                             fontSize: '0.75rem',
@@ -23,14 +23,25 @@ export default function Footer({ content }) {
                             lineHeight: '1.2'
                         }}>A unit by Osiya Bullion</p>
                     </div>
-                    <p className="footer-address" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.72)', lineHeight: '1.6', marginBottom: '20px', marginTop: '15px', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                        <i className="fas fa-map-marker-alt" style={{ color: 'var(--color-gold)', marginTop: '4px', fontSize: '0.9rem' }} />
-                        <span>
-                            Shop No. 3, 2nd Floor, Calian House,<br />
-                            Shaikh Memon Street, Above Mumbadevi Jalebiwala,<br />
-                            Zaveri Bazaar, Mumbai - 400002
-                        </span>
-                    </p>
+                    <div className="footer-addresses" style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '20px', marginTop: '15px' }}>
+                        <p className="footer-address" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.72)', lineHeight: '1.6', margin: '0', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                            <i className="fas fa-map-marker-alt" style={{ color: 'var(--color-gold)', marginTop: '4px', fontSize: '0.9rem' }} />
+                            <span>
+                                <strong>Office Address:</strong><br />
+                                03, Ground Floor, Zarine Building, 4th Road,<br />
+                                Opp. Bhabha Hospital, Bandra West, Mumbai - 400050
+                            </span>
+                        </p>
+                        <p className="footer-address" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.72)', lineHeight: '1.6', margin: '0', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                            <i className="fas fa-map-marker-alt" style={{ color: 'var(--color-gold)', marginTop: '4px', fontSize: '0.9rem' }} />
+                            <span>
+                                <strong>Registered Address:</strong><br />
+                                Shop No. 3, 2nd Floor, Calian House,<br />
+                                Shaikh Memon Street, Above Mumbadevi Jalebiwala,<br />
+                                Zaveri Bazaar, Mumbai - 400002
+                            </span>
+                        </p>
+                    </div>
                     <div className="footer-insta-wrap" style={{ marginTop: '5px' }}>
                         <a href={contact.instagram.url} target="_blank" rel="noopener noreferrer" className="footer-insta-link">
                             <i className="fab fa-instagram" /> <span>{contact.instagram.handle}</span>
@@ -49,9 +60,9 @@ export default function Footer({ content }) {
                 <div className="footer-links-col">
                     <h3>Support</h3>
                     <ul>
-                        <li><a href="#/refund-policy">Return & Refund Policy</a></li>
-                        <li><a href="#/shipping-policy">Shipping Policy</a></li>
                         <li><a href="#/jewellery-care">Jewellery Care</a></li>
+                        <li><a href="#/contact">Contact Us</a></li>
+                        <li><a href="#/contact">Store Location</a></li>
                     </ul>
                 </div>
 
@@ -61,14 +72,6 @@ export default function Footer({ content }) {
                         <li><a href="#/about">Our Story</a></li>
                         <li><a href="#/about#vision">Our Vision</a></li>
                         <li><a href="#/about#why-choose-us">Why Choose Us</a></li>
-                    </ul>
-                </div>
-
-                <div className="footer-links-col">
-                    <h3>Concierge</h3>
-                    <ul>
-                        <li><a href="#/contact">Contact Us</a></li>
-                        <li><a href="#/contact">Store Location</a></li>
                     </ul>
                 </div>
             </div>

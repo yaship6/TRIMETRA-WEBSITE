@@ -65,9 +65,7 @@ export default function Collections({ products, content, initialFilter }) {
                     }}
                 >
                     <div className="collection-banner-content fade-in-text">
-                        <span className="collection-banner-subtitle">Trimetra Signature</span>
-                        <h1 className="collection-banner-title">{meta.title}</h1>
-                        <p className="collection-banner-desc">{meta.description}</p>
+                        <h1 className="collection-banner-title" style={{ margin: 0 }}>{meta.title}</h1>
                     </div>
                 </div>
 

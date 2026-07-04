@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import SectionHeader from '../components/SectionHeader.jsx';
 import ProductCard from '../components/ProductCard.jsx';
 import { whatsappLink, imageUrl } from '../utils/assets.js';
@@ -32,6 +32,14 @@ function TestimonialSpotlightCard({ testimonial }) {
 
 export default function Home({ products, content }) {
     const [selectedTab, setSelectedTab] = useState('all');
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     const displayedProducts = useMemo(() => {
         if (selectedTab !== 'all') {
@@ -70,15 +78,20 @@ export default function Home({ products, content }) {
         <div className="home-page-wrapper fade-in-section">
             <div className="hero-banner-custom" style={{ position: 'relative' }}>
                 <div
-                    className="hero-slide active"
+                    className={`hero-slide ${currentSlide === 0 ? 'active' : ''}`}
                     style={{
                         backgroundImage: `url('${imageUrl('assets/images/Banner.webp')}')`
                     }}
+                />
+                <div
+                    className={`hero-slide ${currentSlide === 1 ? 'active' : ''}`}
+                    style={{
+                        backgroundImage: `url('${imageUrl('assets/images/Home1.png')}')`
+                    }}
                 >
-                    <div className="hero-explore-btn-wrap">
-                        <a href="#/collections" className="hero-explore-btn">
-                            Explore Our Collection
-                        </a>
+                    <div className="hero-slide-overlay-content">
+                        <span className="hero-slide-eyebrow">Trimetra Signature</span>
+                        <h2 className="hero-slide-title">Perfect for your loved ones.</h2>
                     </div>
                 </div>
             </div>
@@ -99,7 +112,7 @@ export default function Home({ products, content }) {
                         <div className="trust-strip-divider" />
                         <div className="trust-strip-item">
                             <i className="fas fa-certificate" />
-                            <span>BIS Hallmarked</span>
+                            <span>Rhodium Plating</span>
                         </div>
                         <div className="trust-strip-divider" />
                         <div className="trust-strip-item">
@@ -121,7 +134,7 @@ export default function Home({ products, content }) {
                         <div className="trust-strip-divider" />
                         <div className="trust-strip-item">
                             <i className="fas fa-certificate" />
-                            <span>BIS Hallmarked</span>
+                            <span>Rhodium Plating</span>
                         </div>
                         <div className="trust-strip-divider" />
                         <div className="trust-strip-item">
@@ -132,6 +145,7 @@ export default function Home({ products, content }) {
                     </div>
                 </div>
             </div>
+
 
             <section className="featured-carousel-section reveal-on-scroll">
                 <SectionHeader eyebrow="Exceptional Masterpieces" title="Our Collections" />
