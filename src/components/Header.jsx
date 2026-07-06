@@ -13,6 +13,8 @@ function isActive(currentPath, item) {
     return item.match !== '/home' && currentPath.startsWith(item.match);
 }
 
+const formatRate = (rate) => rate.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
 export default function Header({ currentPath }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [shrink, setShrink] = useState(false);
@@ -79,7 +81,7 @@ export default function Header({ currentPath }) {
         <>
             <div className="live-rates-bar">
                 <span className="live-rates-content">
-                    <span className="live-pulse">🟢</span> Live Rate (per g) &nbsp;|&nbsp; Gold: <strong>₹{gold.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong> &nbsp;|&nbsp; Silver: <strong>₹{silver.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                    <span className="live-pulse">🟢</span> Live Rate (per g) &nbsp;|&nbsp; Silver: <strong>₹{formatRate(silver)}</strong> &nbsp;|&nbsp; Gold: <strong>₹{formatRate(gold)}</strong>
                 </span>
             </div>
 

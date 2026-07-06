@@ -100,43 +100,35 @@
   "collectionMetadata": {
     "all": {
       "title": "Fine Jewellery Collections",
-      "description": "Discover our complete catalog of signature rings, necklaces, earrings, cuffs, and jewelry sets handcrafted with conflict-free diamonds, grade-AAA pearls, and solid 18k gold.",
       "image": "assets/images/hero.webp"
     },
     "everyday-elegance": {
       "title": "Everyday Elegance",
-      "description": "Minimalist, lightweight silver jewelry designed for daily sophistication and effortless style.",
       "image": "assets/images/earrings_2.webp"
     },
     "necklaces": {
       "title": "Necklaces & Pendants",
-      "description": "Elegantly draped chains, collars, and brilliant pendants handcrafted in 18k gold and platinum.",
       "image": "assets/images/necklace_3.webp"
     },
     "earrings": {
-      "title": "Earrings & Drops",
-      "description": "From delicate studs to dramatic diamond drops, designed to capture light with every movement.",
+      "title": "Earrings",
       "image": "assets/images/earrings_1.webp"
     },
     "rings": {
-      "title": "Fine Rings",
-      "description": "Exquisite solitaire engagement rings, eternity bands, and custom statement rings.",
+      "title": "Rings",
       "image": "assets/images/ring_1.webp"
     },
     "bracelets": {
       "title": "Bracelets",
-      "description": "Timeless tennis bracelets, structured cuffs, and delicate chain bracelets designed for everyday luxury.",
       "image": "assets/images/bracelet_11.webp"
     },
     "sets": {
       "title": "Signature Jewellery Sets",
-      "description": "Heirloom-quality kundan, diamond, and pearl sets crafted to celebrate life's most precious milestones.",
       "image": "assets/images/set_a.webp",
       "backgroundPosition": "center 30%"
     },
     "coins": {
-      "title": "Exclusive Coins",
-      "description": "Pure, certified silver and gold coins reflecting trust, heritage, and prosperity.",
+      "title": "Coins",
       "image": "assets/images/coins.png"
     }
   }
