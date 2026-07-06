@@ -188,7 +188,7 @@ export default function Home({ products, content }) {
 
                 <div className="top-styles-grid">
                     {displayedProducts.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} disableHover={true} />
                     ))}
                 </div>
 

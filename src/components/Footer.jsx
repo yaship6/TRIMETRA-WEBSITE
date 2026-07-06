@@ -27,19 +27,19 @@ export default function Footer({ content }) {
                         <p className="footer-address" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.72)', lineHeight: '1.6', margin: '0', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                             <i className="fas fa-map-marker-alt" style={{ color: 'var(--color-gold)', marginTop: '4px', fontSize: '0.9rem' }} />
                             <span>
-                                <strong>Office Address:</strong><br />
-                                03, Ground Floor, Zarine Building, 4th Road,<br />
-                                Opp. Bhabha Hospital, Bandra West,
-                                Mumbai - 400050.
+                                <strong>Registered Address:</strong><br />
+                                Shop No. 3, 2nd Floor, Calian House,<br />
+                                Shaikh Memon Street, Above Mumbadevi Jalebiwala,<br />
+                                Zaveri Bazaar,<br /> Mumbai - 400002.
                             </span>
                         </p>
                         <p className="footer-address" style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.72)', lineHeight: '1.6', margin: '0', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                             <i className="fas fa-map-marker-alt" style={{ color: 'var(--color-gold)', marginTop: '4px', fontSize: '0.9rem' }} />
                             <span>
-                                <strong>Registered Address:</strong><br />
-                                Shop No. 3, 2nd Floor, Calian House,<br />
-                                Shaikh Memon Street, Above Mumbadevi Jalebiwala,<br />
-                                Zaveri Bazaar, Mumbai - 400002.
+                                <strong>Office Address:</strong><br />
+                                03, Ground Floor, Zarine Building, 4th Road,<br />
+                                Opp. Bhabha Hospital, Bandra West,<br />
+                                Mumbai - 400050.
                             </span>
                         </p>
                     </div>

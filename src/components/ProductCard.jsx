@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { imageUrl } from '../utils/assets.js';
 
-export default function ProductCard({ product, featured = false }) {
+export default function ProductCard({ product, featured = false, disableHover = false }) {
     const [isRecentlyViewed, setIsRecentlyViewed] = useState(false);
 
     useEffect(() => {
@@ -24,6 +24,8 @@ export default function ProductCard({ product, featured = false }) {
         setIsWishlisted(!isWishlisted);
     };
 
+    const hasHoverImage = product.images[1] && !disableHover;
+
     return (
         <div className="product-card fade-in-section">
             <a href={`#/product/${product.id}`} className="product-card-link-wrapper">
@@ -37,11 +39,11 @@ export default function ProductCard({ product, featured = false }) {
                     <img
                         src={imageUrl(product.images[0])}
                         alt={product.name}
-                        className={`product-card-img primary-image ${product.images[1] ? 'has-hover' : ''}`}
+                        className={`product-card-img primary-image ${hasHoverImage ? 'has-hover' : ''}`}
                         loading="lazy"
                         style={{ objectPosition: product.objectPosition || 'center' }}
                     />
-                    {product.images[1] && (
+                    {hasHoverImage && (
                         <img
                             src={imageUrl(product.images[1])}
                             alt={`${product.name} alternate view`}

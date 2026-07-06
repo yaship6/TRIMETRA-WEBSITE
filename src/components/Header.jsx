@@ -79,7 +79,7 @@ export default function Header({ currentPath }) {
         <>
             <div className="live-rates-bar">
                 <span className="live-rates-content">
-                    <span className="live-pulse">🟢</span> Live Rate (per g) &nbsp;|&nbsp; Silver: <strong>₹{silver.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                    <span className="live-pulse">🟢</span> Live Rate (per g) &nbsp;|&nbsp; Silver: <strong>₹{silver.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong> | &nbsp; Gold: <strong>₹{gold.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
                 </span>
             </div>
 

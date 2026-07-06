@@ -176,9 +176,9 @@ export default function ProductDetails({ products, content, productId, addToRece
             </div>
 
             {recommendedProducts.length > 0 && (
-                <section className="recommendations-section fade-in-section" style={{ padding: '50px 20px', textAlign: 'center', background: 'var(--bg-primary)' }}>
-                    <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--burgundy)', fontSize: '2rem', marginBottom: '35px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>You May Also Like</h2>
-                    <div className="top-styles-grid" style={{ maxWidth: 'var(--max-width)', margin: '0 auto' }}>
+                <section className="recommendations-section fade-in-section">
+                    <h2 className="recommendations-section-title">You May Also Like</h2>
+                    <div className="recommendations-grid">
                         {recommendedProducts.map((recProduct) => (
                             <ProductCard key={recProduct.id} product={recProduct} />
                         ))}
