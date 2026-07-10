@@ -2478,6 +2478,7 @@ p {
     margin-top: 0;
     padding: 0 40px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .hero-slide {

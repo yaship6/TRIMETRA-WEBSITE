@@ -76,7 +76,12 @@ export default function Home({ products, content }) {
 
     return (
         <div className="home-page-wrapper fade-in-section">
-            <div className="hero-banner-custom" style={{ position: 'relative' }}>
+            <a
+                href="#/collections?filter=everyday-elegance"
+                className="hero-banner-custom"
+                style={{ position: 'relative', display: 'block', textDecoration: 'none' }}
+                aria-label="Shop Everyday Elegance Collection"
+            >
                 <div
                     className={`hero-slide ${currentSlide === 0 ? 'active' : ''}`}
                     style={{
@@ -86,15 +91,10 @@ export default function Home({ products, content }) {
                 <div
                     className={`hero-slide ${currentSlide === 1 ? 'active' : ''}`}
                     style={{
-                        backgroundImage: `url('${imageUrl('assets/images/Home1.png')}')`
+                        backgroundImage: `url('${imageUrl('assets/images/Banner 2.jpg.jpeg')}')`
                     }}
-                >
-                    <div className="hero-slide-overlay-content">
-                        <span className="hero-slide-eyebrow">Trimetra Signature</span>
-                        <h2 className="hero-slide-title">Perfect for your loved ones.</h2>
-                    </div>
-                </div>
-            </div>
+                />
+            </a>
 
             <div className="home-trust-strip">
                 <div className="trust-strip-marquee">
