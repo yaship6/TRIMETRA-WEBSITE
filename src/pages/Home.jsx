@@ -45,7 +45,7 @@ export default function Home({ products, content }) {
         if (selectedTab !== 'all') {
             return products.filter((p) => p.collection === selectedTab).slice(0, 4);
         }
-        
+
         // Return a mix of different collections for the "All" tab
         const mixed = [];
         const collections = ['necklaces', 'earrings', 'rings', 'bracelets'];
@@ -173,7 +173,7 @@ export default function Home({ products, content }) {
 
             <section className="home-top-styles-section reveal-on-scroll">
                 <SectionHeader eyebrow="Trending Masterpieces" title="Our Top Styles" />
-                
+
                 <div className="top-styles-tabs">
                     {tabs.map((tab) => (
                         <button
@@ -202,7 +202,7 @@ export default function Home({ products, content }) {
             <section className="home-cta-banner reveal-on-scroll">
                 <div className="home-cta-content">
                     <h2>Bespoke Creations</h2>
-                    <p>Looking for a custom length, specific diamond grade, or a completely personalized design? Connect with our master concierge via WhatsApp for dedicated advice.</p>
+                    <p>Looking for a custom length, or a completely personalized design? Connect with our master concierge via WhatsApp for dedicated advice.</p>
                     <a
                         href={whatsappLink(content.contact.whatsapp.number, 'Hello Trimetra, I would like to consult on a custom/bespoke jewelry piece.')}
                         target="_blank"

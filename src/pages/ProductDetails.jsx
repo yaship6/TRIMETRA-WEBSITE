@@ -148,20 +148,14 @@ export default function ProductDetails({ products, content, productId, addToRece
                             <span className="product-detail-id">REF: {product.id}</span>
                             
                             <div className="product-spec-pointers">
-                                {product.materials.map((material, idx) => (
-                                    <span key={idx} className="spec-pointer-tag">
-                                        ✦ {material}
-                                    </span>
-                                ))}
+                                <span className="spec-pointer-tag">✦ 925 Sterling Silver</span>
+                                <span className="spec-pointer-tag">✦ Stone</span>
+                                <span className="spec-pointer-tag">✦ Polish</span>
                             </div>
                         </div>
 
                         <div className="product-accordions">
-                            <AccordionItem title="Description" defaultOpen>
-                                <p>{product.description}</p>
-                            </AccordionItem>
-
-                            <AccordionItem title="Jewellery Care">
+                            <AccordionItem title="Jewellery Care" defaultOpen>
                                 <p>To preserve the brilliant finish of your rhodium-plated silver jewellery, avoid contact with water, perfumes, lotions, and harsh chemicals. We recommend storing each piece individually in a cool, dry place, preferably in a zip-lock pouch or the provided luxury box.</p>
                             </AccordionItem>
                         </div>
