@@ -30,13 +30,43 @@ export default function ProductDetails({ products, content, productId, addToRece
         .filter((item) => item.collection === product?.collection && item.id !== product?.id)
         .slice(0, 3);
     const [selectedImage, setSelectedImage] = useState(0);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const touchStartX = useRef(null);
+    const lightboxTouchStartX = useRef(null);
 
     useEffect(() => {
         if (product && addToRecentlyViewed) {
             addToRecentlyViewed(product.id);
         }
     }, [product, addToRecentlyViewed]);
+
+    useEffect(() => {
+        if (!isLightboxOpen) return;
+
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                setIsLightboxOpen(false);
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isLightboxOpen, product]);
+
+    useEffect(() => {
+        if (isLightboxOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isLightboxOpen]);
 
     if (!product) {
         return <ErrorPage message="Product details could not be found. Check if the code is correct." />;
@@ -59,6 +89,25 @@ export default function ProductDetails({ products, content, productId, addToRece
             }
         }
         touchStartX.current = null;
+    };
+
+    const handleLightboxTouchStart = (e) => {
+        lightboxTouchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleLightboxTouchEnd = (e) => {
+        if (lightboxTouchStartX.current === null) return;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = lightboxTouchStartX.current - touchEndX;
+
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                nextImage();
+            } else {
+                prevImage();
+            }
+        }
+        lightboxTouchStartX.current = null;
     };
 
     const nextImage = () => {
@@ -112,7 +161,9 @@ export default function ProductDetails({ products, content, productId, addToRece
                                 src={imageUrl(product.images[selectedImage])}
                                 alt={product.name}
                                 id="main-product-image"
+                                className="zoomable-image"
                                 style={{ objectPosition: product.objectPosition || 'center' }}
+                                onClick={() => setIsLightboxOpen(true)}
                             />
                             {product.images.length > 1 && (
                                 <div className="carousel-indicators">
@@ -181,6 +232,68 @@ export default function ProductDetails({ products, content, productId, addToRece
                         ))}
                     </div>
                 </section>
+            )}
+            {isLightboxOpen && (
+                <div
+                    className="product-lightbox"
+                    onClick={(e) => {
+                        if (e.target.classList.contains('product-lightbox') || e.target.classList.contains('lightbox-close-btn') || e.target.classList.contains('lightbox-content-wrapper')) {
+                            setIsLightboxOpen(false);
+                        }
+                    }}
+                >
+                    <button
+                        type="button"
+                        className="lightbox-close-btn"
+                        onClick={() => setIsLightboxOpen(false)}
+                        aria-label="Close fullscreen view"
+                    >
+                        &times;
+                    </button>
+                    {product.images.length > 1 && (
+                        <>
+                            <button
+                                type="button"
+                                className="lightbox-arrow prev-arrow"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    prevImage();
+                                }}
+                                aria-label="Previous image"
+                            >
+                                <i className="fas fa-chevron-left" />
+                            </button>
+                            <button
+                                type="button"
+                                className="lightbox-arrow next-arrow"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    nextImage();
+                                }}
+                                aria-label="Next image"
+                            >
+                                <i className="fas fa-chevron-right" />
+                            </button>
+                        </>
+                    )}
+                    <div 
+                        className="lightbox-content-wrapper"
+                        onTouchStart={handleLightboxTouchStart}
+                        onTouchEnd={handleLightboxTouchEnd}
+                    >
+                        <img
+                            src={imageUrl(product.images[selectedImage])}
+                            alt={product.name}
+                            className="lightbox-image"
+                            style={{ objectPosition: product.objectPosition || 'center' }}
+                        />
+                        {product.images.length > 1 && (
+                            <div className="lightbox-counter">
+                                {selectedImage + 1} / {product.images.length}
+                            </div>
+                        )}
+                    </div>
+                </div>
             )}
         </div>
     );
