@@ -83,24 +83,24 @@ export default function ProductDetails({ products, content, productId, addToRece
 
                 <div className="product-details-grid">
                     <div className="product-gallery">
-                        <div 
+                        <div
                             className="main-image-viewport"
                             onTouchStart={handleTouchStart}
                             onTouchEnd={handleTouchEnd}
                         >
                             {product.images.length > 1 && (
                                 <>
-                                    <button 
-                                        type="button" 
-                                        className="carousel-arrow prev-arrow" 
+                                    <button
+                                        type="button"
+                                        className="carousel-arrow prev-arrow"
                                         onClick={prevImage}
                                         aria-label="Previous image"
                                     >
                                         <i className="fas fa-chevron-left" />
                                     </button>
-                                    <button 
-                                        type="button" 
-                                        className="carousel-arrow next-arrow" 
+                                    <button
+                                        type="button"
+                                        className="carousel-arrow next-arrow"
                                         onClick={nextImage}
                                         aria-label="Next image"
                                     >
@@ -117,8 +117,8 @@ export default function ProductDetails({ products, content, productId, addToRece
                             {product.images.length > 1 && (
                                 <div className="carousel-indicators">
                                     {product.images.map((_, index) => (
-                                        <span 
-                                            key={index} 
+                                        <span
+                                            key={index}
                                             className={`indicator-dot${selectedImage === index ? ' active' : ''}`}
                                             onClick={() => setSelectedImage(index)}
                                         />
@@ -146,16 +146,19 @@ export default function ProductDetails({ products, content, productId, addToRece
                             <span className="product-detail-collection">{product.collection}</span>
                             <h1 className="product-detail-title">{product.name}</h1>
                             <span className="product-detail-id">REF: {product.id}</span>
-                            
+
                             <div className="product-spec-pointers">
                                 <span className="spec-pointer-tag">✦ 925 Sterling Silver</span>
-                                <span className="spec-pointer-tag">✦ Stone</span>
-                                <span className="spec-pointer-tag">✦ Polish</span>
+                                <span className="spec-pointer-tag">✦ Stone : </span>
+                                <span className="spec-pointer-tag">✦ Polish </span>
                             </div>
                         </div>
 
                         <div className="product-accordions">
-                            <AccordionItem title="Jewellery Care" defaultOpen>
+                            <AccordionItem title="Description" defaultOpen>
+                                <p>{product.description}</p>
+                            </AccordionItem>
+                            <AccordionItem title="Jewellery Care">
                                 <p>To preserve the brilliant finish of your rhodium-plated silver jewellery, avoid contact with water, perfumes, lotions, and harsh chemicals. We recommend storing each piece individually in a cool, dry place, preferably in a zip-lock pouch or the provided luxury box.</p>
                             </AccordionItem>
                         </div>
