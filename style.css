@@ -4113,6 +4113,9 @@ body,
 }
 
 .testimonials-burgundy-section .testimonials-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 28px;
 }
 
@@ -4121,6 +4124,8 @@ body,
     --spotlight-y: 0%;
     position: relative;
     min-height: 360px;
+    flex: 1 1 380px;
+    max-width: 480px;
     padding: 38px 34px 32px;
     overflow: hidden;
     border: 1px solid rgba(213, 163, 97, 0.34);
@@ -4183,6 +4188,7 @@ body,
     margin-bottom: 24px;
     color: var(--color-gold) !important;
     font-size: 0.86rem;
+    justify-content: center;
 }
 
 .testimonial-spotlight-card .testimonial-text {
@@ -4194,16 +4200,19 @@ body,
     font-size: 0.98rem;
     line-height: 1.75;
     font-style: normal;
+    text-align: center;
 }
 
 .testimonial-spotlight-card .testimonial-author {
     position: relative;
     z-index: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 14px;
     padding-top: 18px;
     border-top: 1px solid rgba(213, 163, 97, 0.18);
+    text-align: center;
 }
 
 .testimonial-author-seal {

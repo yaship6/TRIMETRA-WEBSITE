@@ -27,7 +27,12 @@ function AccordionItem({ title, children, defaultOpen = false }) {
 export default function ProductDetails({ products, content, productId, addToRecentlyViewed }) {
     const product = products.find((item) => item.id === productId);
     const recommendedProducts = products
-        .filter((item) => item.collection === product?.collection && item.id !== product?.id)
+        .filter((item) => {
+            if (item.id === product?.id) return false;
+            const itemCols = Array.isArray(item.collection) ? item.collection : [item.collection];
+            const prodCols = Array.isArray(product?.collection) ? product.collection : [product?.collection];
+            return itemCols.some(col => prodCols.includes(col));
+        })
         .slice(0, 3);
     const [selectedImage, setSelectedImage] = useState(0);
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -126,8 +131,8 @@ export default function ProductDetails({ products, content, productId, addToRece
     return (
         <div className="product-details-page-wrapper">
             <div className="product-details-container fade-in-section">
-                <a href={`#/collections?filter=${product.collection}`} className="back-link">
-                    <i className="fas fa-arrow-left" /> Back to {product.collection}
+                <a href={`#/collections?filter=${Array.isArray(product.collection) ? product.collection[0] : product.collection}`} className="back-link">
+                    <i className="fas fa-arrow-left" /> Back to {Array.isArray(product.collection) ? product.collection.join(" & ") : product.collection}
                 </a>
 
                 <div className="product-details-grid">
@@ -194,14 +199,14 @@ export default function ProductDetails({ products, content, productId, addToRece
 
                     <div className="product-info-panel">
                         <div className="product-meta-header">
-                            <span className="product-detail-collection">{product.collection}</span>
+                            <span className="product-detail-collection">{Array.isArray(product.collection) ? product.collection.join(" & ") : product.collection}</span>
                             <h1 className="product-detail-title">{product.name}</h1>
                             <span className="product-detail-id">REF: {product.id}</span>
 
                             <div className="product-spec-pointers">
-                                <span className="spec-pointer-tag">✦ 925 Sterling Silver</span>
-                                <span className="spec-pointer-tag">✦ Stone : </span>
-                                <span className="spec-pointer-tag">✦ Polish </span>
+                                {product.materials && product.materials.map((spec, i) => (
+                                    <span key={i} className="spec-pointer-tag">✦ {spec}</span>
+                                ))}
                             </div>
                         </div>
 

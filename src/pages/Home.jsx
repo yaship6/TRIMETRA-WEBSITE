@@ -43,7 +43,7 @@ export default function Home({ products, content }) {
 
     const displayedProducts = useMemo(() => {
         if (selectedTab !== 'all') {
-            return products.filter((p) => p.collection === selectedTab).slice(0, 4);
+            return products.filter((p) => Array.isArray(p.collection) ? p.collection.includes(selectedTab) : p.collection === selectedTab).slice(0, 4);
         }
 
         // Return a mix of different collections for the "All" tab
@@ -53,7 +53,7 @@ export default function Home({ products, content }) {
         while (mixed.length < 4) {
             let addedInThisRound = false;
             for (const col of collections) {
-                const colItems = products.filter(p => p.collection === col);
+                const colItems = products.filter(p => Array.isArray(p.collection) ? p.collection.includes(col) : p.collection === col);
                 if (colItems[idx]) {
                     mixed.push(colItems[idx]);
                     addedInThisRound = true;

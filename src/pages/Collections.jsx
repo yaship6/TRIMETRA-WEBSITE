@@ -51,7 +51,12 @@ export default function Collections({ products, content, initialFilter }) {
 
     const filteredProducts = useMemo(() => {
         if (currentFilter === 'all') return products;
-        return products.filter((product) => product.collection === currentFilter);
+        return products.filter((product) => {
+            if (Array.isArray(product.collection)) {
+                return product.collection.includes(currentFilter);
+            }
+            return product.collection === currentFilter;
+        });
     }, [currentFilter, products]);
 
     return (

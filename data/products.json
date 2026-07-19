@@ -19,11 +19,11 @@
     "id": "TRM-NC-002",
     "name": "Luna Choker",
     "collection": "sets",
-    "description": "Luminous South Sea pearls hand-selected for their mirror-like luster, strung together with a signature 18k white gold clasp encrusted with micro-pavé diamonds.",
+    "description": "Luminous South Sea pearls hand-selected for their mirror-like luster, strung together with a signature 18k white gold clasp encrusted with micro-pav\u00e9 diamonds.",
     "materials": [
       "18k White Gold Clasp",
       "Grade AAA South Sea Pearls (10-12mm)",
-      "0.15ct Pavé Diamonds"
+      "0.15ct Pav\u00e9 Diamonds"
     ],
     "images": [
       "assets/images/set_2_a.webp",
@@ -52,10 +52,10 @@
     "id": "TRM-NC-004",
     "name": "Starlight Necklace",
     "collection": "necklaces",
-    "description": "An architectural pendant in solid white gold, with micro-pavé diamonds arranged in geometric patterns resembling the night sky.",
+    "description": "An architectural pendant in solid white gold, with micro-pav\u00e9 diamonds arranged in geometric patterns resembling the night sky.",
     "materials": [
       "18k White Gold",
-      "2.4ct Pavé-set Diamonds (VS2, F-G)",
+      "2.4ct Pav\u00e9-set Diamonds (VS2, F-G)",
       "Adjustable 16-18 inch gold chain"
     ],
     "images": [
@@ -117,7 +117,7 @@
     "materials": [
       "18k Yellow Gold",
       "1.25ct Brilliant-cut Center Diamonds",
-      "Micro-pavé Diamonds"
+      "Micro-pav\u00e9 Diamonds"
     ],
     "images": [
       "assets/images/earrings_4.webp"
@@ -145,11 +145,11 @@
     "id": "TRM-ER-006",
     "name": "Nirvana Polki Studs",
     "collection": "earrings",
-    "description": "Timeless floral cluster studs featuring a magnificent pear-shaped (teardrop) central polki diamond slice, outlined in a delicate pavé diamond border and framed by round polki petals.",
+    "description": "Timeless floral cluster studs featuring a magnificent pear-shaped (teardrop) central polki diamond slice, outlined in a delicate pav\u00e9 diamond border and framed by round polki petals.",
     "materials": [
       "18k Yellow Gold",
       "Pear-shaped Polki Diamonds",
-      "0.4ct Pavé Accent Diamonds"
+      "0.4ct Pav\u00e9 Accent Diamonds"
     ],
     "images": [
       "assets/images/earrings_7.webp"
@@ -165,7 +165,7 @@
       "18k Yellow Gold",
       "Central Polki Diamonds",
       "Fine Ruby Beads (Tumbles)",
-      "Pavé Diamonds"
+      "Pav\u00e9 Diamonds"
     ],
     "images": [
       "assets/images/earrings_8.webp"
@@ -207,11 +207,11 @@
     "id": "TRM-ER-010",
     "name": "Devika Cushion Studs",
     "collection": "earrings",
-    "description": "A contemporary blend of vintage and modern aesthetics, featuring cushion-cut polki diamonds surrounded by a double square halo of micro-pavé diamonds.",
+    "description": "A contemporary blend of vintage and modern aesthetics, featuring cushion-cut polki diamonds surrounded by a double square halo of micro-pav\u00e9 diamonds.",
     "materials": [
       "18k Yellow Gold",
       "Cushion-cut Polki Diamonds",
-      "0.55ct Micro-pavé Diamonds"
+      "0.55ct Micro-pav\u00e9 Diamonds"
     ],
     "images": [
       "assets/images/earrings_11.webp"
@@ -264,5 +264,410 @@
       "assets/images/set_c.webp"
     ],
     "featured": true
+  },
+  {
+    "id": "TRJ001",
+    "name": "The Gulnaz Heritage Choker Set",
+    "description": "A breathtaking celebration of timeless Indian craftsmanship, this exquisite 925 Sterling Silver Jadau-inspired choker set is dipped in luxurious a gold polish. Perfectly blending regal opulence with vintage charm, this set is designed for the modern bride and connoisseur of heritage jewelry.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj001_1.jpg",
+      "assets/images/trj001_2.jpg",
+      "assets/images/trj001_3.jpg",
+      "assets/images/trj001_4.jpg",
+      "assets/images/trj001_5.jpg",
+      "assets/images/trj001_6.jpg",
+      "assets/images/trj001_7.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ002",
+    "name": "The Roohi Jadau Pendant Set",
+    "description": "A beautiful blend of minimalistic elegance and royal heritage, this sleek pendant and earring set is crafted in pure 925 Sterling Silver with a premium gold polish. Inspired by classic Jadau motifs, it is designed for the modern woman who loves a touch of traditional luxury without the weight of heavy bridal sets.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj002_1.jpg",
+      "assets/images/trj002_2.jpg",
+      "assets/images/trj002_3.jpg",
+      "assets/images/trj002_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ003",
+    "name": "The Firdaus Jadau Pendant Set",
+    "description": "Exuding the refreshing charm of a royal courtyard, this exquisite pendant and earring set is crafted in pure 925 Sterling Silver with a radiant gold polish. Drawing inspiration from vintage Jadau craftsmanship, this set marries regal emerald hues with delicate pearl details for a look that is effortlessly majestic",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj003_1.jpg",
+      "assets/images/trj003_2.jpg",
+      "assets/images/trj003_3.jpg",
+      "assets/images/trj003_4.jpg",
+      "assets/images/trj003_5.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ004",
+    "name": "The Noorani Jadau Choker Set",
+    "description": "A magnificent tribute to the regal courts of India, this breathtaking Choker set is a masterpiece of imperial design. Meticulously handcrafted in pure 925 Sterling Silver with a premium, glowing gold polish, it brings together classic Jadau elements with a beautifully structured, modern silhouette.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj004_1.jpg",
+      "assets/images/trj004_2.jpg",
+      "assets/images/trj004_3.jpg",
+      "assets/images/trj004_4.jpg",
+      "assets/images/trj004_5.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ005",
+    "name": "The Mehtab Kundan Choker Set",
+    "description": "Capturing the serene brilliance of moonlight, this ethereal Choker set reflects the pinnacle of classic Indian craftsmanship. Mindfully handcrafted in pure 925 Sterling Silver and finished with a rich gold polish, this monochromatic masterpiece is designed for the modern woman who adores minimalist majesty and timeless elegance.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj005_1.jpg",
+      "assets/images/trj005_2.jpg",
+      "assets/images/trj005_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ006",
+    "name": "The Shahi Gulistan Jadau Choker",
+    "description": "A breathtaking testament to royal heritage, this grand Gala Bandh (choker) is a symphony of imperial design. Meticulously handcrafted in pure 925 Sterling Silver and dipped in a rich gold polish, it features intricate Jadau and Kundan artistry, making it an exquisite statement piece for the modern maharani.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj006_1.jpg",
+      "assets/images/trj006_2.jpg",
+      "assets/images/trj006_3.jpg",
+      "assets/images/trj006_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ007",
+    "name": "The Nazuk Polki Pendant Set",
+    "description": "Capturing the essence of minimal royalty, this graceful pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a radiant gold polish. Designed for the modern woman who appreciates fine heirloom details in a delicate silhouette, this set offers classic Jadau charm without the weight of heavy festive necklaces.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj007_1.jpg",
+      "assets/images/trj007_2.jpg",
+      "assets/images/trj007_3.jpg",
+      "assets/images/trj007_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP001",
+    "name": "The Rukhsar Pearl Haar Set",
+    "description": "A stunning tribute to vintage Nawabi elegance, this multi-strand Haar set is beautifully handcrafted in pure 925 Sterling Silver with a radiant gold polish. Combining the soft luster of pristine pearls with classic artistry, this set is designed for the entire beautiful connoisseur who loves graceful, layered silhouettes.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap001_1.jpg",
+      "assets/images/trj-ap001_2.jpg",
+      "assets/images/trj-ap001_3.jpg",
+      "assets/images/trj-ap001_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP002",
+    "name": "The Ira Set",
+    "description": "Exuding the breathtaking brilliance of a starry night, this contemporary Indo-Western necklace and earring set is beautifully crafted in premium 925 Sterling Silver with a high-shine white rhodium polish. It perfectly captures the essence of modern Indian luxury, combining diamond-like radiance with a vibrant pop of regal color.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap002_1.jpg",
+      "assets/images/trj-ap002_2.jpg",
+      "assets/images/trj-ap002_3.jpg",
+      "assets/images/trj-ap002_4.jpg",
+      "assets/images/trj-ap002_5.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP003",
+    "name": "The Mayra Floral Moti Set",
+    "description": "A beautiful celebration of minimalist grace and delicate femininity, this exquisite Y-style necklace and earring set is meticulously crafted in pure 925 Sterling Silver with a radiant gold polish. Perfectly blending modern sleekness with the timeless elegance of moti (pearls), it is designed for the modern Indian woman who loves understated, everyday luxury.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Pearls"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap003_1.jpg",
+      "assets/images/trj-ap003_2.jpg",
+      "assets/images/trj-ap003_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP004",
+    "name": "The Titli Mother-of-Pearl Pendant Set",
+    "description": "A whimsical celebration of nature\u2019s grace and contemporary elegance, this delicate butterfly-themed pendant and earring set is meticulously crafted in pure 925 Sterling Silver with a radiant gold polish. Designed for the modern Indian woman who adores minimalist charm.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap004_1.jpg",
+      "assets/images/trj-ap004_2.jpg",
+      "assets/images/trj-ap004_3.jpg",
+      "assets/images/trj-ap004_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP005",
+    "name": "The Mayura Citrine Drop Pendant Set",
+    "description": "Capturing the radiant warmth of the festive sun, this contemporary pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a premium gold polish. Designed for the modern Indian woman who appreciates a delicate pop of color, this set effortlessly blends sleek minimalist geometry with a touch of traditional luxury.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap005_1.jpg",
+      "assets/images/trj-ap005_2.jpg",
+      "assets/images/trj-ap005_3.jpg",
+      "assets/images/trj-ap005_4.jpg",
+      "assets/images/trj-ap005_5.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP006",
+    "name": "The Dilnaz Pearl & Baguette Pendant Set",
+    "description": "A beautiful celebration of modern romance and minimalist sophistication, this delicate heart-themed pendant and earring set is meticulously crafted in pure 925 Sterling Silver with a high-shine rhodium polish. Combining diamond-like CZ geometric precision with the timeless, soft grace of a moti (pearl), it is designed for the contemporary Indian woman who loves chic, versatile jewelry.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium Polish",
+      "Type of stone: 5A Cubic Zirconia & Pearls"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap006_1.jpg",
+      "assets/images/trj-ap006_2.jpg",
+      "assets/images/trj-ap006_3.jpg",
+      "assets/images/trj-ap006_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP007",
+    "name": "The Tarika Starburst Pendant Set",
+    "description": "Capturing the radiant brilliance of a night sky, this elegant pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a premium rhodium polish. Combining a striking modern starburst geometry with the classic grace of a moti (pearl), this Indo-Western set is designed for the contemporary woman who loves sleek, sophisticated luxury.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium Polish",
+      "Type of stone: 5A Cubic Zirconia & Pearls"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap007_1.jpg",
+      "assets/images/trj-ap007_2.jpg",
+      "assets/images/trj-ap007_3.jpg",
+      "assets/images/trj-ap007_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP008",
+    "name": "The Sia Floral Mangalsutra Set",
+    "description": "A beautiful celebration of sacred marital bonds and modern minimalism, this exquisite Mangalsutra and earring set is meticulously crafted in pure 925 Sterling Silver with premium gold polish. Designed for the contemporary Indian bride, it seamlessly reimagines traditional auspicious jewelry into a sleek, everyday luxury piece.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap008_1.jpg",
+      "assets/images/trj-ap008_2.jpg",
+      "assets/images/trj-ap008_3.jpg",
+      "assets/images/trj-ap008_4.jpg",
+      "assets/images/trj-ap008_5.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP009",
+    "name": "The Avani Mangalsutra Set",
+    "description": "A magnificent balance of sacred tradition and contemporary chic, this elegant Mangalsutra and earring set is beautifully crafted in pure 925 Sterling Silver with premium gold polish. Tailored for the modern Indian woman, it transforms a timeless symbol of marital union into a delicate, everyday luxury statement.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap009_1.jpg",
+      "assets/images/trj-ap009_2.jpg",
+      "assets/images/trj-ap009_3.jpg",
+      "assets/images/trj-ap009_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP010",
+    "name": "The Rhea Leaf & Drop Pendant Set",
+    "description": "Embodying the crisp radiance of morning dew, this ultra-chic pendant and earring set is beautifully crafted in pure 925 Sterling Silver and finished with a premium rhodium polish. Combining organic nature-inspired motifs with clean geometric cuts, this contemporary Indo-Western set is designed for the modern Indian woman who loves understated, high-shine luxury.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap010_1.jpg",
+      "assets/images/trj-ap010_2.jpg",
+      "assets/images/trj-ap010_3.jpg",
+      "assets/images/trj-ap010_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP011",
+    "name": "The Gauri Bloom Pendant Set",
+    "description": "A charming celebration of festive brightness and organic grace, this dainty floral pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a rich, radiant gold polish. Channeling a modern Kundan aesthetic through clean geometric cuts, this Indo-Western set is designed for the contemporary woman who adores minimalist elegance with a hint of traditional heritage.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap011_1.jpg",
+      "assets/images/trj-ap011_2.jpg",
+      "assets/images/trj-ap011_3.jpg",
+      "assets/images/trj-ap011_4.jpg",
+      "assets/images/trj-ap011_5.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP012",
+    "name": "The Meera Fusion Necklace Set",
+    "description": "A breathtaking celebration of classic Indian heritage reimagined for the modern era, this exquisite pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a rich, antique gold polish. Drawing inspiration from timeless Jadau and Meenakari jewelry forms, this set seamlessly blends regal emerald tones with luminous pearl accents to create an elegant heirloom-quality statement.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Pearls."
+    ],
+    "collection": [
+      "everyday-elegance",
+      "sets"
+    ],
+    "images": [
+      "assets/images/trj-ap012_1.jpg",
+      "assets/images/trj-ap012_2.jpg",
+      "assets/images/trj-ap012_3.jpg",
+      "assets/images/trj-ap012_4.jpg"
+    ],
+    "featured": false
   }
 ]
