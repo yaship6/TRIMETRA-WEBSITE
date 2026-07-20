@@ -215,7 +215,7 @@ export default function ProductDetails({ products, content, productId, addToRece
                                 <p>{product.description}</p>
                             </AccordionItem>
                             <AccordionItem title="Jewellery Care">
-                                <p>To preserve the brilliant finish of your rhodium-plated silver jewellery, avoid contact with water, perfumes, lotions, and harsh chemicals. We recommend storing each piece individually in a cool, dry place, preferably in a zip-lock pouch or the provided luxury box.</p>
+                                <p>To preserve the brilliant finish of your fine jewellery, keep it away from moisture, avoid contact with perfumes, remove it when sleeping or active, allow perfumes and lotions to dry completely before wearing, remove it before entering water, clean with a soft cloth, and store it individually in a closed bag or box.</p>
                             </AccordionItem>
                         </div>
 
