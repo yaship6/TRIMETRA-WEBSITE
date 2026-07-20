@@ -2,7 +2,9 @@
   {
     "id": "TRM-NC-001",
     "name": "Aurelia Pendant",
-    "collection": "necklaces",
+    "collection": [
+      "necklaces"
+    ],
     "description": "An exquisite 18k solid yellow gold necklace featuring a brilliant-cut center diamond surrounded by delicate filigree work. Handcrafted to reflect the timeless craftsmanship of Trimetra.",
     "materials": [
       "18k Yellow Gold",
@@ -18,7 +20,9 @@
   {
     "id": "TRM-NC-002",
     "name": "Luna Choker",
-    "collection": "sets",
+    "collection": [
+      "necklaces"
+    ],
     "description": "Luminous South Sea pearls hand-selected for their mirror-like luster, strung together with a signature 18k white gold clasp encrusted with micro-pav\u00e9 diamonds.",
     "materials": [
       "18k White Gold Clasp",
@@ -34,7 +38,9 @@
   {
     "id": "TRM-NC-003",
     "name": "Vesper Sapphire Necklace",
-    "collection": "necklaces",
+    "collection": [
+      "necklaces"
+    ],
     "description": "An enchanting deep royal blue sapphire oval center stone, surrounded by a double halo of sparkling diamonds, suspended from a delicate 18k white gold chain.",
     "materials": [
       "18k White Gold Chain",
@@ -51,7 +57,9 @@
   {
     "id": "TRM-NC-004",
     "name": "Starlight Necklace",
-    "collection": "necklaces",
+    "collection": [
+      "necklaces"
+    ],
     "description": "An architectural pendant in solid white gold, with micro-pav\u00e9 diamonds arranged in geometric patterns resembling the night sky.",
     "materials": [
       "18k White Gold",
@@ -66,7 +74,9 @@
   {
     "id": "TRM-ER-001",
     "name": "Elysian Emerald Drops",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Breathtaking teardrop Colombian emeralds suspended from line-styled diamond clusters in platinum settings. Designed to sway elegantly with every step.",
     "materials": [
       "Platinum 950",
@@ -83,7 +93,9 @@
   {
     "id": "TRM-ER-002",
     "name": "Solitude Gold Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Timeless solitaire studs showcasing hand-set princess-cut diamonds in a minimalist four-prong 18k yellow gold basket.",
     "materials": [
       "18k Yellow Gold",
@@ -97,7 +109,9 @@
   {
     "id": "TRM-ER-003",
     "name": "Jharokha Ruby Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Elegant triangular studs inspired by royal Jharokha archways, featuring vibrant hand-cut rubies bordering a central polki diamond floral cluster.",
     "materials": [
       "18k Yellow Gold",
@@ -112,7 +126,9 @@
   {
     "id": "TRM-ER-004",
     "name": "Mayura Dome Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Dazzling round dome-style studs featuring intricate yellow gold filigree work radiating from a brilliant-cut center diamond, bordered by a delicate halo.",
     "materials": [
       "18k Yellow Gold",
@@ -127,7 +143,9 @@
   {
     "id": "TRM-ER-005",
     "name": "Rajkumari Polki Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Exquisite round floral-shaped studs showcasing a large central slice of polki diamond enclosed in a vibrant crimson red enamel border (meenakari) and surrounded by a pear-cut polki diamond halo.",
     "materials": [
       "18k Yellow Gold",
@@ -144,7 +162,9 @@
   {
     "id": "TRM-ER-006",
     "name": "Nirvana Polki Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Timeless floral cluster studs featuring a magnificent pear-shaped (teardrop) central polki diamond slice, outlined in a delicate pav\u00e9 diamond border and framed by round polki petals.",
     "materials": [
       "18k Yellow Gold",
@@ -159,7 +179,9 @@
   {
     "id": "TRM-ER-007",
     "name": "Gulbahar Ruby Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "A masterclass in color and form, these sunflower-inspired studs feature a central uncut polki diamond bordered in gold, with vibrant pinkish-purple ruby beads radiating outwards as delicate petals.",
     "materials": [
       "18k Yellow Gold",
@@ -175,7 +197,9 @@
   {
     "id": "TRM-ER-008",
     "name": "Empress Crescent Drops",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Royal crescent-shaped drop earrings featuring a brilliant kundan cluster, a green emerald-inlay crescent (meenakari), and hanging south sea pearl drops. Perfectly matching the Empress Bridal Set.",
     "materials": [
       "22k Yellow Gold",
@@ -191,7 +215,9 @@
   {
     "id": "TRM-ER-009",
     "name": "Padma Lotus Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "Delicate and lightweight floral studs crafted in yellow gold, showcasing a central brilliant-cut diamond surrounded by a ring of ten pear-shaped uncut diamonds.",
     "materials": [
       "18k Yellow Gold",
@@ -206,7 +232,9 @@
   {
     "id": "TRM-ER-010",
     "name": "Devika Cushion Studs",
-    "collection": "earrings",
+    "collection": [
+      "earrings"
+    ],
     "description": "A contemporary blend of vintage and modern aesthetics, featuring cushion-cut polki diamonds surrounded by a double square halo of micro-pav\u00e9 diamonds.",
     "materials": [
       "18k Yellow Gold",
@@ -221,7 +249,9 @@
   {
     "id": "TRM-RG-001",
     "name": "Golden Bloom Ring",
-    "collection": "rings",
+    "collection": [
+      "rings"
+    ],
     "description": "An elegant solid gold ring adorned with delicate, hand-sculpted golden flowers set with brilliant-cut diamonds.",
     "materials": [
       "18k Yellow Gold",
@@ -235,7 +265,9 @@
   {
     "id": "TRM-BR-001",
     "name": "Golden Bloom Bracelet",
-    "collection": "bracelets",
+    "collection": [
+      "bracelets"
+    ],
     "description": "A fluid 18k solid gold chain bracelet adorned with delicate, hand-sculpted golden flowers set with brilliant-cut diamonds.",
     "materials": [
       "18k Yellow Gold",
@@ -250,7 +282,9 @@
   {
     "id": "TRM-BD-001",
     "name": "Empress Bridal Set",
-    "collection": "sets",
+    "collection": [
+      "sets"
+    ],
     "description": "A majestic bridal collar set featuring five rows of pristine seed pearls holding a grand central medallion crafted in 22k yellow gold. Encrusted with brilliant polki diamonds and a border of rich green emerald inlay (meenakari). Comes with matching crescent drop earrings.",
     "materials": [
       "22k Yellow Gold",
@@ -275,7 +309,6 @@
       "Type of stone: Moissanite Polki"
     ],
     "collection": [
-      "everyday-elegance",
       "sets"
     ],
     "images": [
@@ -320,7 +353,6 @@
       "Type of stone: Moissanite Polki"
     ],
     "collection": [
-      "everyday-elegance",
       "sets"
     ],
     "images": [
@@ -342,7 +374,6 @@
       "Type of stone: Moissanite Polki"
     ],
     "collection": [
-      "everyday-elegance",
       "sets"
     ],
     "images": [
@@ -364,7 +395,6 @@
       "Type of stone: Moissanite Polki"
     ],
     "collection": [
-      "everyday-elegance",
       "sets"
     ],
     "images": [
@@ -384,8 +414,7 @@
       "Type of stone: Moissanite Polki"
     ],
     "collection": [
-      "everyday-elegance",
-      "sets"
+      "necklaces"
     ],
     "images": [
       "assets/images/trj006_1.jpg",
@@ -659,7 +688,6 @@
       "Type of stone: Moissanite Polki, Pearls."
     ],
     "collection": [
-      "everyday-elegance",
       "sets"
     ],
     "images": [
@@ -667,6 +695,602 @@
       "assets/images/trj-ap012_2.jpg",
       "assets/images/trj-ap012_3.jpg",
       "assets/images/trj-ap012_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP020",
+    "name": "The Roohi Chandbalis",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A magnificent tribute to royal heritage, these stunning Chandbali drop earrings are meticulously handcrafted in pure 925 Sterling Silver with a rich gold polish. Perfectly blending classic Rajasthani artistry with a striking pop of festive color, these earrings embody timeless elegance for the contemporary festive wardrobe.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap020_1.jpg",
+      "assets/images/trj-ap020_2.jpg",
+      "assets/images/trj-ap020_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP024",
+    "name": "The Mayuri Pastel Bloom Jhumkas",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A breathtaking celebration of royal motifs and soft, modern color palettes, these exquisite Jhumka drop earrings are meticulously crafted in pure 925 Sterling Silver with a premium gold polish. Perfectly blending classic Indian bird iconography with contemporary gemstone bunching, these earrings offer a regal yet refreshingly delicate statement for festive celebrations.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia, Beads"
+    ],
+    "images": [
+      "assets/images/trj-ap024_1.jpg",
+      "assets/images/trj-ap024_2.jpg",
+      "assets/images/trj-ap024_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP026",
+    "name": "The Noor Mahal Chandelier Jhumkas",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A grand celebration of Mughal architecture and traditional craftsmanship, these statement shoulder-dusting Jhumka earrings are exquisitely crafted in pure 925 Sterling Silver with a rich, textured antique gold polish. Showcasing striking geometric structure, detailed Meenakari (enamel) work, and a classic tiered drape.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish with Enamel work"
+    ],
+    "images": [
+      "assets/images/trj-ap026_1.jpg",
+      "assets/images/trj-ap026_2.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP037",
+    "name": "The Nazaqat Emerald & Polki Set",
+    "collection": [
+      "sets"
+    ],
+    "description": "A grand celebration of royal Nizam heritage, this magnificent multi-layered step necklace and earring set is exquisitely handcrafted in premium 925 Sterling Silver with a rich gold polish. Reimagining the opulence of classic Jadau jewelry for the modern era, this statement piece elegantly pairs cascading lines of soft green beads with brilliant uncut-style Polki clusters to create a truly majestic silhouette.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Beads"
+    ],
+    "images": [
+      "assets/images/trj-ap037_1.jpg",
+      "assets/images/trj-ap037_2.jpg",
+      "assets/images/trj-ap037_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP038",
+    "name": "The Vinayaka Temple Heritage Haar",
+    "collection": [
+      "necklaces"
+    ],
+    "description": "A magnificent masterpiece celebrating divine iconography and ancient Indian craftsmanship, this grand Temple-style multi-strand long necklace is exquisitely handcrafted in pure 925 Sterling Silver with an authentic antique gold Nakashi finish. Reimagining the regal opulence of traditional South Indian heritage jewelry, this statement Haar features intricate carvings of Lord Ganesha, meticulously paired with layers of seed pearls and rich emerald drops.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Pearls"
+    ],
+    "images": [
+      "assets/images/trj-ap038_1.jpg",
+      "assets/images/trj-ap038_2.jpg",
+      "assets/images/trj-ap038_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP041",
+    "name": "The Navratna Heritage Cocktail Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A magnificent tribute to cosmic alignment and royal Indian heritage, this grand cocktail ring is exquisitely handcrafted in pure 925 Sterling Silver with a rich gold polish. Inspired by traditional Jadau jewelry, this statement piece features a contemporary Navratna (nine gems) layout, blending deep astrological significance with striking, regal elegance.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap041_1.jpg",
+      "assets/images/trj-ap041_2.jpg",
+      "assets/images/trj-ap041_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP043",
+    "name": "The Rajkumari Polki Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A royal statement of traditional luxury, this magnificent cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with an opulent gold polish. Drawing inspiration from classic Jadau and heritage temple jewelry, this striking piece pairs the radiant charm of uncut-style Polki stones with vibrant pink Kemp accents to create an unforgettable heirloom aesthetic.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap043_1.jpg",
+      "assets/images/trj-ap043_2.jpg",
+      "assets/images/trj-ap043_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP044",
+    "name": "The Shahi Dholki Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A breathtaking manifestation of regal Indian aesthetics, this magnificent statement cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with a premium, glowing gold polish. Embracing the classic architectural elements of royal Rajasthani jewelry, this piece highlights an iconic Dholki (drum-shaped) focal element\u2014weaving together intricate Jadau style gemstone placement, woven seed pearls, and rich festive enamel details to crown your hand with vintage majesty.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap044_1.jpg",
+      "assets/images/trj-ap044_2.jpg",
+      "assets/images/trj-ap044_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP045",
+    "name": "The Charvi Kemp & Polki Flower Cocktail Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A beautiful celebration of traditional South Indian Jadau and temple jewelry aesthetics, this striking oversized cocktail ring is meticulously handcrafted in pure 925 Sterling Silver with a premium, high-shine gold polish. Designed with a captivating concentric layout, this piece elegantly pairs radiant uncut-style stones with vibrant pink accents to create a timeless statement of heritage luxury.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap045_1.jpg",
+      "assets/images/trj-ap045_2.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP046",
+    "name": "The Aadya Classic  Cocktail Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A breathtaking celebration of pristine royal artistry, this statement cocktail ring is meticulously handcrafted in pure 925 Sterling Silver with a premium, high-shine gold polish. Celebrating the timeless allure of Mughal-era Jadau craftsmanship, this piece showcases a brilliant concentric floral design composed entirely of clear, uncut-style stones, delivering an unmatched air of vintage aristocracy.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap046_1.jpg",
+      "assets/images/trj-ap046_2.jpg",
+      "assets/images/trj-ap046_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP048",
+    "name": "The Kamal Utsav Cocktail Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A breathtaking tribute to the sacred lotus bloom, this grand statement cocktail ring is exquisitely handcrafted in pure 925 Sterling Silver with a premium gold polish. Seamlessly blending classic Rajasthani Meenakari (enamel art) with the timeless brilliance of imperial Jadau styling, this piece showcases an elegant, blooming silhouette that radiates feminine grace and royal heritage.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish & Enamel",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap048_1.jpg",
+      "assets/images/trj-ap048_2.jpg",
+      "assets/images/trj-ap048_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP049",
+    "name": "The Sitara Diamond-Cluster Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "A stunning master class in contemporary luxury and fluid grace, this exquisite statement bracelet is meticulously crafted in pure 925 Sterling Silver with a premium, high-shine rhodium finish. Inspired by the natural brilliance of the nature, this piece blends classic Indian celebratory grandeur with a sleek, modern Indo-Western silhouette.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj-ap049_1.jpg",
+      "assets/images/trj-ap049_2.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP050",
+    "name": "The Tarika Floral Tennis Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "A magnificent display of modern Indian luxury and geometric precision, this exquisite statement tennis bracelet is meticulously crafted in pure 925 Sterling Silver with a premium, high-shine rhodium finish. Inspired by the classic Phool-Patti (flower and leaf) motifs of royal Indian architecture.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj-ap050_1.jpg",
+      "assets/images/trj-ap050_2.jpg",
+      "assets/images/trj-ap050_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP051",
+    "name": "The Mayura Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "A spectacular homage to the imperial court jewelry of Rajasthan, this magnificent statement bracelet is beautifully crafted in pure 925 Sterling Silver with a rich, radiant gold polish. Showcasing a pristine marriage of traditional Meenakari (hand-painted enamel art) and intricate Jali openwork, this bracelet perfectly embodies vintage luxury and timeless Indian heritage.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish & Enamel",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj-ap051_1.jpg",
+      "assets/images/trj-ap051_2.jpg",
+      "assets/images/trj-ap051_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP055",
+    "name": "The Mayra Tennis Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "A mesmerizing tribute to modern Indian luxury and sophisticated Indo-Western styling, this exquisite statement tennis bracelet is meticulously crafted in pure 925 Sterling Silver with a premium, high-shine rhodium finish. Inspired by the warmth of festive sunshine, the piece showcases a stunning alternating pattern of vibrant canary-yellow stones and clear diamond-style crystals, bringing a fresh, contemporary opulence to your celebration wardrobe.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj-ap055_1.jpg",
+      "assets/images/trj-ap055_2.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP056",
+    "name": "The Tanvi Bangle-Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "A breathtaking fusion of contemporary geometry and traditional Indian grandeur, this masterfully structured statement bangle-bracelet is crafted in pure 925 Sterling Silver with an opulent gold polish. Designed with a striking split-shank silhouette and a dual-motif crown, this piece effortlessly bridges the gap between classic heritage aesthetics and modern Indo-Western luxury.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj-ap056_1.jpg",
+      "assets/images/trj-ap056_2.jpg",
+      "assets/images/trj-ap056_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP057",
+    "name": "The Trisha Statement Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "A bold celebration of contemporary minimalism and high-end Indo-Western luxury, this striking statement bangle-bracelet is masterfully crafted in pure 925 Sterling Silver. Showcasing a seamless blend of bright white rhodium and opulent gold finishes, this piece adapts international equestrian aesthetics into a highly sophisticated accessory for the modern Indian woman's festive-fusion wardrobe.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium and Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj-ap057_1.jpg",
+      "assets/images/trj-ap057_2.jpg",
+      "assets/images/trj-ap057_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-AP058",
+    "name": "The Trisha Dual Bangle-Bracelet",
+    "collection": [
+      "bracelets"
+    ],
+    "description": "An outstanding expression of modern Indian luxury, this elegant statement bangle-bracelet is meticulously handcrafted in pure 925 Sterling Silver with a radiant, high-shine gold polish. Combining sleek contemporary geometry with a classic touch of royalty, it serves as the perfect accessory for festive occasions.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj-ap058_1.jpg",
+      "assets/images/trj-ap058_2.jpg",
+      "assets/images/trj-ap058_3.jpg",
+      "assets/images/trj-ap058_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ009",
+    "name": "The Niloufer Chandbalis",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A breathtaking tribute to classic Nizami and Rajasthani luxury, this magnificent pair of Chandbalis is meticulously crafted in pure 925 Sterling Silver with a premium, high-shine gold polish. Celebrating traditional floral symmetry and royal adornment, these earrings display an exquisite blend of uncut-style Polki, vibrant blue stones and a radiant fringe of lustrous seed pearls.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Pearls"
+    ],
+    "images": [
+      "assets/images/trj009_1.jpg",
+      "assets/images/trj009_2.jpg",
+      "assets/images/trj009_3.jpg",
+      "assets/images/trj009_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ014",
+    "name": "The Devyani Choker Set",
+    "collection": [
+      "sets"
+    ],
+    "description": "A breathtaking celebration of traditional Indian royalty, this magnificent heritage choker necklace  and matching earrings set is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. Showcasing the majestic symmetry of royal court jewelry, this set pairs multi-layered rows of lustrous pearls with a grand, crescent-shaped Jadau centerpiece inlaid with clear stones and rich emerald-green accents.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Pearls"
+    ],
+    "images": [
+      "assets/images/trj014_1.jpg",
+      "assets/images/trj014_2.jpg",
+      "assets/images/trj014_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ015",
+    "name": "The Avani Jhumki Studs",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A magnificent tribute to the heritage splendor of traditional Indian craftsmanship, this exquisite pair of drop earrings is meticulously handcrafted in pure 925 Sterling Silver with a premium, high-shine gold polish. Embodying classic royal symmetry and festive grace, these earrings showcase a stunning combination of uncut-style Polki, rich emerald-green stone borders, and a soft, swaying fringe of lustrous pearls.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Pearls"
+    ],
+    "images": [
+      "assets/images/trj015_1.jpg",
+      "assets/images/trj015_2.jpg",
+      "assets/images/trj015_3.jpg",
+      "assets/images/trj015_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ016",
+    "name": "Neel Padma Studs",
+    "collection": [
+      "earrings"
+    ],
+    "description": "Celebrate timeless Indian elegance with these Neel Padma Studs Earrings, beautifully handcrafted in 925 Sterling Silver with a luxurious gold polish. Inspired by traditional Hindu temple jewelry, these exquisite studs feature a radiant Polki-style Moissanite centerpiece, encircled by sparkling white Moissanite stones and a graceful halo of deep blue lotus-petal motifs.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj016_1.jpg",
+      "assets/images/trj016_2.jpg",
+      "assets/images/trj016_3.jpg",
+      "assets/images/trj016_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ018",
+    "name": "The Aadrika Jhumki Studs",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A masterful expression of traditional Hindu heritage and classical Indian aestheticism, this pair of semi-oversized statement drop earrings is meticulously handcrafted in pure 925 Sterling Silver with a premium, heavy gold polish. Named Aadrika\u2014symbolizing celestial grace\u2014this exquisite design blends the vintage allure of heritage Jadau settings with deep crimson ruby accents, an intricate crescent bridge, and a rhythmic, swaying gemstone fringe.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj018_1.jpg",
+      "assets/images/trj018_2.jpg",
+      "assets/images/trj018_3.jpg",
+      "assets/images/trj018_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ019",
+    "name": "The Sia Chandbalis",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A gorgeous testament to classic heritage and royal craftsmanship, this pair of statement Chandbalis is meticulously handcrafted in pure 925 Sterling Silver with a premium, heavy gold polish. This exquisite pair blends the vintage texture of heritage Jadau settings with traditional floral motifs, delicate pearl linings, and a rich, vibrant ruby drop fringe.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Pearls"
+    ],
+    "images": [
+      "assets/images/trj019_1.jpg",
+      "assets/images/trj019_2.jpg",
+      "assets/images/trj019_3.jpg",
+      "assets/images/trj019_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ020",
+    "name": "The Ira Studs",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A magnificent tribute to traditional heritage and classical art, this pair of statement tops is meticulously handcrafted in pure 925 Sterling Silver with an opulent gold polish. This pair beautifully frames the face with a unique horseshoe-meets-lotus silhouette, combining the vintage texture of heritage Jadau settings with a vibrant crimson ruby colored border.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj020_1.jpg",
+      "assets/images/trj020_2.jpg",
+      "assets/images/trj020_3.jpg",
+      "assets/images/trj020_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ034",
+    "name": "The Uma Polki Chandbalis",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A grand testament to classic heritage and royal artistry, this pair of majestic Chandbalis is meticulously handcrafted in pure 925 Sterling Silver with a premium, heavy gold polish. This exquisite pair blends the vintage charm of heritage Jadau settings with traditional floral motifs and a fluid fringe of rice pearls.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj034_1.jpg",
+      "assets/images/trj034_2.jpg",
+      "assets/images/trj034_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ036",
+    "name": "The Riya Floral Studs",
+    "collection": [
+      "everyday-elegance",
+      "earrings"
+    ],
+    "description": "A beautiful testament to traditional elegance and everyday luxury, this classic pair of floral statement studs are meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. This delicate pair captures the organic charm of vintage Jadau jewelry in a timeless floral setting, offering a sophisticated look that transitions effortlessly from day to night.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj036_1.jpg",
+      "assets/images/trj036_2.jpg",
+      "assets/images/trj036_3.jpg",
+      "assets/images/trj036_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ037",
+    "name": "The Diya Oval Studs",
+    "collection": [
+      "earrings"
+    ],
+    "description": "A radiant celebration of traditional elegance and delicate refinement, this exquisite pair of daily-luxury statement studs is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This classic pair brings forth the soulful, vintage charm of ancestral Jadau jewelry into a perfectly proportioned silhouette designed for the modern Indian woman.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj037_1.jpg",
+      "assets/images/trj037_2.jpg",
+      "assets/images/trj037_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ042",
+    "name": "The Isha Statement Ring",
+    "collection": [
+      "rings"
+    ],
+    "description": "A grand celebration of traditional elegance and classic geometry, this magnificent statement ring is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This heirloom-quality ring displays a rich heritage layout that brings the raw, regal luster of traditional Jadau jewelry beautifully to your fingertips.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj042_1.jpg",
+      "assets/images/trj042_2.jpg",
+      "assets/images/trj042_3.jpg",
+      "assets/images/trj042_4.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ044",
+    "name": "The Riya Floral Ring",
+    "collection": [
+      "everyday-elegance",
+      "rings"
+    ],
+    "description": "A beautiful expression of traditional elegance and everyday luxury, this classic floral ring is meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. This delicate ring captures the organic charm of vintage Jadau jewelry in a timeless floral silhouette, matching the classic look of traditional studs in a highly wearable format.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
+    ],
+    "images": [
+      "assets/images/trj044_1.jpg",
+      "assets/images/trj044_2.jpg",
+      "assets/images/trj044_3.jpg"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ045",
+    "name": "The Tara Hoops",
+    "collection": [
+      "everyday-elegance",
+      "earrings"
+    ],
+    "description": "A mesmerizing blend of modern minimalist geometry and celestial inspiration, this exquisite pair of front-facing open hoop earrings is crafted in pure 925 Sterling Silver with a delicate, premium gold polish. The design mimics a glistening constellation, offering a contemporary take on traditional diamond jewelry that transitions effortlessly from elegant daytime wear to high-glamour evening affairs.",
+    "materials": [
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: 5A Cubic Zirconia"
+    ],
+    "images": [
+      "assets/images/trj045_1.jpg",
+      "assets/images/trj045_2.jpg",
+      "assets/images/trj045_3.jpg"
     ],
     "featured": false
   }
