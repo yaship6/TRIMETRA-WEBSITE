@@ -19,8 +19,8 @@ export default function Header({ currentPath }) {
 
     // Live rates state — Gold (per gram) and Silver (per gram)
     const [rates, setRates] = useState({
-        gold24k: 7520.00,
-        silver: 91.50
+        silver: 220.00,
+        gold24k: 14400.00
     });
 
     useEffect(() => {
@@ -37,36 +37,31 @@ export default function Header({ currentPath }) {
             let fetchedGold24k = null;
             let fetchedSilver = null;
 
-            // Primary Strategy: CoinGecko PAXG (Real 1:1 fine gold vault price in INR) + Gold-API Silver
+            // Indian Market conversion factors (includes ~11.5% import/custom duty, 3% GST, and local market premium)
+            const GOLD_DOMESTIC_FACTOR = 1.15;
+            const SILVER_DOMESTIC_FACTOR = 1.22;
+
+            // Primary Strategy: Gold-API INR directly
             try {
-                const [resCG, resFx, resSilver] = await Promise.all([
-                    fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold&vs_currencies=inr'),
-                    fetch('https://open.er-api.com/v6/latest/USD'),
-                    fetch('https://api.gold-api.com/price/XAG')
+                const [resG, resS] = await Promise.all([
+                    fetch('https://api.gold-api.com/price/XAU/INR'),
+                    fetch('https://api.gold-api.com/price/XAG/INR')
                 ]);
 
-                if (resCG.ok && resFx.ok && resSilver.ok) {
-                    const dataCG = await resCG.json();
-                    const dataFx = await resFx.json();
-                    const dataSilver = await resSilver.json();
+                if (resG.ok && resS.ok) {
+                    const dataG = await resG.json();
+                    const dataS = await resS.json();
 
-                    const paxGoldInr = dataCG?.['pax-gold']?.inr;
-                    const usdInr = dataFx?.rates?.INR;
-                    const silverUsd = dataSilver?.price;
-
-                    if (paxGoldInr && usdInr && silverUsd) {
-                        const rawGoldG = paxGoldInr / 31.1034768;
-                        const rawSilverG = (silverUsd * usdInr) / 31.1034768;
-
-                        fetchedGold24k = +(rawGoldG * 0.60).toFixed(2);
-                        fetchedSilver = +(rawSilverG * 0.50).toFixed(2);
+                    if (dataG?.price && dataS?.price) {
+                        fetchedGold24k = +((dataG.price / 31.1034768) * GOLD_DOMESTIC_FACTOR).toFixed(2);
+                        fetchedSilver = +((dataS.price / 31.1034768) * SILVER_DOMESTIC_FACTOR).toFixed(2);
                     }
                 }
             } catch (err) {
-                console.warn('CoinGecko primary fetch failed:', err.message);
+                console.warn('Gold-API INR primary fetch failed:', err.message);
             }
 
-            // Fallback Strategy 1: Gold-API XAU/XAG
+            // Fallback Strategy 1: Gold-API USD and exchange rate conversion
             if (!fetchedGold24k || !fetchedSilver) {
                 try {
                     const [resG, resS, resFx] = await Promise.all([
@@ -82,33 +77,40 @@ export default function Header({ currentPath }) {
                         const inrRate = dataFx?.rates?.INR;
 
                         if (dataG?.price && dataS?.price && inrRate) {
-                            const rawGoldG = (dataG.price * inrRate) / 31.1034768;
-                            const rawSilverG = (dataS.price * inrRate) / 31.1034768;
-
-                            fetchedGold24k = +(rawGoldG * 0.60).toFixed(2);
-                            fetchedSilver = +(rawSilverG * 0.50).toFixed(2);
+                            fetchedGold24k = +(((dataG.price * inrRate) / 31.1034768) * GOLD_DOMESTIC_FACTOR).toFixed(2);
+                            fetchedSilver = +(((dataS.price * inrRate) / 31.1034768) * SILVER_DOMESTIC_FACTOR).toFixed(2);
                         }
                     }
                 } catch (err) {
-                    console.warn('Gold-API fallback failed:', err.message);
+                    console.warn('Gold-API USD fallback failed:', err.message);
                 }
             }
 
-            // Fallback Strategy 2: FXRatesAPI
+            // Fallback Strategy 2: CoinGecko PAXG (Real 1:1 fine gold vault price in INR) + Gold-API Silver
             if (!fetchedGold24k || !fetchedSilver) {
                 try {
-                    const res = await fetch('https://api.fxratesapi.com/latest?currencies=XAU,XAG&base=INR');
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data?.success && data?.rates?.XAU && data?.rates?.XAG) {
-                            const rawGoldG = (1 / data.rates.XAU) / 31.1034768;
-                            const rawSilverG = (1 / data.rates.XAG) / 31.1034768;
-                            fetchedGold24k = +(rawGoldG * 0.60).toFixed(2);
-                            fetchedSilver = +(rawSilverG * 0.50).toFixed(2);
+                    const [resCG, resFx, resSilver] = await Promise.all([
+                        fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold&vs_currencies=inr'),
+                        fetch('https://open.er-api.com/v6/latest/USD'),
+                        fetch('https://api.gold-api.com/price/XAG')
+                    ]);
+
+                    if (resCG.ok && resFx.ok && resSilver.ok) {
+                        const dataCG = await resCG.json();
+                        const dataFx = await resFx.json();
+                        const dataSilver = await resSilver.json();
+
+                        const paxGoldInr = dataCG?.['pax-gold']?.inr;
+                        const usdInr = dataFx?.rates?.INR;
+                        const silverUsd = dataSilver?.price;
+
+                        if (paxGoldInr && usdInr && silverUsd) {
+                            fetchedGold24k = +((paxGoldInr / 31.1034768) * GOLD_DOMESTIC_FACTOR).toFixed(2);
+                            fetchedSilver = +(((silverUsd * usdInr) / 31.1034768) * SILVER_DOMESTIC_FACTOR).toFixed(2);
                         }
                     }
                 } catch (err) {
-                    console.warn('FXRatesAPI fallback failed:', err.message);
+                    console.warn('CoinGecko fallback failed:', err.message);
                 }
             }
 
