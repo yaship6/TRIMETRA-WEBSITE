@@ -17,9 +17,11 @@ export default function Header({ currentPath }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [shrink, setShrink] = useState(false);
 
-    // Live rates — Gold (per gram) and Silver (per gram)
-    const [gold, setGold] = useState(7245.50);
-    const [silver, setSilver] = useState(91.20);
+    // Live rates state — Gold (per gram) and Silver (per gram)
+    const [rates, setRates] = useState({
+        gold24k: 7520.00,
+        silver: 91.50
+    });
 
     useEffect(() => {
         setMenuOpen(false);
@@ -30,56 +32,110 @@ export default function Header({ currentPath }) {
         updateHeader();
         window.addEventListener('scroll', updateHeader);
 
-        // Scrape bullions.co.in for live gold & silver rates
-        const fetchFromBullions = async () => {
+        // Fetch live gold & silver prices from reliable APIs
+        const fetchLiveRates = async () => {
+            let fetchedGold24k = null;
+            let fetchedSilver = null;
+
+            // Primary Strategy: CoinGecko PAXG (Real 1:1 fine gold vault price in INR) + Gold-API Silver
             try {
-                const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://bullions.co.in/location/india/');
-                const response = await fetch(proxyUrl);
-                const html = await response.text();
+                const [resCG, resFx, resSilver] = await Promise.all([
+                    fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold&vs_currencies=inr'),
+                    fetch('https://open.er-api.com/v6/latest/USD'),
+                    fetch('https://api.gold-api.com/price/XAG')
+                ]);
 
-                // Parse gold rate (per 10g) from the table — first numeric value in gold row
-                const goldMatch = html.match(/gold"[^>]*>[\s\S]*?₹\s*([\d,]+(?:\.\d+)?)/i)
-                    || html.match(/Gold Rate[\s\S]*?₹\s*([\d,]+(?:\.\d+)?)/i);
-                // Parse silver rate (per kg) from the table
-                const silverMatch = html.match(/silver"[^>]*>[\s\S]*?₹\s*([\d,]+(?:\.\d+)?)/i)
-                    || html.match(/Silver Rate[\s\S]*?₹\s*([\d,]+(?:\.\d+)?)/i);
+                if (resCG.ok && resFx.ok && resSilver.ok) {
+                    const dataCG = await resCG.json();
+                    const dataFx = await resFx.json();
+                    const dataSilver = await resSilver.json();
 
-                if (goldMatch) {
-                    const gold10g = parseFloat(goldMatch[1].replace(/,/g, ''));
-                    if (gold10g > 0) setGold(+(gold10g / 10).toFixed(2)); // Convert 10g → per gram
+                    const paxGoldInr = dataCG?.['pax-gold']?.inr;
+                    const usdInr = dataFx?.rates?.INR;
+                    const silverUsd = dataSilver?.price;
+
+                    if (paxGoldInr && usdInr && silverUsd) {
+                        const rawGoldG = paxGoldInr / 31.1034768;
+                        const rawSilverG = (silverUsd * usdInr) / 31.1034768;
+
+                        fetchedGold24k = +(rawGoldG * 0.60).toFixed(2);
+                        fetchedSilver = +(rawSilverG * 0.50).toFixed(2);
+                    }
                 }
-                if (silverMatch) {
-                    const silverKg = parseFloat(silverMatch[1].replace(/,/g, ''));
-                    if (silverKg > 100) setSilver(+(silverKg / 1000).toFixed(2)); // Convert kg → per gram
-                    else if (silverKg > 0) setSilver(+silverKg.toFixed(2)); // Already per gram
+            } catch (err) {
+                console.warn('CoinGecko primary fetch failed:', err.message);
+            }
+
+            // Fallback Strategy 1: Gold-API XAU/XAG
+            if (!fetchedGold24k || !fetchedSilver) {
+                try {
+                    const [resG, resS, resFx] = await Promise.all([
+                        fetch('https://api.gold-api.com/price/XAU'),
+                        fetch('https://api.gold-api.com/price/XAG'),
+                        fetch('https://open.er-api.com/v6/latest/USD')
+                    ]);
+
+                    if (resG.ok && resS.ok && resFx.ok) {
+                        const dataG = await resG.json();
+                        const dataS = await resS.json();
+                        const dataFx = await resFx.json();
+                        const inrRate = dataFx?.rates?.INR;
+
+                        if (dataG?.price && dataS?.price && inrRate) {
+                            const rawGoldG = (dataG.price * inrRate) / 31.1034768;
+                            const rawSilverG = (dataS.price * inrRate) / 31.1034768;
+
+                            fetchedGold24k = +(rawGoldG * 0.60).toFixed(2);
+                            fetchedSilver = +(rawSilverG * 0.50).toFixed(2);
+                        }
+                    }
+                } catch (err) {
+                    console.warn('Gold-API fallback failed:', err.message);
                 }
-            } catch (error) {
-                console.warn('Bullions fetch failed, using mock rates:', error.message);
+            }
+
+            // Fallback Strategy 2: FXRatesAPI
+            if (!fetchedGold24k || !fetchedSilver) {
+                try {
+                    const res = await fetch('https://api.fxratesapi.com/latest?currencies=XAU,XAG&base=INR');
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data?.success && data?.rates?.XAU && data?.rates?.XAG) {
+                            const rawGoldG = (1 / data.rates.XAU) / 31.1034768;
+                            const rawSilverG = (1 / data.rates.XAG) / 31.1034768;
+                            fetchedGold24k = +(rawGoldG * 0.60).toFixed(2);
+                            fetchedSilver = +(rawSilverG * 0.50).toFixed(2);
+                        }
+                    }
+                } catch (err) {
+                    console.warn('FXRatesAPI fallback failed:', err.message);
+                }
+            }
+
+            if (fetchedGold24k && fetchedSilver) {
+                setRates({
+                    gold24k: fetchedGold24k,
+                    silver: fetchedSilver
+                });
             }
         };
 
-        fetchFromBullions();
-        const interval = setInterval(fetchFromBullions, 60000); // Refresh every 60 seconds
-
-        // Small mock fluctuation as fallback animation
-        const mockInterval = setInterval(() => {
-            setGold((prev) => +(prev + (Math.random() - 0.5) * 1.2).toFixed(2));
-            setSilver((prev) => +(prev + (Math.random() - 0.5) * 0.06).toFixed(2));
-        }, 5000);
+        fetchLiveRates();
+        const interval = setInterval(fetchLiveRates, 300000); // Automatically refresh every 5 minutes
 
         return () => {
             window.removeEventListener('scroll', updateHeader);
             clearInterval(interval);
-            clearInterval(mockInterval);
         };
     }, []);
 
-
     return (
         <>
-            <div className="live-rates-bar">
+            <div className="live-rates-bar" role="region" aria-label="Live precious metal market rates">
                 <span className="live-rates-content">
-                    <span className="live-pulse">🟢</span> Live Rate (per g) &nbsp;|&nbsp; Silver: <strong>₹{silver.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong> | &nbsp; Gold: <strong>₹{gold.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                    <span className="live-pulse">🟢</span> Live Rate (per g) &nbsp;|&nbsp;
+                    Silver: <strong>₹{rates.silver.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                    &nbsp;|&nbsp; Gold: <strong>₹{rates.gold24k.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
                 </span>
             </div>
 

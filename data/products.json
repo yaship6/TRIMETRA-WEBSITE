@@ -1,264 +1,53 @@
 [
   {
-    "id": "TRM-NC-001",
-    "name": "Aurelia Pendant",
+    "id": "TRJ-AP039",
+    "name": "The Radha Krishna Haar",
     "collection": [
       "necklaces"
     ],
-    "description": "An exquisite 18k solid yellow gold necklace featuring a brilliant-cut center diamond surrounded by delicate filigree work. Handcrafted to reflect the timeless craftsmanship of Trimetra.",
+    "description": "A breathtaking masterpiece of devotion and royal temple craftsmanship, this magnificent statement necklace (Haar) is meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. Named after the eternal divine couple Radha Krishna, this heirloom-quality creation seamlessly combines sacred idol carving with heritage Jadau settings, vibrant emerald-green beads, crimson ruby accents, and lustrous pearls.",
     "materials": [
-      "18k Yellow Gold",
-      "0.45ct Round Brilliant Diamond (VVS1, E)",
-      "Adjustable 16-18 inch gold chain"
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/necklace_1.webp"
-    ],
-    "objectPosition": "center 90%",
-    "featured": true
-  },
-  {
-    "id": "TRM-NC-002",
-    "name": "Luna Choker",
-    "collection": [
-      "necklaces"
-    ],
-    "description": "Luminous South Sea pearls hand-selected for their mirror-like luster, strung together with a signature 18k white gold clasp encrusted with micro-pav\u00e9 diamonds.",
-    "materials": [
-      "18k White Gold Clasp",
-      "Grade AAA South Sea Pearls (10-12mm)",
-      "0.15ct Pav\u00e9 Diamonds"
-    ],
-    "images": [
-      "assets/images/set_2_a.webp",
-      "assets/images/set_2_b.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-NC-003",
-    "name": "Vesper Sapphire Necklace",
-    "collection": [
-      "necklaces"
-    ],
-    "description": "An enchanting deep royal blue sapphire oval center stone, surrounded by a double halo of sparkling diamonds, suspended from a delicate 18k white gold chain.",
-    "materials": [
-      "18k White Gold Chain",
-      "1.8ct Cushion-cut Royal Blue Sapphire",
-      "0.65ct Halo & Pendant Diamonds"
-    ],
-    "images": [
-      "assets/images/necklace_2_a.webp",
-      "assets/images/necklace_2_b.webp"
-    ],
-    "objectPosition": "center 90%",
-    "featured": false
-  },
-  {
-    "id": "TRM-NC-004",
-    "name": "Starlight Necklace",
-    "collection": [
-      "necklaces"
-    ],
-    "description": "An architectural pendant in solid white gold, with micro-pav\u00e9 diamonds arranged in geometric patterns resembling the night sky.",
-    "materials": [
-      "18k White Gold",
-      "2.4ct Pav\u00e9-set Diamonds (VS2, F-G)",
-      "Adjustable 16-18 inch gold chain"
-    ],
-    "images": [
-      "assets/images/necklace_3.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-ER-001",
-    "name": "Elysian Emerald Drops",
-    "collection": [
-      "earrings"
-    ],
-    "description": "Breathtaking teardrop Colombian emeralds suspended from line-styled diamond clusters in platinum settings. Designed to sway elegantly with every step.",
-    "materials": [
-      "Platinum 950",
-      "2.1ct Pear-cut Colombian Emeralds (Total Weight)",
-      "0.8ct Round Brilliant Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_1.webp",
-      "assets/images/earrings_1_b.webp",
-      "assets/images/earrings_1_c.webp"
+      "assets/images/trj-ap039_1.png"
     ],
     "featured": true
   },
   {
-    "id": "TRM-ER-002",
-    "name": "Solitude Gold Studs",
+    "id": "TRJ-AP040",
+    "name": "The Maya Diamond Haar",
     "collection": [
-      "earrings"
+      "necklaces"
     ],
-    "description": "Timeless solitaire studs showcasing hand-set princess-cut diamonds in a minimalist four-prong 18k yellow gold basket.",
+    "description": "A radiant tribute to modern royal aesthetics and celestial elegance, this breathtaking long statement necklace is meticulously crafted in pure 925 Sterling Silver with a rhodium finish. This exquisite piece reinterprets the traditional long heritage necklace into a sleek, red-carpet-worthy diamond masterpiece.",
     "materials": [
-      "18k Yellow Gold",
-      "1.0ct Princess-cut Diamonds (Pair, VS2, F)"
+      "Metal type: 925 Sterling Silver",
+      "Polish: Rhodium",
+      "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/earrings_2.webp"
+      "assets/images/trj-ap040_1.png"
     ],
     "featured": false
   },
   {
-    "id": "TRM-ER-003",
-    "name": "Jharokha Ruby Studs",
+    "id": "TRJ-AP022",
+    "name": "The Radhika Jhumkas",
     "collection": [
       "earrings"
     ],
-    "description": "Elegant triangular studs inspired by royal Jharokha archways, featuring vibrant hand-cut rubies bordering a central polki diamond floral cluster.",
+    "description": "A breathtaking expression of traditional heritage and imperial grandeur, this magnificent pair of statement Jhumkas is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This pair seamlessly marries the vintage luster of heritage Jadau settings with rich emerald-green enamel, radiant teardrop stones, and a fluid fringe of pearls and emerald beads.",
     "materials": [
-      "18k Yellow Gold",
-      "Natural Rubies",
-      "Uncut Polki Diamonds"
+      "Metal type: 925 Sterling Silver",
+      "Polish: Gold Polish",
+      "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/earrings_3.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-ER-004",
-    "name": "Mayura Dome Studs",
-    "collection": [
-      "earrings"
-    ],
-    "description": "Dazzling round dome-style studs featuring intricate yellow gold filigree work radiating from a brilliant-cut center diamond, bordered by a delicate halo.",
-    "materials": [
-      "18k Yellow Gold",
-      "1.25ct Brilliant-cut Center Diamonds",
-      "Micro-pav\u00e9 Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_4.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-ER-005",
-    "name": "Rajkumari Polki Studs",
-    "collection": [
-      "earrings"
-    ],
-    "description": "Exquisite round floral-shaped studs showcasing a large central slice of polki diamond enclosed in a vibrant crimson red enamel border (meenakari) and surrounded by a pear-cut polki diamond halo.",
-    "materials": [
-      "18k Yellow Gold",
-      "Premium Polki Diamond Slices",
-      "Hand-painted Enamel (Meenakari)",
-      "0.9ct Brilliant-cut Accent Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_5.webp",
-      "assets/images/earrings_6.webp"
-    ],
-    "featured": true
-  },
-  {
-    "id": "TRM-ER-006",
-    "name": "Nirvana Polki Studs",
-    "collection": [
-      "earrings"
-    ],
-    "description": "Timeless floral cluster studs featuring a magnificent pear-shaped (teardrop) central polki diamond slice, outlined in a delicate pav\u00e9 diamond border and framed by round polki petals.",
-    "materials": [
-      "18k Yellow Gold",
-      "Pear-shaped Polki Diamonds",
-      "0.4ct Pav\u00e9 Accent Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_7.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-ER-007",
-    "name": "Gulbahar Ruby Studs",
-    "collection": [
-      "earrings"
-    ],
-    "description": "A masterclass in color and form, these sunflower-inspired studs feature a central uncut polki diamond bordered in gold, with vibrant pinkish-purple ruby beads radiating outwards as delicate petals.",
-    "materials": [
-      "18k Yellow Gold",
-      "Central Polki Diamonds",
-      "Fine Ruby Beads (Tumbles)",
-      "Pav\u00e9 Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_8.webp"
-    ],
-    "featured": true
-  },
-  {
-    "id": "TRM-ER-008",
-    "name": "Empress Crescent Drops",
-    "collection": [
-      "earrings"
-    ],
-    "description": "Royal crescent-shaped drop earrings featuring a brilliant kundan cluster, a green emerald-inlay crescent (meenakari), and hanging south sea pearl drops. Perfectly matching the Empress Bridal Set.",
-    "materials": [
-      "22k Yellow Gold",
-      "Uncut Kundan/Polki Diamonds",
-      "Emerald Inlay",
-      "South Sea Pearl Drops"
-    ],
-    "images": [
-      "assets/images/earrings_9.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-ER-009",
-    "name": "Padma Lotus Studs",
-    "collection": [
-      "earrings"
-    ],
-    "description": "Delicate and lightweight floral studs crafted in yellow gold, showcasing a central brilliant-cut diamond surrounded by a ring of ten pear-shaped uncut diamonds.",
-    "materials": [
-      "18k Yellow Gold",
-      "Uncut Polki Diamonds",
-      "Brilliant-cut Accent Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_10.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-ER-010",
-    "name": "Devika Cushion Studs",
-    "collection": [
-      "earrings"
-    ],
-    "description": "A contemporary blend of vintage and modern aesthetics, featuring cushion-cut polki diamonds surrounded by a double square halo of micro-pav\u00e9 diamonds.",
-    "materials": [
-      "18k Yellow Gold",
-      "Cushion-cut Polki Diamonds",
-      "0.55ct Micro-pav\u00e9 Diamonds"
-    ],
-    "images": [
-      "assets/images/earrings_11.webp"
-    ],
-    "featured": false
-  },
-  {
-    "id": "TRM-RG-001",
-    "name": "Golden Bloom Ring",
-    "collection": [
-      "rings"
-    ],
-    "description": "An elegant solid gold ring adorned with delicate, hand-sculpted golden flowers set with brilliant-cut diamonds.",
-    "materials": [
-      "18k Yellow Gold",
-      "0.6ct Round Brilliant Diamonds"
-    ],
-    "images": [
-      "assets/images/ring_1.webp"
+      "assets/images/trj-ap022_1.jpg",
+      "assets/images/earrings_1.webp"
     ],
     "featured": true
   },
@@ -768,7 +557,9 @@
     "images": [
       "assets/images/trj-ap037_1.jpg",
       "assets/images/trj-ap037_2.jpg",
-      "assets/images/trj-ap037_3.jpg"
+      "assets/images/trj-ap037_3.jpg",
+      "assets/images/set_2_a.webp",
+      "assets/images/set_2_b.webp"
     ],
     "featured": false
   },
@@ -844,7 +635,8 @@
     "images": [
       "assets/images/trj-ap044_1.jpg",
       "assets/images/trj-ap044_2.jpg",
-      "assets/images/trj-ap044_3.jpg"
+      "assets/images/trj-ap044_3.jpg",
+      "assets/images/ring_1.webp"
     ],
     "featured": false
   },
