@@ -54,7 +54,8 @@
     "location": {
       "address": "03, Ground floor, Zarine building, 4th Road, opp. Bhabha Hospital, Bandra W, Mumbai 400050.",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM (By Appointment Only)",
-      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d21487.134978818376!2d72.83457704894452!3d19.061490269925656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s03%2C%20Ground%20floor%2C%20Zarine%20building%2C%204th%20Road%2C%20opp.%20Bhabha%20Hospital%2C%20Bandra%20W%2C%20Mumbai%20400050!5e1!3m2!1sen!2sin!4v1782890304323!5m2!1sen!2sin"
+      "mapEmbedUrl": "https://maps.google.com/maps?q=03%2C+Ground+floor%2C+Zarine+building%2C+4th+Road%2C+opp.+Bhabha+Hospital%2C+Bandra+W%2C+Mumbai+400050&t=&z=16&ie=UTF8&iwloc=B&output=embed",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=03%2C+Ground+floor%2C+Zarine+building%2C+4th+Road%2C+opp.+Bhabha+Hospital%2C+Bandra+W%2C+Mumbai+400050"
     }
   },
   "founderStory": {

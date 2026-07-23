@@ -127,6 +127,41 @@ export default function Contact({ contact }) {
                 </div>
 
                 <section className="map-section reveal-on-scroll">
+                    {contact.location.mapUrl && (
+                        <div className="map-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                            <span style={{ fontWeight: 600, color: 'var(--color-magenta)', fontSize: '0.95rem' }}>
+                                <i className="fas fa-map-marker-alt" style={{ marginRight: '8px' }}></i> Showroom Location
+                            </span>
+                            <a 
+                                href={contact.location.mapUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '6px',
+                                    padding: '6px 16px',
+                                    fontSize: '0.85rem',
+                                    fontWeight: 500,
+                                    color: 'var(--color-magenta)',
+                                    border: '1px solid var(--color-magenta)',
+                                    borderRadius: '20px',
+                                    textDecoration: 'none',
+                                    transition: 'all 0.3s ease'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.background = 'var(--color-magenta)';
+                                    e.currentTarget.style.color = '#ffffff';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.background = 'transparent';
+                                    e.currentTarget.style.color = 'var(--color-magenta)';
+                                }}
+                            >
+                                <i className="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    )}
                     <div className="map-container">
                         <iframe src={contact.location.mapEmbedUrl} allowFullScreen loading="lazy" title="Trimetra showroom map" />
                     </div>
