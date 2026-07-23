@@ -163,7 +163,7 @@ export default function Contact({ contact }) {
                         </div>
                     )}
                     <div className="map-container">
-                        <iframe src={contact.location.mapEmbedUrl} allowFullScreen loading="lazy" title="Trimetra showroom map" />
+                        <iframe src={contact.location.mapEmbedUrl} allowFullScreen loading="lazy" title="Trimetra showroom map" referrerPolicy="no-referrer-when-downgrade" />
                     </div>
                 </section>
             </div>
