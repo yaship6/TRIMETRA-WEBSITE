@@ -80,7 +80,7 @@ export default function Collections({ products, content, initialFilter }) {
                     {filteredProducts.length === 0 ? (
                         <div className="empty-catalog">
                             <i className="far fa-gem" />
-                            <h3>No jewelry pieces found</h3>
+                            <h3>No Jewellery pieces found</h3>
                             <p>We are currently updating our collection.</p>
                         </div>
                     ) : (

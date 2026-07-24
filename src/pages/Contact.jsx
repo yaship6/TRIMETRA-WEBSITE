@@ -162,9 +162,24 @@ export default function Contact({ contact }) {
                             </a>
                         </div>
                     )}
-                    <div className="map-container">
-                        <iframe src={contact.location.mapEmbedUrl} allowFullScreen loading="lazy" title="Trimetra showroom map" referrerPolicy="no-referrer-when-downgrade" />
-                    </div>
+                    <a 
+                        href={contact.location.mapUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="map-link-wrapper" 
+                        style={{ display: 'block', textDecoration: 'none', cursor: 'pointer' }}
+                    >
+                        <div className="map-container">
+                            <iframe 
+                                src={contact.location.mapEmbedUrl} 
+                                allowFullScreen 
+                                loading="lazy" 
+                                title="Trimetra showroom map" 
+                                referrerPolicy="no-referrer-when-downgrade" 
+                                style={{ pointerEvents: 'none' }}
+                            />
+                        </div>
+                    </a>
                 </section>
             </div>
         </div>

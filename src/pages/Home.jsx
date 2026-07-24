@@ -162,7 +162,10 @@ export default function Home({ products, content }) {
                                     alt={value.title}
                                     className="circle-image"
                                     loading="lazy"
-                                    style={{ objectPosition: value.backgroundPosition || 'center' }}
+                                    style={{ 
+                                        objectPosition: value.backgroundPosition || 'center',
+                                        filter: key === 'necklaces' ? 'brightness(1.35) contrast(1.05) saturate(1.1)' : undefined
+                                    }}
                                 />
                             </div>
                             <span className="circle-label">{value.title}</span>
@@ -204,7 +207,7 @@ export default function Home({ products, content }) {
                     <h2>Bespoke Creations</h2>
                     <p>Looking for a custom length, or a completely personalized design? Connect with our master concierge via WhatsApp for dedicated advice.</p>
                     <a
-                        href={whatsappLink(content.contact.whatsapp.number, 'Hello Trimetra, I would like to consult on a custom/bespoke jewelry piece.')}
+                        href={whatsappLink(content.contact.whatsapp.number, 'Hello Trimetra, I would like to consult on a custom/bespoke Jewellery piece.')}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="gold-btn"

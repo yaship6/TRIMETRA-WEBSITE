@@ -6,14 +6,14 @@
   },
   "hero": {
     "title": "Sculpted in Gold. Defined by Brilliance.",
-    "subtitle": "Discover Trimetra's fine jewelry collection, handcrafted with conflict-free diamonds, grade-AAA pearls, and solid 18k gold.",
+    "subtitle": "Discover Trimetra's fine jewellery collection, handcrafted with conflict-free diamonds, grade-AAA pearls, and solid 18k gold.",
     "ctaText": "Explore Collections",
     "ctaLink": "#/collections"
   },
   "brandStory": {
     "title": "The Trimetra Story",
     "paragraphs": [
-      "Founded on the principles of design purity, mathematical precision, and exceptional hand-craftsmanship, Trimetra creates fine jewelry that transcends fleeting trends. The name Trimetra is derived from the fusion of symmetry, material integrity, and artistic vision.",
+      "Founded on the principles of design purity, mathematical precision, and exceptional hand-craftsmanship, Trimetra creates fine jewellery that transcends fleeting trends. The name Trimetra is derived from the fusion of symmetry, material integrity, and artistic vision.",
       "Each design starts with a hand-drawn sketch and is brought to life by master artisans who have spent decades perfecting their craft. We source only the finest raw materials\u2014ethically and sustainably\u2014to ensure that every piece is not only beautiful but also a responsible heirloom for the future."
     ]
   },
@@ -54,7 +54,7 @@
     "location": {
       "address": "03, Ground floor, Zarine building, 4th Road, opp. Bhabha Hospital, Bandra W, Mumbai 400050.",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM (By Appointment Only)",
-      "mapEmbedUrl": "https://maps.google.com/maps?q=Zarine+Building%2C+4th+Road%2C+opp.+Bhabha+Hospital%2C+Bandra+West%2C+Mumbai+400050&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=72.82605%2C19.05104%2C72.83205%2C19.05504&layer=mapnik&marker=19.05304%2C72.82905",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=03%2C+Ground+floor%2C+Zarine+building%2C+4th+Road%2C+opp.+Bhabha+Hospital%2C+Bandra+W%2C+Mumbai+400050"
     }
   },
@@ -99,11 +99,11 @@
     },
     "everyday-elegance": {
       "title": "Everyday Elegance",
-      "image": "assets/images/earrings_2.webp"
+      "image": "assets/images/everyday_elegance_user.png"
     },
     "necklaces": {
       "title": "Necklaces & Pendants",
-      "image": "assets/images/necklace_3.webp"
+      "image": "assets/images/trj-ap040_1.png"
     },
     "earrings": {
       "title": "Earrings",
@@ -119,7 +119,7 @@
     },
     "sets": {
       "title": "Signature Jewellery Sets",
-      "image": "assets/images/set_a.webp",
+      "image": "assets/images/set_c.webp",
       "backgroundPosition": "center 30%"
     },
     "coins": {

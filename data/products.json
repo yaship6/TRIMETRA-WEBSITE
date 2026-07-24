@@ -12,8 +12,10 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
+      "assets/images/trj-ap039_2.webp",
       "assets/images/trj-ap039_1.png"
     ],
+    "objectPosition": "center 88%",
     "featured": true
   },
   {
@@ -91,7 +93,7 @@
   {
     "id": "TRJ001",
     "name": "The Gulnaz Heritage Choker Set",
-    "description": "A breathtaking celebration of timeless Indian craftsmanship, this exquisite 925 Sterling Silver Jadau-inspired choker set is dipped in luxurious a gold polish. Perfectly blending regal opulence with vintage charm, this set is designed for the modern bride and connoisseur of heritage jewelry.",
+    "description": "A breathtaking celebration of timeless Indian craftsmanship, this exquisite 925 Sterling Silver Jadau-inspired choker set is dipped in luxurious a gold polish. Perfectly blending regal opulence with vintage charm, this set is designed for the modern bride and connoisseur of heritage jewellery.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -342,7 +344,7 @@
   {
     "id": "TRJ-AP006",
     "name": "The Dilnaz Pearl & Baguette Pendant Set",
-    "description": "A beautiful celebration of modern romance and minimalist sophistication, this delicate heart-themed pendant and earring set is meticulously crafted in pure 925 Sterling Silver with a high-shine rhodium polish. Combining diamond-like CZ geometric precision with the timeless, soft grace of a moti (pearl), it is designed for the contemporary Indian woman who loves chic, versatile jewelry.",
+    "description": "A beautiful celebration of modern romance and minimalist sophistication, this delicate heart-themed pendant and earring set is meticulously crafted in pure 925 Sterling Silver with a high-shine rhodium polish. Combining diamond-like CZ geometric precision with the timeless, soft grace of a moti (pearl), it is designed for the contemporary Indian woman who loves chic, versatile jewellery.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Rhodium Polish",
@@ -384,7 +386,7 @@
   {
     "id": "TRJ-AP008",
     "name": "The Sia Floral Mangalsutra Set",
-    "description": "A beautiful celebration of sacred marital bonds and modern minimalism, this exquisite Mangalsutra and earring set is meticulously crafted in pure 925 Sterling Silver with premium gold polish. Designed for the contemporary Indian bride, it seamlessly reimagines traditional auspicious jewelry into a sleek, everyday luxury piece.",
+    "description": "A beautiful celebration of sacred marital bonds and modern minimalism, this exquisite Mangalsutra and earring set is meticulously crafted in pure 925 Sterling Silver with premium gold polish. Designed for the contemporary Indian bride, it seamlessly reimagines traditional auspicious jewellery into a sleek, everyday luxury piece.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -470,7 +472,7 @@
   {
     "id": "TRJ-AP012",
     "name": "The Meera Fusion Necklace Set",
-    "description": "A breathtaking celebration of classic Indian heritage reimagined for the modern era, this exquisite pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a rich, antique gold polish. Drawing inspiration from timeless Jadau and Meenakari jewelry forms, this set seamlessly blends regal emerald tones with luminous pearl accents to create an elegant heirloom-quality statement.",
+    "description": "A breathtaking celebration of classic Indian heritage reimagined for the modern era, this exquisite pendant and earring set is beautifully crafted in pure 925 Sterling Silver with a rich, antique gold polish. Drawing inspiration from timeless Jadau and Meenakari Jewellery forms, this set seamlessly blends regal emerald tones with luminous pearl accents to create an elegant heirloom-quality statement.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -548,7 +550,7 @@
     "collection": [
       "sets"
     ],
-    "description": "A grand celebration of royal Nizam heritage, this magnificent multi-layered step necklace and earring set is exquisitely handcrafted in premium 925 Sterling Silver with a rich gold polish. Reimagining the opulence of classic Jadau jewelry for the modern era, this statement piece elegantly pairs cascading lines of soft green beads with brilliant uncut-style Polki clusters to create a truly majestic silhouette.",
+    "description": "A grand celebration of royal Nizam heritage, this magnificent multi-layered step necklace and earring set is exquisitely handcrafted in premium 925 Sterling Silver with a rich gold polish. Reimagining the opulence of classic Jadau jewellery for the modern era, this statement piece elegantly pairs cascading lines of soft green beads with brilliant uncut-style Polki clusters to create a truly majestic silhouette.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -569,7 +571,7 @@
     "collection": [
       "necklaces"
     ],
-    "description": "A magnificent masterpiece celebrating divine iconography and ancient Indian craftsmanship, this grand Temple-style multi-strand long necklace is exquisitely handcrafted in pure 925 Sterling Silver with an authentic antique gold Nakashi finish. Reimagining the regal opulence of traditional South Indian heritage jewelry, this statement Haar features intricate carvings of Lord Ganesha, meticulously paired with layers of seed pearls and rich emerald drops.",
+    "description": "A magnificent masterpiece celebrating divine iconography and ancient Indian craftsmanship, this grand Temple-style multi-strand long necklace is exquisitely handcrafted in pure 925 Sterling Silver with an authentic antique gold Nakashi finish. Reimagining the regal opulence of traditional South Indian heritage Jewellery, this statement Haar features intricate carvings of Lord Ganesha, meticulously paired with layers of seed pearls and rich emerald drops.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -580,6 +582,7 @@
       "assets/images/trj-ap038_2.jpg",
       "assets/images/trj-ap038_3.jpg"
     ],
+    "objectPosition": "center bottom",
     "featured": false
   },
   {
@@ -588,7 +591,7 @@
     "collection": [
       "rings"
     ],
-    "description": "A magnificent tribute to cosmic alignment and royal Indian heritage, this grand cocktail ring is exquisitely handcrafted in pure 925 Sterling Silver with a rich gold polish. Inspired by traditional Jadau jewelry, this statement piece features a contemporary Navratna (nine gems) layout, blending deep astrological significance with striking, regal elegance.",
+    "description": "A magnificent tribute to cosmic alignment and royal Indian heritage, this grand cocktail ring is exquisitely handcrafted in pure 925 Sterling Silver with a rich gold polish. Inspired by traditional Jadau Jewellery, this statement piece features a contemporary Navratna (nine gems) layout, blending deep astrological significance with striking, regal elegance.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -607,7 +610,7 @@
     "collection": [
       "rings"
     ],
-    "description": "A royal statement of traditional luxury, this magnificent cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with an opulent gold polish. Drawing inspiration from classic Jadau and heritage temple jewelry, this striking piece pairs the radiant charm of uncut-style Polki stones with vibrant pink Kemp accents to create an unforgettable heirloom aesthetic.",
+    "description": "A royal statement of traditional luxury, this magnificent cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with an opulent gold polish. Drawing inspiration from classic Jadau and heritage temple Jewellery, this striking piece pairs the radiant charm of uncut-style Polki stones with vibrant pink Kemp accents to create an unforgettable heirloom aesthetic.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -626,7 +629,7 @@
     "collection": [
       "rings"
     ],
-    "description": "A breathtaking manifestation of regal Indian aesthetics, this magnificent statement cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with a premium, glowing gold polish. Embracing the classic architectural elements of royal Rajasthani jewelry, this piece highlights an iconic Dholki (drum-shaped) focal element\u2014weaving together intricate Jadau style gemstone placement, woven seed pearls, and rich festive enamel details to crown your hand with vintage majesty.",
+    "description": "A breathtaking manifestation of regal Indian aesthetics, this magnificent statement cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with a premium, glowing gold polish. Embracing the classic architectural elements of royal Rajasthani Jewellery, this piece highlights an iconic Dholki (drum-shaped) focal element\u2014weaving together intricate Jadau style gemstone placement, woven seed pearls, and rich festive enamel details to crown your hand with vintage majesty.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -646,7 +649,7 @@
     "collection": [
       "rings"
     ],
-    "description": "A beautiful celebration of traditional South Indian Jadau and temple jewelry aesthetics, this striking oversized cocktail ring is meticulously handcrafted in pure 925 Sterling Silver with a premium, high-shine gold polish. Designed with a captivating concentric layout, this piece elegantly pairs radiant uncut-style stones with vibrant pink accents to create a timeless statement of heritage luxury.",
+    "description": "A beautiful celebration of traditional South Indian Jadau and temple Jewellery aesthetics, this striking oversized cocktail ring is meticulously handcrafted in pure 925 Sterling Silver with a premium, high-shine gold polish. Designed with a captivating concentric layout, this piece elegantly pairs radiant uncut-style stones with vibrant pink accents to create a timeless statement of heritage luxury.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -739,7 +742,7 @@
     "collection": [
       "bracelets"
     ],
-    "description": "A spectacular homage to the imperial court jewelry of Rajasthan, this magnificent statement bracelet is beautifully crafted in pure 925 Sterling Silver with a rich, radiant gold polish. Showcasing a pristine marriage of traditional Meenakari (hand-painted enamel art) and intricate Jali openwork, this bracelet perfectly embodies vintage luxury and timeless Indian heritage.",
+    "description": "A spectacular homage to the imperial court Jewellery of Rajasthan, this magnificent statement bracelet is beautifully crafted in pure 925 Sterling Silver with a rich, radiant gold polish. Showcasing a pristine marriage of traditional Meenakari (hand-painted enamel art) and intricate Jali openwork, this bracelet perfectly embodies vintage luxury and timeless Indian heritage.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish & Enamel",
@@ -854,7 +857,7 @@
     "collection": [
       "sets"
     ],
-    "description": "A breathtaking celebration of traditional Indian royalty, this magnificent heritage choker necklace  and matching earrings set is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. Showcasing the majestic symmetry of royal court jewelry, this set pairs multi-layered rows of lustrous pearls with a grand, crescent-shaped Jadau centerpiece inlaid with clear stones and rich emerald-green accents.",
+    "description": "A breathtaking celebration of traditional Indian royalty, this magnificent heritage choker necklace  and matching earrings set is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. Showcasing the majestic symmetry of royal court Jewellery, this set pairs multi-layered rows of lustrous pearls with a grand, crescent-shaped Jadau centerpiece inlaid with clear stones and rich emerald-green accents.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -893,7 +896,7 @@
     "collection": [
       "earrings"
     ],
-    "description": "Celebrate timeless Indian elegance with these Neel Padma Studs Earrings, beautifully handcrafted in 925 Sterling Silver with a luxurious gold polish. Inspired by traditional Hindu temple jewelry, these exquisite studs feature a radiant Polki-style Moissanite centerpiece, encircled by sparkling white Moissanite stones and a graceful halo of deep blue lotus-petal motifs.",
+    "description": "Celebrate timeless Indian elegance with these Neel Padma Studs Earrings, beautifully handcrafted in 925 Sterling Silver with a luxurious gold polish. Inspired by traditional Hindu temple Jewellery, these exquisite studs feature a radiant Polki-style Moissanite centerpiece, encircled by sparkling white Moissanite stones and a graceful halo of deep blue lotus-petal motifs.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -993,7 +996,7 @@
       "everyday-elegance",
       "earrings"
     ],
-    "description": "A beautiful testament to traditional elegance and everyday luxury, this classic pair of floral statement studs are meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. This delicate pair captures the organic charm of vintage Jadau jewelry in a timeless floral setting, offering a sophisticated look that transitions effortlessly from day to night.",
+    "description": "A beautiful testament to traditional elegance and everyday luxury, this classic pair of floral statement studs are meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. This delicate pair captures the organic charm of vintage Jadau Jewellery in a timeless floral setting, offering a sophisticated look that transitions effortlessly from day to night.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -1013,7 +1016,7 @@
     "collection": [
       "earrings"
     ],
-    "description": "A radiant celebration of traditional elegance and delicate refinement, this exquisite pair of daily-luxury statement studs is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This classic pair brings forth the soulful, vintage charm of ancestral Jadau jewelry into a perfectly proportioned silhouette designed for the modern Indian woman.",
+    "description": "A radiant celebration of traditional elegance and delicate refinement, this exquisite pair of daily-luxury statement studs is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This classic pair brings forth the soulful, vintage charm of ancestral Jadau Jewellery into a perfectly proportioned silhouette designed for the modern Indian woman.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -1032,7 +1035,7 @@
     "collection": [
       "rings"
     ],
-    "description": "A grand celebration of traditional elegance and classic geometry, this magnificent statement ring is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This heirloom-quality ring displays a rich heritage layout that brings the raw, regal luster of traditional Jadau jewelry beautifully to your fingertips.",
+    "description": "A grand celebration of traditional elegance and classic geometry, this magnificent statement ring is meticulously handcrafted in pure 925 Sterling Silver with an opulent, high-shine gold polish. This heirloom-quality ring displays a rich heritage layout that brings the raw, regal luster of traditional Jadau Jewellery beautifully to your fingertips.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -1053,7 +1056,7 @@
       "everyday-elegance",
       "rings"
     ],
-    "description": "A beautiful expression of traditional elegance and everyday luxury, this classic floral ring is meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. This delicate ring captures the organic charm of vintage Jadau jewelry in a timeless floral silhouette, matching the classic look of traditional studs in a highly wearable format.",
+    "description": "A beautiful expression of traditional elegance and everyday luxury, this classic floral ring is meticulously handcrafted in pure 925 Sterling Silver with an opulent, heavy gold polish. This delicate ring captures the organic charm of vintage Jadau Jewellery in a timeless floral silhouette, matching the classic look of traditional studs in a highly wearable format.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -1073,7 +1076,7 @@
       "everyday-elegance",
       "earrings"
     ],
-    "description": "A mesmerizing blend of modern minimalist geometry and celestial inspiration, this exquisite pair of front-facing open hoop earrings is crafted in pure 925 Sterling Silver with a delicate, premium gold polish. The design mimics a glistening constellation, offering a contemporary take on traditional diamond jewelry that transitions effortlessly from elegant daytime wear to high-glamour evening affairs.",
+    "description": "A mesmerizing blend of modern minimalist geometry and celestial inspiration, this exquisite pair of front-facing open hoop earrings is crafted in pure 925 Sterling Silver with a delicate, premium gold polish. The design mimics a glistening constellation, offering a contemporary take on traditional diamond Jewellery that transitions effortlessly from elegant daytime wear to high-glamour evening affairs.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
