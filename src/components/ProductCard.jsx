@@ -24,7 +24,8 @@ export default function ProductCard({ product, featured = false, disableHover = 
         setIsWishlisted(!isWishlisted);
     };
 
-    const hasHoverImage = product.images[1] && !disableHover;
+    const images = Array.from(new Set(product.images || []));
+    const hasHoverImage = images[1] && !disableHover;
 
     return (
         <div className="product-card fade-in-section">
@@ -37,7 +38,7 @@ export default function ProductCard({ product, featured = false, disableHover = 
                         </div>
                     )}
                     <img
-                        src={imageUrl(product.images[0])}
+                        src={imageUrl(images[0])}
                         alt={product.name}
                         className={`product-card-img primary-image ${hasHoverImage ? 'has-hover' : ''}`}
                         loading="lazy"
@@ -45,7 +46,7 @@ export default function ProductCard({ product, featured = false, disableHover = 
                     />
                     {hasHoverImage && (
                         <img
-                            src={imageUrl(product.images[1])}
+                            src={imageUrl(images[1])}
                             alt={`${product.name} alternate view`}
                             className="product-card-img hover-image"
                             loading="lazy"

@@ -9,8 +9,6 @@ import Collections from './pages/Collections.jsx';
 import ProductDetails from './pages/ProductDetails.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
-import RefundPolicy from './pages/RefundPolicy.jsx';
-import ShippingPolicy from './pages/ShippingPolicy.jsx';
 import JewelleryCare from './pages/JewelleryCare.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import ComingSoon from './components/ComingSoon.jsx';
@@ -46,14 +44,6 @@ function getPage(route, addToRecentlyViewed) {
 
     if (path === '/contact') {
         return <Contact contact={content.contact} />;
-    }
-
-    if (path === '/refund-policy') {
-        return <RefundPolicy />;
-    }
-
-    if (path === '/shipping-policy') {
-        return <ShippingPolicy />;
     }
 
     if (path === '/jewellery-care') {

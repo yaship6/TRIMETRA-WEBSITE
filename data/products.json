@@ -48,8 +48,7 @@
       "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/trj-ap022_1.jpg",
-      "assets/images/earrings_1.webp"
+      "assets/images/trj-ap022_1.jpg"
     ],
     "featured": true
   },
@@ -559,9 +558,7 @@
     "images": [
       "assets/images/trj-ap037_1.jpg",
       "assets/images/trj-ap037_2.jpg",
-      "assets/images/trj-ap037_3.jpg",
-      "assets/images/set_2_a.webp",
-      "assets/images/set_2_b.webp"
+      "assets/images/trj-ap037_3.jpg"
     ],
     "featured": false
   },
@@ -638,8 +635,7 @@
     "images": [
       "assets/images/trj-ap044_1.jpg",
       "assets/images/trj-ap044_2.jpg",
-      "assets/images/trj-ap044_3.jpg",
-      "assets/images/ring_1.webp"
+      "assets/images/trj-ap044_3.jpg"
     ],
     "featured": false
   },

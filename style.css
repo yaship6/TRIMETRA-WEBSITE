@@ -1669,13 +1669,15 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .main-image-viewport {
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
     background: #ffffff;
-    border: 1px solid var(--border-color);
+    border: none;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1685,11 +1687,12 @@ p {
 
 .main-image-viewport img {
     max-width: 100%;
-    max-height: 760px;
-    width: auto;
+    max-height: 70vh;
+    width: 100%;
     height: auto;
     object-fit: contain;
-    padding: 0;
+    padding: 12px;
+    box-sizing: border-box;
     background-color: #ffffff;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
@@ -3182,9 +3185,45 @@ p {
     }
 
     /* Product Details */
+    .product-details-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .product-details-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 35px;
+    }
+
+    .product-gallery {
+        width: 100%;
+    }
+
+    .main-image-viewport {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-image-viewport img {
+        width: 100%;
+        height: auto;
+        max-height: 55vh;
+        object-fit: contain;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .gallery-thumbnails {
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+        padding: 4px 0;
+    }
+
+    .gallery-thumbnail {
+        width: 65px;
+        height: 65px;
     }
 
     .product-info-panel {
@@ -6922,4 +6961,269 @@ html.lenis-smooth body {
     .lightbox-arrow.next-arrow {
         right: 15px;
     }
+}
+
+/* ==========================================================================
+   JEWELLERY CARE GRID BOX — Visual 6-card care guide
+   ========================================================================== */
+.jewellery-care-box {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 36px 24px;
+    max-width: 520px;
+    margin: 40px auto;
+    box-shadow: none;
+    position: relative;
+    text-align: center;
+}
+
+.jewellery-care-box.compact {
+    max-width: 100%;
+    margin: 15px 0 5px 0;
+    padding: 24px 16px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.care-box-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.care-title-script {
+    font-family: 'Mea Culpa', cursive;
+    font-size: 2.8rem;
+    color: var(--burgundy);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+}
+
+.care-title-main {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--burgundy);
+    text-transform: uppercase;
+    margin-top: -6px;
+}
+
+.care-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.care-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 22px 12px;
+    text-align: center;
+    position: relative;
+    border: none;
+}
+
+.care-icon-wrap {
+    font-size: 1.75rem;
+    color: var(--burgundy);
+    margin-bottom: 12px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.care-grid-item:hover .care-icon-wrap {
+    transform: translateY(-2px);
+    color: var(--color-gold);
+}
+
+.care-item-text {
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    line-height: 1.35;
+    color: #4a4a4a;
+    margin: 0;
+    max-width: 150px;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .jewellery-care-box {
+        padding: 24px 12px;
+    }
+
+    .care-title-script {
+        font-size: 2.2rem;
+    }
+
+    .care-title-main {
+        font-size: 1.1rem;
+    }
+
+    .care-item-text {
+        font-size: 0.78rem;
+    }
+}
+
+/* ==========================================================================
+   VIEW: POLICY PAGES (Refund, Shipping & Jewellery Care)
+   ========================================================================== */
+.policy-page-wrapper {
+    padding: 180px 40px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--text-primary);
+    line-height: 1.8;
+}
+
+.policy-page-wrapper h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--color-magenta);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.policy-page-wrapper .policy-date {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.policy-page-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-magenta);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(98, 3, 53, 0.1);
+    padding-bottom: 8px;
+}
+
+.policy-page-wrapper p {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.policy-page-wrapper ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+.policy-page-wrapper li {
+    margin-bottom: 10px;
+}
+
+.policy-page-wrapper a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: var(--transition-quick);
+}
+
+.policy-page-wrapper a:hover {
+    color: var(--color-magenta);
+}
+
+@media (max-width: 768px) {
+    .policy-page-wrapper {
+        padding: 140px 20px 60px;
+    }
+
+    .policy-page-wrapper h1 {
+        font-size: 2.2rem;
+    }
+
+    .policy-page-wrapper h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Jewellery Care Grid & Cards Styles */
+.jewellery-care-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0 60px;
+}
+
+.jewellery-care-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.jewellery-care-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-magenta));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.jewellery-care-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.jewellery-care-card:hover::before {
+    opacity: 1;
+}
+
+.jewellery-care-icon-wrap {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--color-gold);
+    font-size: 1.8rem;
+    transition: all 0.4s ease;
+}
+
+.jewellery-care-card:hover .jewellery-care-icon-wrap {
+    background: var(--color-gold);
+    color: #0b0206;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.jewellery-care-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.jewellery-care-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
 }

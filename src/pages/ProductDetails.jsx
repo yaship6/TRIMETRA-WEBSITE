@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import ErrorPage from './ErrorPage.jsx';
 import { imageUrl, whatsappLink } from '../utils/assets.js';
 import ProductCard from '../components/ProductCard.jsx';
+import JewelleryCareGrid from '../components/JewelleryCareGrid.jsx';
 
 function AccordionItem({ title, children, defaultOpen = false }) {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -72,25 +73,26 @@ export default function ProductDetails({ products, content, productId, addToRece
             document.body.style.overflow = '';
         };
     }, [isLightboxOpen]);
-
     if (!product) {
         return <ErrorPage message="Product details could not be found. Check if the code is correct." />;
     }
+
+    const productImages = Array.from(new Set(product.images || []));
 
     const handleTouchStart = (e) => {
         touchStartX.current = e.touches[0].clientX;
     };
 
     const handleTouchEnd = (e) => {
-        if (touchStartX.current === null) return;
+        if (touchStartX.current === null || productImages.length <= 1) return;
         const touchEndX = e.changedTouches[0].clientX;
         const diff = touchStartX.current - touchEndX;
 
         if (Math.abs(diff) > 50) {
             if (diff > 0) {
-                setSelectedImage((prev) => (prev + 1) % product.images.length);
+                setSelectedImage((prev) => (prev + 1) % productImages.length);
             } else {
-                setSelectedImage((prev) => (prev - 1 + product.images.length) % product.images.length);
+                setSelectedImage((prev) => (prev - 1 + productImages.length) % productImages.length);
             }
         }
         touchStartX.current = null;
@@ -101,7 +103,7 @@ export default function ProductDetails({ products, content, productId, addToRece
     };
 
     const handleLightboxTouchEnd = (e) => {
-        if (lightboxTouchStartX.current === null) return;
+        if (lightboxTouchStartX.current === null || productImages.length <= 1) return;
         const touchEndX = e.changedTouches[0].clientX;
         const diff = lightboxTouchStartX.current - touchEndX;
 
@@ -116,11 +118,13 @@ export default function ProductDetails({ products, content, productId, addToRece
     };
 
     const nextImage = () => {
-        setSelectedImage((prev) => (prev + 1) % product.images.length);
+        if (productImages.length <= 1) return;
+        setSelectedImage((prev) => (prev + 1) % productImages.length);
     };
 
     const prevImage = () => {
-        setSelectedImage((prev) => (prev - 1 + product.images.length) % product.images.length);
+        if (productImages.length <= 1) return;
+        setSelectedImage((prev) => (prev - 1 + productImages.length) % productImages.length);
     };
 
     const message = `Hi Trimetra, I'm interested in the "${product.name}".\n\n`
@@ -142,7 +146,7 @@ export default function ProductDetails({ products, content, productId, addToRece
                             onTouchStart={handleTouchStart}
                             onTouchEnd={handleTouchEnd}
                         >
-                            {product.images.length > 1 && (
+                            {productImages.length > 1 && (
                                 <>
                                     <button
                                         type="button"
@@ -163,16 +167,16 @@ export default function ProductDetails({ products, content, productId, addToRece
                                 </>
                             )}
                             <img
-                                src={imageUrl(product.images[selectedImage])}
+                                src={imageUrl(productImages[selectedImage] || productImages[0])}
                                 alt={product.name}
                                 id="main-product-image"
                                 className="zoomable-image"
                                 style={{ objectPosition: product.objectPosition || 'center' }}
                                 onClick={() => setIsLightboxOpen(true)}
                             />
-                            {product.images.length > 1 && (
+                            {productImages.length > 1 && (
                                 <div className="carousel-indicators">
-                                    {product.images.map((_, index) => (
+                                    {productImages.map((_, index) => (
                                         <span
                                             key={index}
                                             className={`indicator-dot${selectedImage === index ? ' active' : ''}`}
@@ -182,19 +186,21 @@ export default function ProductDetails({ products, content, productId, addToRece
                                 </div>
                             )}
                         </div>
-                        <div className="gallery-thumbnails">
-                            {product.images.map((img, index) => (
-                                <button
-                                    type="button"
-                                    className={`gallery-thumbnail${selectedImage === index ? ' active' : ''}`}
-                                    key={img}
-                                    onClick={() => setSelectedImage(index)}
-                                    aria-label={`Show ${product.name} image ${index + 1}`}
-                                >
-                                    <img src={imageUrl(img)} alt={`${product.name} detail view ${index + 1}`} loading="lazy" />
-                                </button>
-                            ))}
-                        </div>
+                        {productImages.length > 1 && (
+                            <div className="gallery-thumbnails">
+                                {productImages.map((img, index) => (
+                                    <button
+                                        type="button"
+                                        className={`gallery-thumbnail${selectedImage === index ? ' active' : ''}`}
+                                        key={`${img}-${index}`}
+                                        onClick={() => setSelectedImage(index)}
+                                        aria-label={`Show ${product.name} image ${index + 1}`}
+                                    >
+                                        <img src={imageUrl(img)} alt={`${product.name} detail view ${index + 1}`} loading="lazy" />
+                                    </button>
+                                ))}
+                            </div>
+                        )}
                     </div>
 
                     <div className="product-info-panel">
@@ -215,7 +221,7 @@ export default function ProductDetails({ products, content, productId, addToRece
                                 <p>{product.description}</p>
                             </AccordionItem>
                             <AccordionItem title="Jewellery Care">
-                                <p>To preserve the brilliant finish of your fine jewellery, keep it away from moisture, avoid contact with perfumes, remove it when sleeping or active, allow perfumes and lotions to dry completely before wearing, remove it before entering water, clean with a soft cloth, and store it individually in a closed bag or box.</p>
+                                <JewelleryCareGrid compact />
                             </AccordionItem>
                         </div>
 
@@ -255,7 +261,7 @@ export default function ProductDetails({ products, content, productId, addToRece
                     >
                         &times;
                     </button>
-                    {product.images.length > 1 && (
+                    {productImages.length > 1 && (
                         <>
                             <button
                                 type="button"
@@ -281,20 +287,20 @@ export default function ProductDetails({ products, content, productId, addToRece
                             </button>
                         </>
                     )}
-                    <div 
+                    <div
                         className="lightbox-content-wrapper"
                         onTouchStart={handleLightboxTouchStart}
                         onTouchEnd={handleLightboxTouchEnd}
                     >
                         <img
-                            src={imageUrl(product.images[selectedImage])}
+                            src={imageUrl(productImages[selectedImage] || productImages[0])}
                             alt={product.name}
                             className="lightbox-image"
                             style={{ objectPosition: product.objectPosition || 'center' }}
                         />
-                        {product.images.length > 1 && (
+                        {productImages.length > 1 && (
                             <div className="lightbox-counter">
-                                {selectedImage + 1} / {product.images.length}
+                                {selectedImage + 1} / {productImages.length}
                             </div>
                         )}
                     </div>
