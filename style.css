@@ -1373,6 +1373,24 @@ p {
     box-shadow: 0 14px 32px rgba(98, 3, 53, 0.07);
 }
 
+/* Remove Outer Box Frame & Shadow for Coins */
+.collection-product-frame.coin-frame,
+.coin-portrait .collection-product-frame,
+.product-card.coin-card .product-card-img-wrap,
+.coin-card .product-card-img-wrap {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.coin-portrait .collection-product-frame img,
+.coin-card .product-card-img-wrap img {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
 .collection-recently-viewed-tag {
     position: absolute;
     top: 10px;
@@ -1396,8 +1414,10 @@ p {
 .collection-product-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: filter 0.45s ease;
+    object-fit: contain;
+    padding: 6px;
+    box-sizing: border-box;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
 }
 
 .collection-product-caption {
@@ -1505,7 +1525,9 @@ p {
 .product-card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 6px;
+    box-sizing: border-box;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     transition: var(--transition-smooth);
@@ -7075,155 +7097,193 @@ html.lenis-smooth body {
 }
 
 /* ==========================================================================
-   VIEW: POLICY PAGES (Refund, Shipping & Jewellery Care)
+   JEWELLERY CARE PAGE — Circular Icon Grid (Matching reference mockup)
    ========================================================================== */
-.policy-page-wrapper {
-    padding: 180px 40px 80px;
-    max-width: 900px;
+.jewellery-care-page-container {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    max-width: 1050px;
     margin: 0 auto;
-    color: var(--text-primary);
-    line-height: 1.8;
-}
-
-.policy-page-wrapper h1 {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--color-magenta);
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.policy-page-wrapper .policy-date {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.policy-page-wrapper h2 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--color-magenta);
-    margin-top: 40px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(98, 3, 53, 0.1);
-    padding-bottom: 8px;
-}
-
-.policy-page-wrapper p {
-    margin-bottom: 20px;
-    color: var(--text-secondary);
-}
-
-.policy-page-wrapper ul {
-    margin-bottom: 20px;
     padding-left: 20px;
-    color: var(--text-secondary);
-}
-
-.policy-page-wrapper li {
-    margin-bottom: 10px;
-}
-
-.policy-page-wrapper a {
-    color: var(--color-gold);
-    text-decoration: none;
-    transition: var(--transition-quick);
-}
-
-.policy-page-wrapper a:hover {
-    color: var(--color-magenta);
-}
-
-@media (max-width: 768px) {
-    .policy-page-wrapper {
-        padding: 140px 20px 60px;
-    }
-
-    .policy-page-wrapper h1 {
-        font-size: 2.2rem;
-    }
-
-    .policy-page-wrapper h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Jewellery Care Grid & Cards Styles */
-.jewellery-care-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin: 40px 0 60px;
-}
-
-.jewellery-care-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 30px 25px;
+    padding-right: 20px;
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    overflow: hidden;
 }
 
-.jewellery-care-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-gold), var(--color-magenta));
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.jewellery-care-header {
+    max-width: 680px;
+    margin: 0 auto 60px;
 }
 
-.jewellery-care-card:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(212, 175, 55, 0.3);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+.jewellery-care-header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--burgundy);
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
-.jewellery-care-card:hover::before {
-    opacity: 1;
+.jewellery-care-subtitle {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+    font-weight: 500;
 }
 
-.jewellery-care-icon-wrap {
-    width: 70px;
-    height: 70px;
+.jewellery-care-lead {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 auto;
+}
+
+.jewellery-care-grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.jewellery-care-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.jewellery-care-circle-icon {
+    width: 68px;
+    height: 68px;
     border-radius: 50%;
-    background: rgba(212, 175, 55, 0.1);
+    background-color: #f7efe2;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--color-gold);
-    font-size: 1.8rem;
-    transition: all 0.4s ease;
+    margin-bottom: 20px;
+    color: #c49a56;
+    font-size: 1.35rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.jewellery-care-card:hover .jewellery-care-icon-wrap {
-    background: var(--color-gold);
-    color: #0b0206;
-    transform: scale(1.1) rotate(5deg);
+.jewellery-care-card-item:hover .jewellery-care-circle-icon {
+    transform: translateY(-4px);
+    background-color: #f1e4cf;
 }
 
-.jewellery-care-card h3 {
+.jewellery-care-card-title {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
-    color: var(--color-gold);
+    font-size: 1.15rem;
+    color: #d4a054;
     margin-bottom: 12px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 1.35;
+    max-width: 210px;
 }
 
-.jewellery-care-card p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
+.jewellery-care-card-desc {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
     line-height: 1.6;
-    margin-bottom: 0;
+    color: #666666;
+    margin: 0;
+    max-width: 270px;
+}
+
+@media (max-width: 768px) {
+    .jewellery-care-page-container {
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+
+    .jewellery-care-grid-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .jewellery-care-grid-section {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .jewellery-care-card-title {
+        max-width: 100%;
+    }
+
+    .jewellery-care-card-desc {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   JEWELLERY CARE PAGE — Clean & Beautiful Styling
+   ========================================================================== */
+.jewellery-care-page-clean {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.policy-header-container {
+    max-width: 680px;
+    margin: 0 auto 50px;
+}
+
+.policy-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.policy-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--burgundy);
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.policy-divider {
+    color: var(--color-gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 24px;
+    opacity: 0.85;
+}
+
+.policy-lead-text {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0 auto;
+}
+
+.jewellery-care-grid-wrapper {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .jewellery-care-page-clean {
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+
+    .policy-title {
+        font-size: 2.2rem;
+    }
 }

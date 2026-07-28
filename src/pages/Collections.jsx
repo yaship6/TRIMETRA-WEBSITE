@@ -3,7 +3,9 @@ import { imageUrl } from '../utils/assets.js';
 
 function ProductPortrait({ product }) {
     const [isRecentlyViewed, setIsRecentlyViewed] = useState(false);
-    const materials = product.materials.slice(0, 2).join(' / ');
+    const isCoin = Array.isArray(product.collection)
+        ? product.collection.includes('coins')
+        : product.collection === 'coins' || (product.id && product.id.includes('COIN'));
 
     useEffect(() => {
         try {
@@ -16,8 +18,8 @@ function ProductPortrait({ product }) {
     }, [product.id]);
 
     return (
-        <a href={`#/product/${product.id}`} className="collection-product-portrait">
-            <figure className="collection-product-frame">
+        <a href={`#/product/${product.id}`} className={`collection-product-portrait ${isCoin ? 'coin-portrait' : ''}`}>
+            <figure className={`collection-product-frame ${isCoin ? 'coin-frame' : ''}`}>
                 {isRecentlyViewed && (
                     <span className="collection-recently-viewed-tag">
                         <i className="far fa-clock" /> Recently Viewed

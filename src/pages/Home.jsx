@@ -162,7 +162,7 @@ export default function Home({ products, content }) {
                                     alt={value.title}
                                     className="circle-image"
                                     loading="lazy"
-                                    style={{ 
+                                    style={{
                                         objectPosition: value.backgroundPosition || 'center',
                                         filter: key === 'necklaces' ? 'brightness(1.35) contrast(1.05) saturate(1.1)' : undefined
                                     }}

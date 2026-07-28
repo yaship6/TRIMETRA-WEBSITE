@@ -1084,5 +1084,125 @@
       "assets/images/trj045_3.jpg"
     ],
     "featured": false
+  },
+  {
+    "id": "TRJ-COIN-01",
+    "name": "1 Gram Coin",
+    "collection": [
+      "coins"
+    ],
+    "description": "Exquisite 999 fine 24K gold coin. Crafted with Swiss-standard minting precision and encased in certified tamper-proof security packaging.",
+    "materials": [
+      "Purity: 24K (999 Fine Gold)",
+      "Weight: 1 Gram",
+      "Minting: Swiss-Standard Mirror Finish",
+      "Packaging: Certified Assay Blister Pack"
+    ],
+    "images": [
+      "assets/Gold coins/1 Grm/1G V.png",
+      "assets/Gold coins/1 Grm/1G H F.png",
+      "assets/Gold coins/1 Grm/1G H B.png"
+    ],
+    "featured": true
+  },
+  {
+    "id": "TRJ-COIN-02",
+    "name": "2 Grams Coin",
+    "collection": [
+      "coins"
+    ],
+    "description": "Precious 999 fine 24K gold coin. Showcases high-relief engraving and mirror-lustre finishing in sealed assay card packaging.",
+    "materials": [
+      "Purity: 24K (999 Fine Gold)",
+      "Weight: 2 Grams",
+      "Minting: High-Relief Precision Embossing",
+      "Packaging: Certified Assay Blister Pack"
+    ],
+    "images": [
+      "assets/Gold coins/2 grm/2G V.png",
+      "assets/Gold coins/2 grm/2G H F.jpg",
+      "assets/Gold coins/2 grm/2G H B (1).png"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-COIN-04",
+    "name": "4 Grams Coin",
+    "collection": [
+      "coins"
+    ],
+    "description": "Masterfully minted 999 fine 24K gold coin. A classic weight choice for festive gifting and pure gold asset building.",
+    "materials": [
+      "Purity: 24K (999 Fine Gold)",
+      "Weight: 4 Grams",
+      "Minting: Mirror Finish Relief",
+      "Packaging: Certified Assay Blister Pack"
+    ],
+    "images": [
+      "assets/Gold coins/4 grm/4G V.png",
+      "assets/Gold coins/4 grm/4G H F.png",
+      "assets/Gold coins/4 grm/4G H B.png"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-COIN-05",
+    "name": "5 Grams Coin",
+    "collection": [
+      "coins"
+    ],
+    "description": "Heirloom-grade 999 fine 24K gold coin. Certified for exact weight and guaranteed 999 purity.",
+    "materials": [
+      "Purity: 24K (999 Fine Gold)",
+      "Weight: 5 Grams",
+      "Minting: High-Shine Proof Finish",
+      "Packaging: Certified Security Blister Pack"
+    ],
+    "images": [
+      "assets/Gold coins/5 grm/5G V.png",
+      "assets/Gold coins/5 grm/5G H F.png",
+      "assets/Gold coins/5 grm/5G H B.png"
+    ],
+    "featured": true
+  },
+  {
+    "id": "TRJ-COIN-08",
+    "name": "8 Grams Coin",
+    "collection": [
+      "coins"
+    ],
+    "description": "Imperial 8 Grams (1 Guinea/Sovereign) 999 fine 24K gold coin. Crafted with sacred royal motifs and anti-tamper packaging.",
+    "materials": [
+      "Purity: 24K (999 Fine Gold)",
+      "Weight: 8 Grams (1 Guinea)",
+      "Minting: High-Relief Proof Minting",
+      "Packaging: Certified Security Pack"
+    ],
+    "images": [
+      "assets/Gold coins/8 grm/8G V.png",
+      "assets/Gold coins/8 grm/8G H F.png",
+      "assets/Gold coins/8 grm/8G H B.png"
+    ],
+    "featured": false
+  },
+  {
+    "id": "TRJ-COIN-10",
+    "name": "10 Grams Coin",
+    "collection": [
+      "coins"
+    ],
+    "description": "Flagship 10 Grams 999 fine 24K gold coin. Certified Swiss-standard proof minting with individual serial authentication and tamper-evident casing.",
+    "materials": [
+      "Purity: 24K (999 Fine Gold)",
+      "Weight: 10 Grams",
+      "Minting: Ultra-Fine Proof Mirror Finish",
+      "Packaging: Tamper-Evident Certified Security Card"
+    ],
+    "images": [
+      "assets/Gold coins/10 grm/10G V.png",
+      "assets/Gold coins/10 grm/10G H F.png",
+      "assets/Gold coins/10 grm/10G H B.png"
+    ],
+    "featured": true
   }
 ]
