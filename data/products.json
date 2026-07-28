@@ -1099,9 +1099,9 @@
       "Packaging: Certified Assay Blister Pack"
     ],
     "images": [
-      "assets/Gold coins/1 Grm/1G V.png",
-      "assets/Gold coins/1 Grm/1G H F.png",
-      "assets/Gold coins/1 Grm/1G H B.png"
+      "assets/Gold coins/1 Grm/1G V.webp",
+      "assets/Gold coins/1 Grm/1G H F.webp",
+      "assets/Gold coins/1 Grm/1G H B.webp"
     ],
     "featured": true
   },
@@ -1119,9 +1119,9 @@
       "Packaging: Certified Assay Blister Pack"
     ],
     "images": [
-      "assets/Gold coins/2 grm/2G V.png",
-      "assets/Gold coins/2 grm/2G H F.jpg",
-      "assets/Gold coins/2 grm/2G H B (1).png"
+      "assets/Gold coins/2 grm/2G V.webp",
+      "assets/Gold coins/2 grm/2G H F.webp",
+      "assets/Gold coins/2 grm/2G H B (1).webp"
     ],
     "featured": false
   },
@@ -1139,9 +1139,9 @@
       "Packaging: Certified Assay Blister Pack"
     ],
     "images": [
-      "assets/Gold coins/4 grm/4G V.png",
-      "assets/Gold coins/4 grm/4G H F.png",
-      "assets/Gold coins/4 grm/4G H B.png"
+      "assets/Gold coins/4 grm/4G V.webp",
+      "assets/Gold coins/4 grm/4G H F.webp",
+      "assets/Gold coins/4 grm/4G H B.webp"
     ],
     "featured": false
   },
@@ -1159,9 +1159,9 @@
       "Packaging: Certified Security Blister Pack"
     ],
     "images": [
-      "assets/Gold coins/5 grm/5G V.png",
-      "assets/Gold coins/5 grm/5G H F.png",
-      "assets/Gold coins/5 grm/5G H B.png"
+      "assets/Gold coins/5 grm/5G V.webp",
+      "assets/Gold coins/5 grm/5G H F.webp",
+      "assets/Gold coins/5 grm/5G H B.webp"
     ],
     "featured": true
   },
@@ -1179,9 +1179,9 @@
       "Packaging: Certified Security Pack"
     ],
     "images": [
-      "assets/Gold coins/8 grm/8G V.png",
-      "assets/Gold coins/8 grm/8G H F.png",
-      "assets/Gold coins/8 grm/8G H B.png"
+      "assets/Gold coins/8 grm/8G V.webp",
+      "assets/Gold coins/8 grm/8G H F.webp",
+      "assets/Gold coins/8 grm/8G H B.webp"
     ],
     "featured": false
   },
@@ -1199,9 +1199,9 @@
       "Packaging: Tamper-Evident Certified Security Card"
     ],
     "images": [
-      "assets/Gold coins/10 grm/10G V.png",
-      "assets/Gold coins/10 grm/10G H F.png",
-      "assets/Gold coins/10 grm/10G H B.png"
+      "assets/Gold coins/10 grm/10G V.webp",
+      "assets/Gold coins/10 grm/10G H F.webp",
+      "assets/Gold coins/10 grm/10G H B.webp"
     ],
     "featured": true
   }
