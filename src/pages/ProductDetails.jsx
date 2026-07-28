@@ -174,6 +174,9 @@ export default function ProductDetails({ products, content, productId, addToRece
                                 style={{ objectPosition: product.objectPosition || 'center' }}
                                 onClick={() => setIsLightboxOpen(true)}
                             />
+                            <span className="zoom-hint-tag" onClick={() => setIsLightboxOpen(true)}>
+                                <i className="fas fa-search-plus" /> Tap to expand
+                            </span>
                             {productImages.length > 1 && (
                                 <div className="carousel-indicators">
                                     {productImages.map((_, index) => (

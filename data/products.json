@@ -110,6 +110,7 @@
       "assets/images/trj001_6.jpg",
       "assets/images/trj001_7.jpg"
     ],
+    "objectPosition": "center",
     "featured": false
   },
   {
@@ -152,6 +153,7 @@
       "assets/images/trj003_4.jpg",
       "assets/images/trj003_5.jpg"
     ],
+    "objectPosition": "center 35%",
     "featured": false
   },
   {
@@ -402,6 +404,7 @@
       "assets/images/trj-ap008_4.jpg",
       "assets/images/trj-ap008_5.jpg"
     ],
+    "objectPosition": "center",
     "featured": false
   },
   {
@@ -466,6 +469,7 @@
       "assets/images/trj-ap011_4.jpg",
       "assets/images/trj-ap011_5.jpg"
     ],
+    "objectPosition": "center",
     "featured": false
   },
   {
