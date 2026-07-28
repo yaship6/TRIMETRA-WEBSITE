@@ -13,7 +13,7 @@
     ],
     "images": [
       "assets/images/trj-ap039_2.webp",
-      "assets/images/trj-ap039_1.png"
+      "assets/images/trj-ap039_1.webp"
     ],
     "objectPosition": "center 88%",
     "featured": true
@@ -31,7 +31,7 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap040_1.png"
+      "assets/images/trj-ap040_1.webp"
     ],
     "featured": false
   },
@@ -48,7 +48,7 @@
       "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/trj-ap022_1.jpg"
+      "assets/images/trj-ap022_1.webp"
     ],
     "featured": true
   },
@@ -102,13 +102,13 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj001_1.jpg",
-      "assets/images/trj001_2.jpg",
-      "assets/images/trj001_3.jpg",
-      "assets/images/trj001_4.jpg",
-      "assets/images/trj001_5.jpg",
-      "assets/images/trj001_6.jpg",
-      "assets/images/trj001_7.jpg"
+      "assets/images/trj001_1.webp",
+      "assets/images/trj001_2.webp",
+      "assets/images/trj001_3.webp",
+      "assets/images/trj001_4.webp",
+      "assets/images/trj001_5.webp",
+      "assets/images/trj001_6.webp",
+      "assets/images/trj001_7.webp"
     ],
     "objectPosition": "center",
     "featured": false
@@ -127,10 +127,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj002_1.jpg",
-      "assets/images/trj002_2.jpg",
-      "assets/images/trj002_3.jpg",
-      "assets/images/trj002_4.jpg"
+      "assets/images/trj002_1.webp",
+      "assets/images/trj002_2.webp",
+      "assets/images/trj002_3.webp",
+      "assets/images/trj002_4.webp"
     ],
     "featured": false
   },
@@ -147,11 +147,11 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj003_1.jpg",
-      "assets/images/trj003_2.jpg",
-      "assets/images/trj003_3.jpg",
-      "assets/images/trj003_4.jpg",
-      "assets/images/trj003_5.jpg"
+      "assets/images/trj003_1.webp",
+      "assets/images/trj003_2.webp",
+      "assets/images/trj003_3.webp",
+      "assets/images/trj003_4.webp",
+      "assets/images/trj003_5.webp"
     ],
     "objectPosition": "center 35%",
     "featured": false
@@ -169,11 +169,11 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj004_1.jpg",
-      "assets/images/trj004_2.jpg",
-      "assets/images/trj004_3.jpg",
-      "assets/images/trj004_4.jpg",
-      "assets/images/trj004_5.jpg"
+      "assets/images/trj004_1.webp",
+      "assets/images/trj004_2.webp",
+      "assets/images/trj004_3.webp",
+      "assets/images/trj004_4.webp",
+      "assets/images/trj004_5.webp"
     ],
     "featured": false
   },
@@ -190,9 +190,9 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj005_1.jpg",
-      "assets/images/trj005_2.jpg",
-      "assets/images/trj005_3.jpg"
+      "assets/images/trj005_1.webp",
+      "assets/images/trj005_2.webp",
+      "assets/images/trj005_3.webp"
     ],
     "featured": false
   },
@@ -209,10 +209,10 @@
       "necklaces"
     ],
     "images": [
-      "assets/images/trj006_1.jpg",
-      "assets/images/trj006_2.jpg",
-      "assets/images/trj006_3.jpg",
-      "assets/images/trj006_4.jpg"
+      "assets/images/trj006_1.webp",
+      "assets/images/trj006_2.webp",
+      "assets/images/trj006_3.webp",
+      "assets/images/trj006_4.webp"
     ],
     "featured": false
   },
@@ -230,10 +230,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj007_1.jpg",
-      "assets/images/trj007_2.jpg",
-      "assets/images/trj007_3.jpg",
-      "assets/images/trj007_4.jpg"
+      "assets/images/trj007_1.webp",
+      "assets/images/trj007_2.webp",
+      "assets/images/trj007_3.webp",
+      "assets/images/trj007_4.webp"
     ],
     "featured": false
   },
@@ -251,10 +251,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap001_1.jpg",
-      "assets/images/trj-ap001_2.jpg",
-      "assets/images/trj-ap001_3.jpg",
-      "assets/images/trj-ap001_4.jpg"
+      "assets/images/trj-ap001_1.webp",
+      "assets/images/trj-ap001_2.webp",
+      "assets/images/trj-ap001_3.webp",
+      "assets/images/trj-ap001_4.webp"
     ],
     "featured": false
   },
@@ -272,11 +272,11 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap002_1.jpg",
-      "assets/images/trj-ap002_2.jpg",
-      "assets/images/trj-ap002_3.jpg",
-      "assets/images/trj-ap002_4.jpg",
-      "assets/images/trj-ap002_5.jpg"
+      "assets/images/trj-ap002_1.webp",
+      "assets/images/trj-ap002_2.webp",
+      "assets/images/trj-ap002_3.webp",
+      "assets/images/trj-ap002_4.webp",
+      "assets/images/trj-ap002_5.webp"
     ],
     "featured": false
   },
@@ -294,9 +294,9 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap003_1.jpg",
-      "assets/images/trj-ap003_2.jpg",
-      "assets/images/trj-ap003_3.jpg"
+      "assets/images/trj-ap003_1.webp",
+      "assets/images/trj-ap003_2.webp",
+      "assets/images/trj-ap003_3.webp"
     ],
     "featured": false
   },
@@ -313,10 +313,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap004_1.jpg",
-      "assets/images/trj-ap004_2.jpg",
-      "assets/images/trj-ap004_3.jpg",
-      "assets/images/trj-ap004_4.jpg"
+      "assets/images/trj-ap004_1.webp",
+      "assets/images/trj-ap004_2.webp",
+      "assets/images/trj-ap004_3.webp",
+      "assets/images/trj-ap004_4.webp"
     ],
     "featured": false
   },
@@ -334,11 +334,11 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap005_1.jpg",
-      "assets/images/trj-ap005_2.jpg",
-      "assets/images/trj-ap005_3.jpg",
-      "assets/images/trj-ap005_4.jpg",
-      "assets/images/trj-ap005_5.jpg"
+      "assets/images/trj-ap005_1.webp",
+      "assets/images/trj-ap005_2.webp",
+      "assets/images/trj-ap005_3.webp",
+      "assets/images/trj-ap005_4.webp",
+      "assets/images/trj-ap005_5.webp"
     ],
     "featured": false
   },
@@ -356,10 +356,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap006_1.jpg",
-      "assets/images/trj-ap006_2.jpg",
-      "assets/images/trj-ap006_3.jpg",
-      "assets/images/trj-ap006_4.jpg"
+      "assets/images/trj-ap006_1.webp",
+      "assets/images/trj-ap006_2.webp",
+      "assets/images/trj-ap006_3.webp",
+      "assets/images/trj-ap006_4.webp"
     ],
     "featured": false
   },
@@ -377,10 +377,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap007_1.jpg",
-      "assets/images/trj-ap007_2.jpg",
-      "assets/images/trj-ap007_3.jpg",
-      "assets/images/trj-ap007_4.jpg"
+      "assets/images/trj-ap007_1.webp",
+      "assets/images/trj-ap007_2.webp",
+      "assets/images/trj-ap007_3.webp",
+      "assets/images/trj-ap007_4.webp"
     ],
     "featured": false
   },
@@ -398,11 +398,11 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap008_1.jpg",
-      "assets/images/trj-ap008_2.jpg",
-      "assets/images/trj-ap008_3.jpg",
-      "assets/images/trj-ap008_4.jpg",
-      "assets/images/trj-ap008_5.jpg"
+      "assets/images/trj-ap008_1.webp",
+      "assets/images/trj-ap008_2.webp",
+      "assets/images/trj-ap008_3.webp",
+      "assets/images/trj-ap008_4.webp",
+      "assets/images/trj-ap008_5.webp"
     ],
     "objectPosition": "center",
     "featured": false
@@ -421,10 +421,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap009_1.jpg",
-      "assets/images/trj-ap009_2.jpg",
-      "assets/images/trj-ap009_3.jpg",
-      "assets/images/trj-ap009_4.jpg"
+      "assets/images/trj-ap009_1.webp",
+      "assets/images/trj-ap009_2.webp",
+      "assets/images/trj-ap009_3.webp",
+      "assets/images/trj-ap009_4.webp"
     ],
     "featured": false
   },
@@ -442,10 +442,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap010_1.jpg",
-      "assets/images/trj-ap010_2.jpg",
-      "assets/images/trj-ap010_3.jpg",
-      "assets/images/trj-ap010_4.jpg"
+      "assets/images/trj-ap010_1.webp",
+      "assets/images/trj-ap010_2.webp",
+      "assets/images/trj-ap010_3.webp",
+      "assets/images/trj-ap010_4.webp"
     ],
     "featured": false
   },
@@ -463,11 +463,11 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap011_1.jpg",
-      "assets/images/trj-ap011_2.jpg",
-      "assets/images/trj-ap011_3.jpg",
-      "assets/images/trj-ap011_4.jpg",
-      "assets/images/trj-ap011_5.jpg"
+      "assets/images/trj-ap011_1.webp",
+      "assets/images/trj-ap011_2.webp",
+      "assets/images/trj-ap011_3.webp",
+      "assets/images/trj-ap011_4.webp",
+      "assets/images/trj-ap011_5.webp"
     ],
     "objectPosition": "center",
     "featured": false
@@ -485,10 +485,10 @@
       "sets"
     ],
     "images": [
-      "assets/images/trj-ap012_1.jpg",
-      "assets/images/trj-ap012_2.jpg",
-      "assets/images/trj-ap012_3.jpg",
-      "assets/images/trj-ap012_4.jpg"
+      "assets/images/trj-ap012_1.webp",
+      "assets/images/trj-ap012_2.webp",
+      "assets/images/trj-ap012_3.webp",
+      "assets/images/trj-ap012_4.webp"
     ],
     "featured": false
   },
@@ -505,9 +505,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap020_1.jpg",
-      "assets/images/trj-ap020_2.jpg",
-      "assets/images/trj-ap020_3.jpg"
+      "assets/images/trj-ap020_1.webp",
+      "assets/images/trj-ap020_2.webp",
+      "assets/images/trj-ap020_3.webp"
     ],
     "featured": false
   },
@@ -524,9 +524,9 @@
       "Type of stone: 5A Cubic Zirconia, Beads"
     ],
     "images": [
-      "assets/images/trj-ap024_1.jpg",
-      "assets/images/trj-ap024_2.jpg",
-      "assets/images/trj-ap024_3.jpg"
+      "assets/images/trj-ap024_1.webp",
+      "assets/images/trj-ap024_2.webp",
+      "assets/images/trj-ap024_3.webp"
     ],
     "featured": false
   },
@@ -542,8 +542,8 @@
       "Polish: Gold Polish with Enamel work"
     ],
     "images": [
-      "assets/images/trj-ap026_1.jpg",
-      "assets/images/trj-ap026_2.jpg"
+      "assets/images/trj-ap026_1.webp",
+      "assets/images/trj-ap026_2.webp"
     ],
     "featured": false
   },
@@ -560,9 +560,9 @@
       "Type of stone: Moissanite Polki, Beads"
     ],
     "images": [
-      "assets/images/trj-ap037_1.jpg",
-      "assets/images/trj-ap037_2.jpg",
-      "assets/images/trj-ap037_3.jpg"
+      "assets/images/trj-ap037_1.webp",
+      "assets/images/trj-ap037_2.webp",
+      "assets/images/trj-ap037_3.webp"
     ],
     "featured": false
   },
@@ -579,9 +579,9 @@
       "Type of stone: Pearls"
     ],
     "images": [
-      "assets/images/trj-ap038_1.jpg",
-      "assets/images/trj-ap038_2.jpg",
-      "assets/images/trj-ap038_3.jpg"
+      "assets/images/trj-ap038_1.webp",
+      "assets/images/trj-ap038_2.webp",
+      "assets/images/trj-ap038_3.webp"
     ],
     "objectPosition": "center bottom",
     "featured": false
@@ -599,9 +599,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap041_1.jpg",
-      "assets/images/trj-ap041_2.jpg",
-      "assets/images/trj-ap041_3.jpg"
+      "assets/images/trj-ap041_1.webp",
+      "assets/images/trj-ap041_2.webp",
+      "assets/images/trj-ap041_3.webp"
     ],
     "featured": false
   },
@@ -618,9 +618,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap043_1.jpg",
-      "assets/images/trj-ap043_2.jpg",
-      "assets/images/trj-ap043_3.jpg"
+      "assets/images/trj-ap043_1.webp",
+      "assets/images/trj-ap043_2.webp",
+      "assets/images/trj-ap043_3.webp"
     ],
     "featured": false
   },
@@ -637,9 +637,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap044_1.jpg",
-      "assets/images/trj-ap044_2.jpg",
-      "assets/images/trj-ap044_3.jpg"
+      "assets/images/trj-ap044_1.webp",
+      "assets/images/trj-ap044_2.webp",
+      "assets/images/trj-ap044_3.webp"
     ],
     "featured": false
   },
@@ -656,8 +656,8 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap045_1.jpg",
-      "assets/images/trj-ap045_2.jpg"
+      "assets/images/trj-ap045_1.webp",
+      "assets/images/trj-ap045_2.webp"
     ],
     "featured": false
   },
@@ -674,9 +674,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap046_1.jpg",
-      "assets/images/trj-ap046_2.jpg",
-      "assets/images/trj-ap046_3.jpg"
+      "assets/images/trj-ap046_1.webp",
+      "assets/images/trj-ap046_2.webp",
+      "assets/images/trj-ap046_3.webp"
     ],
     "featured": false
   },
@@ -693,9 +693,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap048_1.jpg",
-      "assets/images/trj-ap048_2.jpg",
-      "assets/images/trj-ap048_3.jpg"
+      "assets/images/trj-ap048_1.webp",
+      "assets/images/trj-ap048_2.webp",
+      "assets/images/trj-ap048_3.webp"
     ],
     "featured": false
   },
@@ -712,8 +712,8 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap049_1.jpg",
-      "assets/images/trj-ap049_2.jpg"
+      "assets/images/trj-ap049_1.webp",
+      "assets/images/trj-ap049_2.webp"
     ],
     "featured": false
   },
@@ -730,9 +730,9 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap050_1.jpg",
-      "assets/images/trj-ap050_2.jpg",
-      "assets/images/trj-ap050_3.jpg"
+      "assets/images/trj-ap050_1.webp",
+      "assets/images/trj-ap050_2.webp",
+      "assets/images/trj-ap050_3.webp"
     ],
     "featured": false
   },
@@ -749,9 +749,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj-ap051_1.jpg",
-      "assets/images/trj-ap051_2.jpg",
-      "assets/images/trj-ap051_3.jpg"
+      "assets/images/trj-ap051_1.webp",
+      "assets/images/trj-ap051_2.webp",
+      "assets/images/trj-ap051_3.webp"
     ],
     "featured": false
   },
@@ -768,8 +768,8 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap055_1.jpg",
-      "assets/images/trj-ap055_2.jpg"
+      "assets/images/trj-ap055_1.webp",
+      "assets/images/trj-ap055_2.webp"
     ],
     "featured": false
   },
@@ -786,9 +786,9 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap056_1.jpg",
-      "assets/images/trj-ap056_2.jpg",
-      "assets/images/trj-ap056_3.jpg"
+      "assets/images/trj-ap056_1.webp",
+      "assets/images/trj-ap056_2.webp",
+      "assets/images/trj-ap056_3.webp"
     ],
     "featured": false
   },
@@ -805,9 +805,9 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap057_1.jpg",
-      "assets/images/trj-ap057_2.jpg",
-      "assets/images/trj-ap057_3.jpg"
+      "assets/images/trj-ap057_1.webp",
+      "assets/images/trj-ap057_2.webp",
+      "assets/images/trj-ap057_3.webp"
     ],
     "featured": false
   },
@@ -824,10 +824,10 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj-ap058_1.jpg",
-      "assets/images/trj-ap058_2.jpg",
-      "assets/images/trj-ap058_3.jpg",
-      "assets/images/trj-ap058_4.jpg"
+      "assets/images/trj-ap058_1.webp",
+      "assets/images/trj-ap058_2.webp",
+      "assets/images/trj-ap058_3.webp",
+      "assets/images/trj-ap058_4.webp"
     ],
     "featured": false
   },
@@ -844,10 +844,10 @@
       "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/trj009_1.jpg",
-      "assets/images/trj009_2.jpg",
-      "assets/images/trj009_3.jpg",
-      "assets/images/trj009_4.jpg"
+      "assets/images/trj009_1.webp",
+      "assets/images/trj009_2.webp",
+      "assets/images/trj009_3.webp",
+      "assets/images/trj009_4.webp"
     ],
     "featured": false
   },
@@ -864,9 +864,9 @@
       "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/trj014_3.jpg",
-      "assets/images/trj014_1.jpg",
-      "assets/images/trj014_2.jpg"
+      "assets/images/trj014_3.webp",
+      "assets/images/trj014_1.webp",
+      "assets/images/trj014_2.webp"
     ],
     "featured": false
   },
@@ -883,10 +883,10 @@
       "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/trj015_1.jpg",
-      "assets/images/trj015_2.jpg",
-      "assets/images/trj015_3.jpg",
-      "assets/images/trj015_4.jpg"
+      "assets/images/trj015_1.webp",
+      "assets/images/trj015_2.webp",
+      "assets/images/trj015_3.webp",
+      "assets/images/trj015_4.webp"
     ],
     "featured": false
   },
@@ -903,10 +903,10 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj016_1.jpg",
-      "assets/images/trj016_2.jpg",
-      "assets/images/trj016_3.jpg",
-      "assets/images/trj016_4.jpg"
+      "assets/images/trj016_1.webp",
+      "assets/images/trj016_2.webp",
+      "assets/images/trj016_3.webp",
+      "assets/images/trj016_4.webp"
     ],
     "featured": false
   },
@@ -923,10 +923,10 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj018_1.jpg",
-      "assets/images/trj018_2.jpg",
-      "assets/images/trj018_3.jpg",
-      "assets/images/trj018_4.jpg"
+      "assets/images/trj018_1.webp",
+      "assets/images/trj018_2.webp",
+      "assets/images/trj018_3.webp",
+      "assets/images/trj018_4.webp"
     ],
     "featured": false
   },
@@ -943,10 +943,10 @@
       "Type of stone: Moissanite Polki, Pearls"
     ],
     "images": [
-      "assets/images/trj019_1.jpg",
-      "assets/images/trj019_2.jpg",
-      "assets/images/trj019_3.jpg",
-      "assets/images/trj019_4.jpg"
+      "assets/images/trj019_1.webp",
+      "assets/images/trj019_2.webp",
+      "assets/images/trj019_3.webp",
+      "assets/images/trj019_4.webp"
     ],
     "featured": false
   },
@@ -963,10 +963,10 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj020_1.jpg",
-      "assets/images/trj020_2.jpg",
-      "assets/images/trj020_3.jpg",
-      "assets/images/trj020_4.jpg"
+      "assets/images/trj020_1.webp",
+      "assets/images/trj020_2.webp",
+      "assets/images/trj020_3.webp",
+      "assets/images/trj020_4.webp"
     ],
     "featured": false
   },
@@ -983,9 +983,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj034_1.jpg",
-      "assets/images/trj034_2.jpg",
-      "assets/images/trj034_3.jpg"
+      "assets/images/trj034_1.webp",
+      "assets/images/trj034_2.webp",
+      "assets/images/trj034_3.webp"
     ],
     "featured": false
   },
@@ -1003,10 +1003,10 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj036_1.jpg",
-      "assets/images/trj036_2.jpg",
-      "assets/images/trj036_3.jpg",
-      "assets/images/trj036_4.jpg"
+      "assets/images/trj036_1.webp",
+      "assets/images/trj036_2.webp",
+      "assets/images/trj036_3.webp",
+      "assets/images/trj036_4.webp"
     ],
     "featured": false
   },
@@ -1023,9 +1023,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj037_1.jpg",
-      "assets/images/trj037_2.jpg",
-      "assets/images/trj037_3.jpg"
+      "assets/images/trj037_1.webp",
+      "assets/images/trj037_2.webp",
+      "assets/images/trj037_3.webp"
     ],
     "featured": false
   },
@@ -1042,10 +1042,10 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj042_1.jpg",
-      "assets/images/trj042_2.jpg",
-      "assets/images/trj042_3.jpg",
-      "assets/images/trj042_4.jpg"
+      "assets/images/trj042_1.webp",
+      "assets/images/trj042_2.webp",
+      "assets/images/trj042_3.webp",
+      "assets/images/trj042_4.webp"
     ],
     "featured": false
   },
@@ -1063,9 +1063,9 @@
       "Type of stone: Moissanite Polki"
     ],
     "images": [
-      "assets/images/trj044_1.jpg",
-      "assets/images/trj044_2.jpg",
-      "assets/images/trj044_3.jpg"
+      "assets/images/trj044_1.webp",
+      "assets/images/trj044_2.webp",
+      "assets/images/trj044_3.webp"
     ],
     "featured": false
   },
@@ -1083,9 +1083,9 @@
       "Type of stone: 5A Cubic Zirconia"
     ],
     "images": [
-      "assets/images/trj045_1.jpg",
-      "assets/images/trj045_2.jpg",
-      "assets/images/trj045_3.jpg"
+      "assets/images/trj045_1.webp",
+      "assets/images/trj045_2.webp",
+      "assets/images/trj045_3.webp"
     ],
     "featured": false
   },

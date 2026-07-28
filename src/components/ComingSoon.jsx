@@ -10,7 +10,7 @@ export default function ComingSoon() {
             <div className="coming-soon-content">
                 <div className="coming-soon-brand animate-fade-in">
                     <img 
-                        src={imageUrl('assets/images/Logo1.png')} 
+                        src={imageUrl('assets/images/Logo1.webp')} 
                         alt="TRIMETRA Logo" 
                         className="coming-soon-logo" 
                     />

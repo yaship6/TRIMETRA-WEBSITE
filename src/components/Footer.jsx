@@ -9,7 +9,7 @@ export default function Footer({ content }) {
                 <div className="footer-brand">
                     <div className="footer-logo-group" style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
                         <div className="footer-logo" style={{ display: 'inline-block' }}>
-                            <img src={imageUrl('assets/images/Logo1.png')} alt="TRIMETRA logo" className="site-logo footer-site-logo" />
+                            <img src={imageUrl('assets/images/Logo1.webp')} alt="TRIMETRA logo" className="site-logo footer-site-logo" />
                         </div>
                         <p className="footer-subunit" style={{
                             fontFamily: 'var(--font-heading)',

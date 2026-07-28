@@ -43,7 +43,7 @@ export default function About({ content }) {
                     ))}
                 </div>
                 <div className="brand-story-img image-lift reveal-on-scroll reveal-slide-right" style={{ '--reveal-delay': '220ms' }}>
-                    <img src={imageUrl('assets/images/logo@4x.png')} alt="Trimetra Logo" loading="lazy" />
+                    <img src={imageUrl('assets/images/logo@4x.webp')} alt="Trimetra Logo" loading="lazy" />
                 </div>
             </section>
 

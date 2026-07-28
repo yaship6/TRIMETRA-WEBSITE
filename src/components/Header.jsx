@@ -145,7 +145,7 @@ export default function Header({ currentPath }) {
                 <div className="header-container">
                     <div className="logo-container">
                         <a href="#/home" className="brand-logo">
-                            <img src={imageUrl('assets/images/logo.png')} alt="TRIMETRA logo" className="site-logo" />
+                            <img src={imageUrl('assets/images/logo.webp')} alt="TRIMETRA logo" className="site-logo" />
                         </a>
                     </div>
 

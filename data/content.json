@@ -99,11 +99,11 @@
     },
     "everyday-elegance": {
       "title": "Everyday Elegance",
-      "image": "assets/images/everyday_elegance_user.png"
+      "image": "assets/images/everyday_elegance_user.webp"
     },
     "necklaces": {
       "title": "Necklaces & Pendants",
-      "image": "assets/images/trj-ap040_1.png"
+      "image": "assets/images/trj-ap040_1.webp"
     },
     "earrings": {
       "title": "Earrings",
@@ -124,7 +124,7 @@
     },
     "coins": {
       "title": "Coins",
-      "image": "assets/images/coins.png"
+      "image": "assets/images/coins.webp"
     }
   }
 }
