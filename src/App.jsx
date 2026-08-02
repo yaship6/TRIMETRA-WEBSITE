@@ -73,7 +73,6 @@ export default function App() {
         return <ComingSoon />;
     }
 
-
     const addToRecentlyViewed = (id) => {
         setRecentlyViewedIds((prev) => {
             const filtered = prev.filter((item) => item !== id);
@@ -93,6 +92,9 @@ export default function App() {
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smoothWheel: true,
+            smoothTouch: true,
+            syncTouch: true,
+            touchMultiplier: 1.5,
         });
 
         lenisRef.current = lenis;

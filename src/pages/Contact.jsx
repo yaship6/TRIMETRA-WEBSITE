@@ -5,7 +5,31 @@ import { whatsappLink } from '../utils/assets.js';
 
 export default function Contact({ contact }) {
     const [submitted, setSubmitted] = useState(false);
+    const [activeLocationIndex, setActiveLocationIndex] = useState(0);
     useScrollReveal();
+
+    const locations = contact.location?.locations || [
+        {
+            id: 'bandra',
+            name: 'Office Address',
+            tagline: 'Waterfield Road Pinpoint',
+            address: '50, Waterfield Road, behind Metro Sweets, Bandra West, Mumbai, Maharashtra 400050',
+            coordinates: '19.0579965° N, 72.8331455° E',
+            mapEmbedUrl: 'https://maps.google.com/maps?q=19.0579965,72.8331455&t=&z=16&ie=UTF8&iwloc=&output=embed',
+            mapUrl: 'https://www.google.com/maps/place/50,+Waterfield+Road,+behind+Metro+Sweets,+Bandra+West,+Mumbai,+Maharashtra+400050/@19.0579965,72.8331455,17z/'
+        },
+        {
+            id: 'zaveri',
+            name: 'Registered Address',
+            tagline: 'Shaikh Memon Street Pinpoint',
+            address: 'Shop No. 3, 2nd Floor, Calian House, Shaikh Memon Street, Above Mumbadevi Jalebiwala, Zaveri Bazaar, Mumbai - 400002',
+            coordinates: '18°57\'06.3"N 72°49\'50.5"E',
+            mapEmbedUrl: 'https://maps.google.com/maps?q=18.95175,72.830694&t=&z=17&ie=UTF8&iwloc=&output=embed',
+            mapUrl: 'https://www.google.com/maps/search/?api=1&query=18.95175,72.830694'
+        }
+    ];
+
+    const activeLoc = locations[activeLocationIndex] || locations[0];
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -127,59 +151,68 @@ export default function Contact({ contact }) {
                 </div>
 
                 <section className="map-section reveal-on-scroll">
-                    {contact.location.mapUrl && (
-                        <div className="map-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                            <span style={{ fontWeight: 600, color: 'var(--color-magenta)', fontSize: '0.95rem' }}>
-                                <i className="fas fa-map-marker-alt" style={{ marginRight: '8px' }}></i> Showroom Location
-                            </span>
-                            <a 
-                                href={contact.location.mapUrl} 
-                                target="_blank" 
+                    <div className="map-location-selector-header" style={{ marginBottom: '15px' }}>
+                        <div className="map-directions-bar">
+                            <a
+                                href={activeLoc.mapUrl}
+                                target="_blank"
                                 rel="noopener noreferrer"
-                                style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '6px',
-                                    padding: '6px 16px',
-                                    fontSize: '0.85rem',
-                                    fontWeight: 500,
-                                    color: 'var(--color-magenta)',
-                                    border: '1px solid var(--color-magenta)',
-                                    borderRadius: '20px',
-                                    textDecoration: 'none',
-                                    transition: 'all 0.3s ease'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = 'var(--color-magenta)';
-                                    e.currentTarget.style.color = '#ffffff';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'transparent';
-                                    e.currentTarget.style.color = 'var(--color-magenta)';
-                                }}
+                                className="map-directions-btn"
                             >
-                                <i className="fas fa-directions"></i> Get Directions
+                                <i className="fas fa-directions"></i> Get Directions on Google Maps
                             </a>
                         </div>
-                    )}
-                    <a 
-                        href={contact.location.mapUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="map-link-wrapper" 
-                        style={{ display: 'block', textDecoration: 'none', cursor: 'pointer' }}
-                    >
-                        <div className="map-container">
-                            <iframe 
-                                src={contact.location.mapEmbedUrl} 
-                                allowFullScreen 
-                                loading="lazy" 
-                                title="Trimetra showroom map" 
-                                referrerPolicy="no-referrer-when-downgrade" 
-                                style={{ pointerEvents: 'none' }}
-                            />
+
+                        {/* Location Tabs */}
+                        <div className="map-location-tabs">
+                            {locations.map((loc, idx) => (
+                                <button
+                                    key={loc.id || idx}
+                                    onClick={() => setActiveLocationIndex(idx)}
+                                    type="button"
+                                    className={`map-tab-btn ${activeLocationIndex === idx ? 'active' : ''}`}
+                                >
+                                    <i className="fas fa-map-pin"></i>
+                                    <span>{loc.name}</span>
+                                </button>
+                            ))}
                         </div>
-                    </a>
+
+                        {/* Active Location Info Card */}
+                        <div className="active-location-card">
+                            <div className="active-location-inner">
+                                <div>
+                                    <strong className="active-loc-title">{activeLoc.name}</strong>
+                                    <p className="active-loc-address">{activeLoc.address}</p>
+                                </div>
+                                {activeLoc.coordinates && (
+                                    <span className="active-loc-coords">
+                                        <i className="fas fa-crosshairs"></i> {activeLoc.coordinates}
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="map-container" style={{ position: 'relative' }}>
+                        <iframe
+                            src={activeLoc.mapEmbedUrl}
+                            allowFullScreen
+                            loading="lazy"
+                            title={`${activeLoc.name} Google Map`}
+                            referrerPolicy="no-referrer-when-downgrade"
+                            style={{ pointerEvents: 'auto' }}
+                        />
+                        <a
+                            href={activeLoc.mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="map-top-corner-link"
+                            title={`Open ${activeLoc.name} on Google Maps`}
+                        >
+                            <i className="fas fa-external-link-alt"></i> Open in Google Maps
+                        </a>
+                    </div>
                 </section>
             </div>
         </div>

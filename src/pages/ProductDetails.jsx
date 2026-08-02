@@ -27,6 +27,11 @@ function AccordionItem({ title, children, defaultOpen = false }) {
 
 export default function ProductDetails({ products, content, productId, addToRecentlyViewed }) {
     const product = products.find((item) => item.id === productId);
+
+    if (!product) {
+        return <ErrorPage message="Product details could not be found. Check if the code is correct." />;
+    }
+
     const recommendedProducts = products
         .filter((item) => {
             if (item.id === product?.id) return false;
@@ -35,10 +40,23 @@ export default function ProductDetails({ products, content, productId, addToRece
             return itemCols.some(col => prodCols.includes(col));
         })
         .slice(0, 3);
+
     const [selectedImage, setSelectedImage] = useState(0);
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const touchStartX = useRef(null);
     const lightboxTouchStartX = useRef(null);
+
+    const productImages = Array.from(new Set(product.images || []));
+
+    const nextImage = () => {
+        if (productImages.length <= 1) return;
+        setSelectedImage((prev) => (prev + 1) % productImages.length);
+    };
+
+    const prevImage = () => {
+        if (productImages.length <= 1) return;
+        setSelectedImage((prev) => (prev - 1 + productImages.length) % productImages.length);
+    };
 
     useEffect(() => {
         if (product && addToRecentlyViewed) {
@@ -61,7 +79,7 @@ export default function ProductDetails({ products, content, productId, addToRece
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [isLightboxOpen, product]);
+    }, [isLightboxOpen, productImages.length]);
 
     useEffect(() => {
         if (isLightboxOpen) {
@@ -73,11 +91,6 @@ export default function ProductDetails({ products, content, productId, addToRece
             document.body.style.overflow = '';
         };
     }, [isLightboxOpen]);
-    if (!product) {
-        return <ErrorPage message="Product details could not be found. Check if the code is correct." />;
-    }
-
-    const productImages = Array.from(new Set(product.images || []));
 
     const handleTouchStart = (e) => {
         touchStartX.current = e.touches[0].clientX;
@@ -90,9 +103,9 @@ export default function ProductDetails({ products, content, productId, addToRece
 
         if (Math.abs(diff) > 50) {
             if (diff > 0) {
-                setSelectedImage((prev) => (prev + 1) % productImages.length);
+                nextImage();
             } else {
-                setSelectedImage((prev) => (prev - 1 + productImages.length) % productImages.length);
+                prevImage();
             }
         }
         touchStartX.current = null;
@@ -117,19 +130,13 @@ export default function ProductDetails({ products, content, productId, addToRece
         lightboxTouchStartX.current = null;
     };
 
-    const nextImage = () => {
-        if (productImages.length <= 1) return;
-        setSelectedImage((prev) => (prev + 1) % productImages.length);
-    };
-
-    const prevImage = () => {
-        if (productImages.length <= 1) return;
-        setSelectedImage((prev) => (prev - 1 + productImages.length) % productImages.length);
-    };
+    const materialsText = Array.isArray(product.materials)
+        ? product.materials.join(', ')
+        : (product.materials || '');
 
     const message = `Hi Trimetra, I'm interested in the "${product.name}".\n\n`
         + `Reference: ${product.id}\n`
-        + `Composition: ${product.materials.join(', ')}\n\n`
+        + (materialsText ? `Composition: ${materialsText}\n\n` : '\n')
         + 'Please advise on its availability and how I may purchase this piece. Thank you!';
 
     return (

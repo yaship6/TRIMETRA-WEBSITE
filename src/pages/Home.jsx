@@ -91,7 +91,7 @@ export default function Home({ products, content }) {
                 <div
                     className={`hero-slide ${currentSlide === 1 ? 'active' : ''}`}
                     style={{
-                        backgroundImage: `url('${imageUrl('assets/images/Banner 2.jpg.jpeg')}')`
+                        backgroundImage: `url('${imageUrl('assets/images/Banner 2.jpg.webp')}')`
                     }}
                 />
             </a>

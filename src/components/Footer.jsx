@@ -37,9 +37,8 @@ export default function Footer({ content }) {
                             <i className="fas fa-map-marker-alt" style={{ color: 'var(--color-gold)', marginTop: '4px', fontSize: '0.9rem' }} />
                             <span>
                                 <strong>Office Address:</strong><br />
-                                03, Ground Floor, Zarine Building, 4th Road,<br />
-                                Opp. Bhabha Hospital, Bandra West,<br />
-                                Mumbai - 400050.
+                                50, Waterfield Road, behind Metro Sweets,<br />
+                                Bandra West, Mumbai - 400050.
                             </span>
                         </p>
                     </div>

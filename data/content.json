@@ -52,10 +52,30 @@
       "address": "trimetrajewel@gmail.com"
     },
     "location": {
-      "address": "03, Ground floor, Zarine building, 4th Road, opp. Bhabha Hospital, Bandra W, Mumbai 400050.",
+      "address": "50, Waterfield Road, behind Metro Sweets, Bandra West, Mumbai, Maharashtra 400050",
       "hours": "Mon - Sat: 10:00 AM - 7:00 PM (By Appointment Only)",
-      "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=72.82605%2C19.05104%2C72.83205%2C19.05504&layer=mapnik&marker=19.05304%2C72.82905",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=03%2C+Ground+floor%2C+Zarine+building%2C+4th+Road%2C+opp.+Bhabha+Hospital%2C+Bandra+W%2C+Mumbai+400050"
+      "mapEmbedUrl": "https://maps.google.com/maps?q=19.0579965,72.8331455&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "mapUrl": "https://www.google.com/maps/place/50,+Waterfield+Road,+behind+Metro+Sweets,+Bandra+West,+Mumbai,+Maharashtra+400050/@19.0579965,72.8331455,17z/",
+      "locations": [
+        {
+          "id": "bandra",
+          "name": "Office Address",
+          "tagline": "Waterfield Road Pinpoint",
+          "address": "50, Waterfield Road, behind Metro Sweets, Bandra West, Mumbai, Maharashtra 400050",
+          "coordinates": "19.0579965° N, 72.8331455° E",
+          "mapEmbedUrl": "https://maps.google.com/maps?q=19.0579965,72.8331455&t=&z=16&ie=UTF8&iwloc=&output=embed",
+          "mapUrl": "https://www.google.com/maps/place/50,+Waterfield+Road,+behind+Metro+Sweets,+Bandra+West,+Mumbai,+Maharashtra+400050/@19.0579965,72.8331455,17z/"
+        },
+        {
+          "id": "zaveri",
+          "name": "Registered Address",
+          "tagline": "Shaikh Memon Street Pinpoint",
+          "address": "Shop No. 3, 2nd Floor, Calian House, Shaikh Memon Street, Above Mumbadevi Jalebiwala, Zaveri Bazaar, Mumbai - 400002",
+          "coordinates": "18°57'06.3\"N 72°49'50.5\"E",
+          "mapEmbedUrl": "https://maps.google.com/maps?q=18.95175,72.830694&t=&z=17&ie=UTF8&iwloc=&output=embed",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=18.95175,72.830694"
+        }
+      ]
     }
   },
   "founderStory": {
