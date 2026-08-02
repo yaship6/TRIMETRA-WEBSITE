@@ -210,7 +210,7 @@ export default function Contact({ contact }) {
                             className="map-top-corner-link"
                             title={`Open ${activeLoc.name} on Google Maps`}
                         >
-                            <i className="fas fa-external-link-alt"></i> Open in Google Maps
+                            Open in Maps <i className="fas fa-external-link-alt" style={{ fontSize: '0.78rem' }}></i>
                         </a>
                     </div>
                 </section>

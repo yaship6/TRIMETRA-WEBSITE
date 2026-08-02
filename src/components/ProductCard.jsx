@@ -56,9 +56,9 @@ export default function ProductCard({ product, featured = false, disableHover = 
                             style={{ objectPosition: product.objectPosition || 'center' }}
                         />
                     )}
-                    
+
                     {/* Wishlist Heart Icon */}
-                    <button 
+                    <button
                         className={`product-card-wishlist-btn ${isWishlisted ? 'active' : ''}`}
                         onClick={handleWishlistClick}
                         aria-label="Add to wishlist"
