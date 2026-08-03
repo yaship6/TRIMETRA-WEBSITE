@@ -13,7 +13,7 @@ export default function Contact({ contact }) {
             id: 'bandra',
             name: 'Office Address',
             tagline: 'Waterfield Road Pinpoint',
-            address: '50, Waterfield Road, behind Metro Sweets, Bandra West, Mumbai, Maharashtra 400050',
+            address: '03, Ground floor, zarine building, 4th Road, opp. Bhabha Hospital, Bandra West, Mumbai 400050',
             coordinates: '19.0579965° N, 72.8331455° E',
             mapEmbedUrl: 'https://maps.google.com/maps?q=19.0579965,72.8331455&t=&z=16&ie=UTF8&iwloc=&output=embed',
             mapUrl: 'https://www.google.com/maps/place/50,+Waterfield+Road,+behind+Metro+Sweets,+Bandra+West,+Mumbai,+Maharashtra+400050/@19.0579965,72.8331455,17z/'
