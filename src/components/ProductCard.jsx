@@ -16,14 +16,6 @@ export default function ProductCard({ product, featured = false, disableHover = 
         }
     }, [product.id]);
 
-    const [isWishlisted, setIsWishlisted] = useState(false);
-
-    const handleWishlistClick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setIsWishlisted(!isWishlisted);
-    };
-
     const images = Array.from(new Set(product.images || []));
     const hasHoverImage = images[1] && !disableHover;
     const isCoin = Array.isArray(product.collection)
@@ -56,18 +48,12 @@ export default function ProductCard({ product, featured = false, disableHover = 
                             style={{ objectPosition: product.objectPosition || 'center' }}
                         />
                     )}
-
-                    {/* Wishlist Heart Icon */}
-                    <button
-                        className={`product-card-wishlist-btn ${isWishlisted ? 'active' : ''}`}
-                        onClick={handleWishlistClick}
-                        aria-label="Add to wishlist"
-                    >
-                        <i className={`${isWishlisted ? 'fas' : 'far'} fa-heart`} />
-                    </button>
                 </div>
                 <div className="product-card-info">
                     <h3 className="product-card-title">{product.name}</h3>
+                    <span className="product-card-view-btn">
+                        VIEW PIECE <i className="fas fa-arrow-right" />
+                    </span>
                 </div>
             </a>
         </div>
