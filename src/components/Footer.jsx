@@ -36,7 +36,7 @@ export default function Footer({ content }) {
                             <span>
                                 <strong>Office Address:</strong><br />
                                 03, Ground floor, zarine building, 4th Road, opp. Bhabha Hospital, Bandra West, <br />
-                                Mumbai 400050.
+                                Mumbai - 400050.
                             </span>
                         </p>
                     </div>
