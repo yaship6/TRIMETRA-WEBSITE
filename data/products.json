@@ -54,23 +54,6 @@
     "featured": true
   },
   {
-    "id": "TRM-BR-001",
-    "name": "Golden Bloom Bracelet",
-    "collection": [
-      "bracelets"
-    ],
-    "description": "A fluid 18k solid gold chain bracelet adorned with delicate, hand-sculpted golden flowers set with brilliant-cut diamonds.",
-    "materials": [
-      "18k Yellow Gold",
-      "0.6ct Round Brilliant Diamonds",
-      "Adjustable 7-8 inch safety clasp"
-    ],
-    "images": [
-      "assets/images/bracelet_11.webp"
-    ],
-    "featured": true
-  },
-  {
     "id": "TRJ014",
     "name": "The Devyani Choker Set",
     "collection": [
