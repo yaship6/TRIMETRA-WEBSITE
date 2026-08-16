@@ -103,8 +103,32 @@ export default function Admin() {
         if (!file) return;
 
         const reader = new FileReader();
-        reader.onloadend = () => {
-            handleImageChange(index, reader.result);
+        reader.onload = (event) => {
+            const img = new Image();
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                let width = img.width;
+                let height = img.height;
+                const maxDim = 800;
+
+                if (width > height && width > maxDim) {
+                    height = Math.round((height * maxDim) / width);
+                    width = maxDim;
+                } else if (height > maxDim) {
+                    width = Math.round((width * maxDim) / height);
+                    height = maxDim;
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, width, height);
+
+                // Compress image to lightweight JPEG (0.75 quality)
+                const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.75);
+                handleImageChange(index, compressedDataUrl);
+            };
+            img.src = event.target.result;
         };
         reader.readAsDataURL(file);
     };
