@@ -42,7 +42,7 @@ export default function ProductDetails({ products: initialProductsList, content,
         return <ErrorPage message="Product details could not be found. Check if the code is correct." />;
     }
 
-    const recommendedProducts = products
+    const recommendedProducts = (productsList || [])
         .filter((item) => {
             if (item.id === product?.id) return false;
             const itemCols = Array.isArray(item.collection) ? item.collection : [item.collection];
