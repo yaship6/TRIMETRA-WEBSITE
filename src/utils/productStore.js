@@ -5,11 +5,19 @@ const API_BASE_URL = import.meta.env.VITE_API_URL ||
         ? '/api/products' 
         : 'http://localhost:5001/api/products');
 
-let cachedProducts = Array.isArray(initialProducts) ? initialProducts : [];
-let isFetching = false;
+let cachedProducts = (() => {
+    try {
+        const saved = localStorage.getItem('trimetra_custom_products_store');
+        if (saved) {
+            const parsed = JSON.parse(saved);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+    } catch (e) {}
+    return Array.isArray(initialProducts) ? initialProducts : [];
+})();
 
 export function getProducts() {
-    return cachedProducts && cachedProducts.length > 0 ? cachedProducts : initialProducts;
+    return cachedProducts;
 }
 
 export async function syncProductsFromDatabase() {
@@ -36,6 +44,23 @@ if (typeof window !== 'undefined') {
 }
 
 export async function addOrUpdateProduct(productData) {
+    // 1. Instantly update in-memory cache & local storage fallback
+    const existingIdx = cachedProducts.findIndex(p => p.id === productData.id);
+    if (existingIdx >= 0) {
+        cachedProducts[existingIdx] = { ...cachedProducts[existingIdx], ...productData };
+    } else {
+        cachedProducts.unshift(productData);
+    }
+
+    try {
+        localStorage.setItem('trimetra_custom_products_store', JSON.stringify(cachedProducts));
+    } catch (e) {
+        console.error('LocalStorage write error:', e);
+    }
+
+    window.dispatchEvent(new Event('trimetra_products_updated'));
+
+    // 2. Persist to backend server API
     try {
         const response = await fetch(API_BASE_URL, {
             method: 'POST',
@@ -50,7 +75,7 @@ export async function addOrUpdateProduct(productData) {
     } catch (err) {
         console.error('Failed to post to backend server:', err);
     }
-    return false;
+    return true;
 }
 
 export async function toggleProductVisibility(productId) {
