@@ -26,9 +26,23 @@ export async function syncProductsFromDatabase() {
         if (response.ok) {
             const data = await response.json();
             if (Array.isArray(data) && data.length > 0) {
-                cachedProducts = data;
+                // Merge local custom storage overrides if present
+                const localSaved = localStorage.getItem('trimetra_custom_products_store');
+                let mergedData = data;
+                if (localSaved) {
+                    try {
+                        const localProducts = JSON.parse(localSaved);
+                        if (Array.isArray(localProducts)) {
+                            const map = new Map();
+                            data.forEach(p => map.set(p.id, p));
+                            localProducts.forEach(p => map.set(p.id, p));
+                            mergedData = Array.from(map.values());
+                        }
+                    } catch (e) {}
+                }
+                cachedProducts = mergedData;
                 window.dispatchEvent(new Event('trimetra_products_updated'));
-                return data;
+                return mergedData;
             }
         }
     } catch (err) {

@@ -13,6 +13,16 @@ export default function Admin() {
     const [searchQuery, setSearchQuery] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('All');
 
+    // Toast Notification state
+    const [toastMessage, setToastMessage] = useState(null);
+
+    const showToast = (msg) => {
+        setToastMessage(msg);
+        setTimeout(() => {
+            setToastMessage(null);
+        }, 4000);
+    };
+
     // Modal state for Add/Edit
     const [showModal, setShowModal] = useState(false);
     const [editingProduct, setEditingProduct] = useState(null);
@@ -124,11 +134,18 @@ export default function Admin() {
         });
 
         setShowModal(false);
+        showToast(editingProduct ? `✅ Product "${formData.name}" updated & saved successfully!` : `✨ New product "${formData.name}" added & published successfully!`);
+    };
+
+    const handleToggleVisibility = async (prod) => {
+        await toggleProductVisibility(prod.id);
+        showToast(prod.hidden ? `👁️ "${prod.name}" is now visible on public website!` : `🙈 "${prod.name}" is now hidden from public website.`);
     };
 
     const handleDelete = async (id, name) => {
         if (window.confirm(`Are you sure you want to delete "${name}" (${id})?`)) {
             await deleteProduct(id);
+            showToast(`🗑️ Product "${name}" deleted successfully.`);
         }
     };
 
@@ -237,6 +254,37 @@ export default function Admin() {
     return (
         <div style={{ minHeight: '90vh', background: '#080407', color: '#e0e0e0', padding: '160px 20px 80px' }}>
             <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+
+                {/* Floating Success Toast Banner */}
+                {toastMessage && (
+                    <div style={{
+                        position: 'fixed',
+                        top: '100px',
+                        right: '24px',
+                        zIndex: 9999,
+                        background: 'linear-gradient(135deg, rgba(25, 20, 10, 0.95) 0%, rgba(15, 10, 5, 0.98) 100%)',
+                        color: '#D4AF37',
+                        border: '1px solid #D4AF37',
+                        borderRadius: '12px',
+                        padding: '14px 22px',
+                        fontSize: '0.92rem',
+                        fontWeight: '600',
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(212,175,55,0.3)',
+                        backdropFilter: 'blur(10px)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        animation: 'fadeIn 0.3s ease'
+                    }}>
+                        <span>{toastMessage}</span>
+                        <button
+                            onClick={() => setToastMessage(null)}
+                            style={{ background: 'none', border: 'none', color: '#aaa', cursor: 'pointer', fontSize: '1.1rem', marginLeft: '10px' }}
+                        >
+                            ✕
+                        </button>
+                    </div>
+                )}
 
                 {/* Top Control Header */}
                 <div style={{
@@ -403,7 +451,7 @@ export default function Admin() {
                                             {prod.id}
                                         </div>
                                         <button
-                                            onClick={() => toggleProductVisibility(prod.id)}
+                                            onClick={() => handleToggleVisibility(prod)}
                                             style={{
                                                 position: 'absolute',
                                                 top: '10px',
