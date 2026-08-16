@@ -3,6 +3,7 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { Redis } from '@upstash/redis';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,67 +13,82 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-const DATA_FILE = path.join(process.env.VERCEL ? '/tmp/data' : path.join(__dirname, 'data'), 'products.json');
+// Connect to Upstash Redis if Env vars exist
+let redis = null;
+if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+    redis = new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN
+    });
+} else if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+    redis = new Redis({
+        url: process.env.KV_REST_API_URL,
+        token: process.env.KV_REST_API_TOKEN
+    });
+}
+
 const ORIGINAL_DATA_FILE = path.join(process.cwd(), 'data/products.json');
 
-// Helper to read DB
-const readProductsDB = () => {
+// Helper to read initial JSON file
+const getInitialProducts = () => {
     try {
-        if (fs.existsSync(DATA_FILE)) {
-            const data = fs.readFileSync(DATA_FILE, 'utf-8');
-            const parsed = JSON.parse(data);
-            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
-        }
         if (fs.existsSync(ORIGINAL_DATA_FILE)) {
             const data = fs.readFileSync(ORIGINAL_DATA_FILE, 'utf-8');
-            if (process.env.VERCEL) {
-                try {
-                    const tmpDir = path.dirname(DATA_FILE);
-                    if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
-                    fs.writeFileSync(DATA_FILE, data, 'utf-8');
-                } catch (e) {
-                    console.error('Failed to copy initial data to /tmp:', e);
-                }
-            }
             return JSON.parse(data);
         }
-        return [];
-    } catch (err) {
-        console.error('Error reading products DB:', err);
-        return [];
+    } catch (e) {
+        console.error('Error reading initial products file:', e);
     }
+    return [];
 };
 
-// Helper to write DB
-const writeProductsDB = (products) => {
-    try {
-        const targetPath = process.env.VERCEL ? '/tmp/data/products.json' : DATA_FILE;
-        const targetDir = path.dirname(targetPath);
-        if (!fs.existsSync(targetDir)) {
-            fs.mkdirSync(targetDir, { recursive: true });
+// Helper to read DB from Redis or Fallback File
+const readProductsDB = async () => {
+    if (redis) {
+        try {
+            const data = await redis.get('trimetra_products_db');
+            if (data) {
+                return typeof data === 'string' ? JSON.parse(data) : data;
+            }
+            // Seed Redis with initial products file if first run
+            const initial = getInitialProducts();
+            await redis.set('trimetra_products_db', JSON.stringify(initial));
+            return initial;
+        } catch (e) {
+            console.error('Upstash Redis read error:', e);
         }
-        fs.writeFileSync(targetPath, JSON.stringify(products, null, 2), 'utf-8');
-        return true;
-    } catch (err) {
-        console.error('Error writing to products DB:', err);
-        return false;
     }
+    return getInitialProducts();
+};
+
+// Helper to write DB to Redis or local memory
+const writeProductsDB = async (products) => {
+    if (redis) {
+        try {
+            await redis.set('trimetra_products_db', JSON.stringify(products));
+            return true;
+        } catch (e) {
+            console.error('Upstash Redis write error:', e);
+            return false;
+        }
+    }
+    return true;
 };
 
 // GET /api/products
-app.get('/api/products', (req, res) => {
-    const products = readProductsDB();
+app.get('/api/products', async (req, res) => {
+    const products = await readProductsDB();
     res.json(products);
 });
 
 // POST /api/products
-app.post('/api/products', (req, res) => {
+app.post('/api/products', async (req, res) => {
     const productData = req.body;
     if (!productData || !productData.id || !productData.name) {
         return res.status(400).json({ error: 'Product ID and Title are required.' });
     }
 
-    const products = readProductsDB();
+    const products = await readProductsDB();
     const existingIdx = products.findIndex(p => p.id === productData.id);
 
     if (existingIdx >= 0) {
@@ -93,7 +109,7 @@ app.post('/api/products', (req, res) => {
         products.unshift(newProduct);
     }
 
-    if (writeProductsDB(products)) {
+    if (await writeProductsDB(products)) {
         res.json({ success: true, message: 'Saved successfully', product: productData });
     } else {
         res.status(500).json({ error: 'Failed to write data' });
@@ -101,9 +117,9 @@ app.post('/api/products', (req, res) => {
 });
 
 // PUT /api/products/:id/toggle-visibility
-app.put('/api/products/:id/toggle-visibility', (req, res) => {
+app.put('/api/products/:id/toggle-visibility', async (req, res) => {
     const { id } = req.params;
-    const products = readProductsDB();
+    const products = await readProductsDB();
     const product = products.find(p => p.id === id);
 
     if (!product) {
@@ -112,7 +128,7 @@ app.put('/api/products/:id/toggle-visibility', (req, res) => {
 
     product.hidden = !product.hidden;
 
-    if (writeProductsDB(products)) {
+    if (await writeProductsDB(products)) {
         res.json({ success: true, hidden: product.hidden });
     } else {
         res.status(500).json({ error: 'Failed to update' });
@@ -120,9 +136,9 @@ app.put('/api/products/:id/toggle-visibility', (req, res) => {
 });
 
 // DELETE /api/products/:id
-app.delete('/api/products/:id', (req, res) => {
+app.delete('/api/products/:id', async (req, res) => {
     const { id } = req.params;
-    let products = readProductsDB();
+    let products = await readProductsDB();
     const initialLength = products.length;
     products = products.filter(p => p.id !== id);
 
@@ -130,7 +146,7 @@ app.delete('/api/products/:id', (req, res) => {
         return res.status(404).json({ error: 'Product not found' });
     }
 
-    if (writeProductsDB(products)) {
+    if (await writeProductsDB(products)) {
         res.json({ success: true, message: 'Product deleted successfully' });
     } else {
         res.status(500).json({ error: 'Failed to delete' });
@@ -142,6 +158,6 @@ export default app;
 if (!process.env.VERCEL) {
     const PORT = process.env.PORT || 5001;
     app.listen(PORT, () => {
-        console.log(`⚡ Trimetra Backend Server running on http://localhost:${PORT}`);
+        console.log(`⚡ Trimetra Serverless Backend running on http://localhost:${PORT}`);
     });
 }

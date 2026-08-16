@@ -1,9 +1,8 @@
 import initialProducts from '../../data/products.json';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 
-    (typeof window !== 'undefined' && window.location.hostname !== 'localhost' 
-        ? '/api/products' 
-        : 'http://localhost:5001/api/products');
+// Public Zero-Config Cloud Database Endpoint (Pantry / JSONBin Cloud Store)
+const CLOUD_DB_ID = 'trimetra_products_master_db_v1';
+const PANTRY_API_URL = `https://getpantry.cloud/apiv1/pantry/1a3f6562-b97c-473d-82d6-4447dd84f901/basket/${CLOUD_DB_ID}`;
 
 let cachedProducts = (() => {
     try {
@@ -16,49 +15,47 @@ let cachedProducts = (() => {
     return Array.isArray(initialProducts) ? initialProducts : [];
 })();
 
+let isFetching = false;
+
 export function getProducts() {
     return cachedProducts;
 }
 
 export async function syncProductsFromDatabase() {
+    if (isFetching) return cachedProducts;
+    isFetching = true;
+
     try {
-        const response = await fetch(API_BASE_URL);
+        const response = await fetch(PANTRY_API_URL);
         if (response.ok) {
-            const data = await response.json();
+            const json = await response.json();
+            const data = json.products || json;
             if (Array.isArray(data) && data.length > 0) {
-                // Merge local custom storage overrides if present
-                const localSaved = localStorage.getItem('trimetra_custom_products_store');
-                let mergedData = data;
-                if (localSaved) {
-                    try {
-                        const localProducts = JSON.parse(localSaved);
-                        if (Array.isArray(localProducts)) {
-                            const map = new Map();
-                            data.forEach(p => map.set(p.id, p));
-                            localProducts.forEach(p => map.set(p.id, p));
-                            mergedData = Array.from(map.values());
-                        }
-                    } catch (e) {}
-                }
-                cachedProducts = mergedData;
+                cachedProducts = data;
+                try {
+                    localStorage.setItem('trimetra_custom_products_store', JSON.stringify(data));
+                } catch (e) {}
                 window.dispatchEvent(new Event('trimetra_products_updated'));
-                return mergedData;
+                return data;
             }
         }
     } catch (err) {
-        console.warn('Backend server not connected, using fallback products data.');
+        console.warn('Cloud DB connection sync using fallback products.');
+    } finally {
+        isFetching = false;
     }
+
     return cachedProducts;
 }
 
-// Auto sync every 3 seconds for instant real-time updates across all clients
+// Auto-sync every 4 seconds across all live clients & devices anywhere in the world
 if (typeof window !== 'undefined') {
     syncProductsFromDatabase();
-    setInterval(syncProductsFromDatabase, 3000);
+    setInterval(syncProductsFromDatabase, 4000);
 }
 
 export async function addOrUpdateProduct(productData) {
-    // 1. Instantly update in-memory cache & local storage fallback
+    // 1. Instantly update local cache & localStorage
     const existingIdx = cachedProducts.findIndex(p => p.id === productData.id);
     if (existingIdx >= 0) {
         cachedProducts[existingIdx] = { ...cachedProducts[existingIdx], ...productData };
@@ -68,27 +65,21 @@ export async function addOrUpdateProduct(productData) {
 
     try {
         localStorage.setItem('trimetra_custom_products_store', JSON.stringify(cachedProducts));
-    } catch (e) {
-        console.error('LocalStorage write error:', e);
-    }
+    } catch (e) {}
 
     window.dispatchEvent(new Event('trimetra_products_updated'));
 
-    // 2. Persist to backend server API
+    // 2. Push to Zero-Config Cloud Database (Instant Cloud Sync for all users)
     try {
-        const response = await fetch(API_BASE_URL, {
+        await fetch(PANTRY_API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(productData)
+            body: JSON.stringify({ products: cachedProducts })
         });
-
-        if (response.ok) {
-            await syncProductsFromDatabase();
-            return true;
-        }
     } catch (err) {
-        console.error('Failed to post to backend server:', err);
+        console.error('Cloud DB write error:', err);
     }
+
     return true;
 }
 
@@ -103,16 +94,15 @@ export async function toggleProductVisibility(productId) {
     }
 
     try {
-        const response = await fetch(`${API_BASE_URL}/${productId}/toggle-visibility`, {
-            method: 'PUT'
+        await fetch(PANTRY_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ products: cachedProducts })
         });
-        if (response.ok) {
-            await syncProductsFromDatabase();
-            return true;
-        }
     } catch (err) {
-        console.error('Failed to update visibility in backend:', err);
+        console.error('Cloud DB visibility update error:', err);
     }
+
     return true;
 }
 
@@ -124,15 +114,14 @@ export async function deleteProduct(productId) {
     window.dispatchEvent(new Event('trimetra_products_updated'));
 
     try {
-        const response = await fetch(`${API_BASE_URL}/${productId}`, {
-            method: 'DELETE'
+        await fetch(PANTRY_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ products: cachedProducts })
         });
-        if (response.ok) {
-            await syncProductsFromDatabase();
-            return true;
-        }
     } catch (err) {
-        console.error('Failed to delete product from backend:', err);
+        console.error('Cloud DB delete error:', err);
     }
+
     return true;
 }
