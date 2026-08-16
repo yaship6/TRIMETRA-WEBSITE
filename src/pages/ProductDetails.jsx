@@ -3,6 +3,7 @@ import ErrorPage from './ErrorPage.jsx';
 import { imageUrl, whatsappLink } from '../utils/assets.js';
 import ProductCard from '../components/ProductCard.jsx';
 import JewelleryCareGrid from '../components/JewelleryCareGrid.jsx';
+import { getProducts } from '../utils/productStore.js';
 
 function AccordionItem({ title, children, defaultOpen = false }) {
     const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -25,8 +26,17 @@ function AccordionItem({ title, children, defaultOpen = false }) {
     );
 }
 
-export default function ProductDetails({ products, content, productId, addToRecentlyViewed }) {
-    const product = products.find((item) => item.id === productId);
+export default function ProductDetails({ products: initialProductsList, content, productId, addToRecentlyViewed }) {
+    const [productsList, setProductsList] = useState(initialProductsList);
+
+    useEffect(() => {
+        setProductsList(getProducts());
+        const handleUpdate = () => setProductsList(getProducts());
+        window.addEventListener('trimetra_products_updated', handleUpdate);
+        return () => window.removeEventListener('trimetra_products_updated', handleUpdate);
+    }, [initialProductsList]);
+
+    const product = productsList.find((item) => item.id === productId);
 
     if (!product) {
         return <ErrorPage message="Product details could not be found. Check if the code is correct." />;

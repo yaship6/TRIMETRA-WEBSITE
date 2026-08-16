@@ -122,15 +122,21 @@ export default function Admin() {
         e.preventDefault();
         if (!formData.name) return;
 
-        const collectionArray = [formData.collection];
-        const materialsArray = formData.materials.split(',').map(m => m.trim()).filter(Boolean);
-        const validImages = formData.images.filter(img => img.trim() !== '');
+        const collectionArray = Array.isArray(editingProduct?.collection) ? editingProduct.collection : [formData.collection];
+        if (!collectionArray.includes(formData.collection)) {
+            collectionArray.unshift(formData.collection);
+        }
+        const materialsArray = typeof formData.materials === 'string'
+            ? formData.materials.split(',').map(m => m.trim()).filter(Boolean)
+            : formData.materials;
+        const validImages = formData.images.filter(img => img && img.trim() !== '');
 
         await addOrUpdateProduct({
+            ...(editingProduct || {}),
             ...formData,
             collection: collectionArray,
             materials: materialsArray,
-            images: validImages.length ? validImages : ['assets/images/logo.png']
+            images: validImages.length ? validImages : (editingProduct?.images || ['assets/images/logo.png'])
         });
 
         setShowModal(false);
