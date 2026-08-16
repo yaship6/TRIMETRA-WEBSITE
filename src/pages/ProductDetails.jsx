@@ -230,9 +230,13 @@ export default function ProductDetails({ products: initialProductsList, content,
                             <span className="product-detail-id">REF: {product.id}</span>
 
                             <div className="product-spec-pointers">
-                                {product.materials && product.materials.map((spec, i) => (
-                                    <span key={i} className="spec-pointer-tag">✦ {spec}</span>
-                                ))}
+                                {Array.isArray(product.materials)
+                                    ? product.materials.map((spec, i) => (
+                                        <span key={i} className="spec-pointer-tag">✦ {spec}</span>
+                                    ))
+                                    : (product.materials || '').split(',').map(m => m.trim()).filter(Boolean).map((spec, i) => (
+                                        <span key={i} className="spec-pointer-tag">✦ {spec}</span>
+                                    ))}
                             </div>
                         </div>
 
