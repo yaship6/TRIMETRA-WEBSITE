@@ -12,21 +12,23 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-const DATA_FILE = path.join(process.env.VERCEL ? '/tmp' : __dirname, 'data/products.json');
-const ORIGINAL_DATA_FILE = path.join(__dirname, 'data/products.json');
+const DATA_FILE = path.join(process.env.VERCEL ? '/tmp/data' : path.join(__dirname, 'data'), 'products.json');
+const ORIGINAL_DATA_FILE = path.join(process.cwd(), 'data/products.json');
 
 // Helper to read DB
 const readProductsDB = () => {
     try {
         if (fs.existsSync(DATA_FILE)) {
             const data = fs.readFileSync(DATA_FILE, 'utf-8');
-            return JSON.parse(data);
+            const parsed = JSON.parse(data);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
         }
         if (fs.existsSync(ORIGINAL_DATA_FILE)) {
             const data = fs.readFileSync(ORIGINAL_DATA_FILE, 'utf-8');
-            // Copy to writable /tmp in Vercel Serverless environment
             if (process.env.VERCEL) {
                 try {
+                    const tmpDir = path.dirname(DATA_FILE);
+                    if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
                     fs.writeFileSync(DATA_FILE, data, 'utf-8');
                 } catch (e) {
                     console.error('Failed to copy initial data to /tmp:', e);
