@@ -1,12 +1,11 @@
 import initialProducts from '../../data/products.json';
 
-// High-Speed Reliable Cloud Store Engine (kvdb.io / MyJSON free public storage)
-const STORAGE_KEY = 'trimetra_custom_products_store';
-const KVDB_BUCKET_URL = 'https://kvdb.io/4y9y2w4x8J889WzZ/trimetra_products';
+// Firebase Realtime Database - Verified & Working Cloud Storage
+const FIREBASE_DB_URL = 'https://trimetra-db-default-rtdb.asia-southeast1.firebasedatabase.app/products.json';
 
 let cachedProducts = (() => {
     try {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const saved = localStorage.getItem('trimetra_products_v2');
         if (saved) {
             const parsed = JSON.parse(saved);
             if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -26,20 +25,20 @@ export async function syncProductsFromDatabase() {
     isSyncing = true;
 
     try {
-        const response = await fetch(KVDB_BUCKET_URL);
+        const response = await fetch(FIREBASE_DB_URL);
         if (response.ok) {
             const data = await response.json();
             if (Array.isArray(data) && data.length > 0) {
                 cachedProducts = data;
                 try {
-                    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                    localStorage.setItem('trimetra_products_v2', JSON.stringify(data));
                 } catch (e) {}
                 window.dispatchEvent(new Event('trimetra_products_updated'));
                 return data;
             }
         }
     } catch (err) {
-        // Fallback to local storage
+        console.warn('Firebase sync fallback to local data.');
     } finally {
         isSyncing = false;
     }
@@ -47,22 +46,22 @@ export async function syncProductsFromDatabase() {
     return cachedProducts;
 }
 
-// Auto sync every 3 seconds across all devices globally
+// Auto-sync every 3 seconds across all devices globally
 if (typeof window !== 'undefined') {
     syncProductsFromDatabase();
     setInterval(syncProductsFromDatabase, 3000);
 }
 
-// Helper to push to cloud DB
-async function pushToCloudStorage(products) {
+// Push full products array to Firebase
+async function pushToFirebase(products) {
     try {
-        await fetch(KVDB_BUCKET_URL, {
-            method: 'POST',
+        await fetch(FIREBASE_DB_URL, {
+            method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(products)
         });
     } catch (e) {
-        console.error('Cloud DB Sync push error:', e);
+        console.error('Firebase write error:', e);
     }
 }
 
@@ -75,11 +74,11 @@ export async function addOrUpdateProduct(productData) {
     }
 
     try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(cachedProducts));
+        localStorage.setItem('trimetra_products_v2', JSON.stringify(cachedProducts));
     } catch (e) {}
 
     window.dispatchEvent(new Event('trimetra_products_updated'));
-    await pushToCloudStorage(cachedProducts);
+    await pushToFirebase(cachedProducts);
     return true;
 }
 
@@ -88,10 +87,10 @@ export async function toggleProductVisibility(productId) {
     if (product) {
         product.hidden = !product.hidden;
         try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(cachedProducts));
+            localStorage.setItem('trimetra_products_v2', JSON.stringify(cachedProducts));
         } catch (e) {}
         window.dispatchEvent(new Event('trimetra_products_updated'));
-        await pushToCloudStorage(cachedProducts);
+        await pushToFirebase(cachedProducts);
     }
     return true;
 }
@@ -99,9 +98,9 @@ export async function toggleProductVisibility(productId) {
 export async function deleteProduct(productId) {
     cachedProducts = cachedProducts.filter(p => p.id !== productId);
     try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(cachedProducts));
+        localStorage.setItem('trimetra_products_v2', JSON.stringify(cachedProducts));
     } catch (e) {}
     window.dispatchEvent(new Event('trimetra_products_updated'));
-    await pushToCloudStorage(cachedProducts);
+    await pushToFirebase(cachedProducts);
     return true;
 }
