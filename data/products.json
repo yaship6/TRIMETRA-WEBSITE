@@ -45,13 +45,16 @@
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
-      "Type of stone: Moissanite Polki, Pearls"
+      "Type of stone: Moissanite Polki",
+      "Pearls"
     ],
     "images": [
       "assets/images/trj-ap022_1.webp",
       "assets/images/IMG_5631.JPG"
     ],
-    "featured": true
+    "featured": true,
+    "price": "Price on Request",
+    "hidden": false
   },
   {
     "id": "TRJ014",
@@ -286,7 +289,7 @@
   {
     "id": "TRJ-AP004",
     "name": "The Titli Mother-of-Pearl Pendant Set",
-    "description": "A whimsical celebration of nature\u2019s grace and contemporary elegance, this delicate butterfly-themed pendant and earring set is meticulously crafted in pure 925 Sterling Silver with a radiant gold polish. Designed for the modern Indian woman who adores minimalist charm.",
+    "description": "A whimsical celebration of nature’s grace and contemporary elegance, this delicate butterfly-themed pendant and earring set is meticulously crafted in pure 925 Sterling Silver with a radiant gold polish. Designed for the modern Indian woman who adores minimalist charm.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish"
@@ -613,7 +616,7 @@
     "collection": [
       "rings"
     ],
-    "description": "A breathtaking manifestation of regal Indian aesthetics, this magnificent statement cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with a premium, glowing gold polish. Embracing the classic architectural elements of royal Rajasthani Jewellery, this piece highlights an iconic Dholki (drum-shaped) focal element\u2014weaving together intricate Jadau style gemstone placement, woven seed pearls, and rich festive enamel details to crown your hand with vintage majesty.",
+    "description": "A breathtaking manifestation of regal Indian aesthetics, this magnificent statement cocktail ring is beautifully handcrafted in pure 925 Sterling Silver with a premium, glowing gold polish. Embracing the classic architectural elements of royal Rajasthani Jewellery, this piece highlights an iconic Dholki (drum-shaped) focal element—weaving together intricate Jadau style gemstone placement, woven seed pearls, and rich festive enamel details to crown your hand with vintage majesty.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",
@@ -880,7 +883,7 @@
     "collection": [
       "earrings"
     ],
-    "description": "A masterful expression of traditional Hindu heritage and classical Indian aestheticism, this pair of semi-oversized statement drop earrings is meticulously handcrafted in pure 925 Sterling Silver with a premium, heavy gold polish. Named Aadrika\u2014symbolizing celestial grace\u2014this exquisite design blends the vintage allure of heritage Jadau settings with deep crimson ruby accents, an intricate crescent bridge, and a rhythmic, swaying gemstone fringe.",
+    "description": "A masterful expression of traditional Hindu heritage and classical Indian aestheticism, this pair of semi-oversized statement drop earrings is meticulously handcrafted in pure 925 Sterling Silver with a premium, heavy gold polish. Named Aadrika—symbolizing celestial grace—this exquisite design blends the vintage allure of heritage Jadau settings with deep crimson ruby accents, an intricate crescent bridge, and a rhythmic, swaying gemstone fringe.",
     "materials": [
       "Metal type: 925 Sterling Silver",
       "Polish: Gold Polish",

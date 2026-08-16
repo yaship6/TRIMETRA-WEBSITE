@@ -10,17 +10,22 @@ import ProductDetails from './pages/ProductDetails.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import JewelleryCare from './pages/JewelleryCare.jsx';
+import Admin from './pages/Admin.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import ComingSoon from './components/ComingSoon.jsx';
 import { useHashRoute } from './hooks/useHashRoute.js';
-import products from '../data/products.json';
+import { getProducts } from './utils/productStore.js';
 import content from '../data/content.json';
 
-function getPage(route, addToRecentlyViewed) {
+function getPage(route, products, addToRecentlyViewed) {
     const { path, query } = route;
 
     if (path === '/' || path === '/home') {
         return <Home products={products} content={content} />;
+    }
+
+    if (path === '/admin') {
+        return <Admin />;
     }
 
     if (path === '/collections') {
@@ -56,6 +61,14 @@ function getPage(route, addToRecentlyViewed) {
 export default function App() {
     const route = useHashRoute();
     const lenisRef = useRef(null);
+
+    const [products, setProducts] = useState(getProducts());
+
+    useEffect(() => {
+        const handleProductsUpdate = () => setProducts(getProducts());
+        window.addEventListener('trimetra_products_updated', handleProductsUpdate);
+        return () => window.removeEventListener('trimetra_products_updated', handleProductsUpdate);
+    }, []);
 
     const [recentlyViewedIds, setRecentlyViewedIds] = useState(() => {
         try {
@@ -132,7 +145,7 @@ export default function App() {
     return (
         <>
             <Header currentPath={route.path} />
-            <main id="app-root">{getPage(route, addToRecentlyViewed)}</main>
+            <main id="app-root">{getPage(route, products, addToRecentlyViewed)}</main>
             <FloatingWhatsApp contact={content.contact} />
             <Footer content={content} />
         </>

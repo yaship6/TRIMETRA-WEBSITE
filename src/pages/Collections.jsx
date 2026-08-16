@@ -12,8 +12,9 @@ export default function Collections({ products, content, initialFilter }) {
     const meta = content.collectionMetadata[currentFilter] || content.collectionMetadata.all;
 
     const filteredProducts = useMemo(() => {
-        if (!currentFilter || currentFilter === 'all') return products;
-        return products.filter((product) => {
+        const visibleProducts = products.filter(p => !p.hidden);
+        if (!currentFilter || currentFilter === 'all') return visibleProducts;
+        return visibleProducts.filter((product) => {
             if (currentFilter === 'everyday-elegance') {
                 return (
                     product.everydayElegance ||
