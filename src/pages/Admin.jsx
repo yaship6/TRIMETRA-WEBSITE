@@ -139,6 +139,7 @@ export default function Admin() {
             images: validImages.length ? validImages : (editingProduct?.images || ['assets/images/logo.png'])
         });
 
+        setProducts(getProducts());
         setShowModal(false);
         showToast(editingProduct ? `✅ Product "${formData.name}" updated & saved successfully!` : `✨ New product "${formData.name}" added & published successfully!`);
     };
