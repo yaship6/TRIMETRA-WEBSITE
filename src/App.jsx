@@ -79,12 +79,6 @@ export default function App() {
         }
     });
 
-    // Check if the current domain is the production domain (.in)
-    const isProduction = window.location.hostname.includes('trimetra.in');
-
-    if (isProduction) {
-        return <ComingSoon />;
-    }
 
     const addToRecentlyViewed = (id) => {
         setRecentlyViewedIds((prev) => {
