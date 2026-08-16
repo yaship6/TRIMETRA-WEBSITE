@@ -495,27 +495,33 @@ export default function Admin() {
 
             {/* Modal: Add or Edit Product */}
             {showModal && (
-                <div style={{
-                    position: 'fixed',
-                    inset: 0,
-                    background: 'rgba(0,0,0,0.85)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: 1000,
-                    padding: '20px',
-                    backdropFilter: 'blur(6px)'
-                }}>
+                <div
+                    onWheel={(e) => e.stopPropagation()}
+                    style={{
+                        position: 'fixed',
+                        inset: 0,
+                        background: 'rgba(0,0,0,0.85)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 2000,
+                        padding: '30px 20px',
+                        backdropFilter: 'blur(6px)',
+                        overflowY: 'auto'
+                    }}
+                >
                     <div style={{
                         background: '#160d13',
                         border: '1px solid #D4AF37',
                         borderRadius: '16px',
                         maxWidth: '650px',
                         width: '100%',
-                        maxHeight: '90vh',
+                        maxHeight: '82vh',
                         overflowY: 'auto',
                         padding: '34px',
-                        boxShadow: '0 20px 50px rgba(0,0,0,0.9)'
+                        boxShadow: '0 20px 50px rgba(0,0,0,0.9)',
+                        position: 'relative',
+                        WebkitOverflowScrolling: 'touch'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                             <h3 style={{ fontFamily: 'Cinzel, serif', color: '#D4AF37', margin: 0, fontSize: '1.4rem' }}>
