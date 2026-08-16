@@ -79,11 +79,19 @@ export async function addOrUpdateProduct(productData) {
 }
 
 export async function toggleProductVisibility(productId) {
+    const product = cachedProducts.find(p => p.id === productId);
+    if (product) {
+        product.hidden = !product.hidden;
+        try {
+            localStorage.setItem('trimetra_custom_products_store', JSON.stringify(cachedProducts));
+        } catch (e) {}
+        window.dispatchEvent(new Event('trimetra_products_updated'));
+    }
+
     try {
         const response = await fetch(`${API_BASE_URL}/${productId}/toggle-visibility`, {
             method: 'PUT'
         });
-
         if (response.ok) {
             await syncProductsFromDatabase();
             return true;
@@ -91,15 +99,20 @@ export async function toggleProductVisibility(productId) {
     } catch (err) {
         console.error('Failed to update visibility in backend:', err);
     }
-    return false;
+    return true;
 }
 
 export async function deleteProduct(productId) {
+    cachedProducts = cachedProducts.filter(p => p.id !== productId);
+    try {
+        localStorage.setItem('trimetra_custom_products_store', JSON.stringify(cachedProducts));
+    } catch (e) {}
+    window.dispatchEvent(new Event('trimetra_products_updated'));
+
     try {
         const response = await fetch(`${API_BASE_URL}/${productId}`, {
             method: 'DELETE'
         });
-
         if (response.ok) {
             await syncProductsFromDatabase();
             return true;
@@ -107,5 +120,5 @@ export async function deleteProduct(productId) {
     } catch (err) {
         console.error('Failed to delete product from backend:', err);
     }
-    return false;
+    return true;
 }
